@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding-top: 12px;
+  flex-wrap: wrap;
+}
+
+.mat-headline {
+  margin: 0;
+}
+
+mat-form-field {
+  margin: 0 16px;
+  font-size: 14px;
+}

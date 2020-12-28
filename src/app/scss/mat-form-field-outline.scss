@@ -1,0 +1,8 @@
+@mixin search-form-field-outline($theme) {
+
+  [app-search] {
+    .mat-form-field-infix {
+      width: 250px !important;
+    }
+  }
+}
