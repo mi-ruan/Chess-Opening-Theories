@@ -4,3 +4,12 @@
   align-items: center;
   margin-top: 56px;
 }
+
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  .mat-card {
+    margin: 12px;
+  }
+}

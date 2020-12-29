@@ -1,0 +1,17 @@
+<cdk-table [dataSource]="dataSource">
+  <ng-container cdkColumnDef="turn">
+    <cdk-header-cell *cdkHeaderCellDef></cdk-header-cell>
+    <cdk-cell class="turn-cell" *cdkCellDef="let moves">{{moves.turn}}.</cdk-cell>
+  </ng-container>
+  <ng-container cdkColumnDef="white">
+    <cdk-header-cell class="white-header-cell" *cdkHeaderCellDef>White</cdk-header-cell>
+    <cdk-cell class="white-cell" *cdkCellDef="let moves">{{moves.white}}</cdk-cell>
+  </ng-container>
+  <ng-container cdkColumnDef="black">
+    <cdk-header-cell class="black-header-cell" *cdkHeaderCellDef>Black</cdk-header-cell>
+    <cdk-cell class="black-cell" *cdkCellDef="let moves">{{moves.black ? moves.black : ""}}</cdk-cell>
+  </ng-container>
+
+  <cdk-header-row *cdkHeaderRowDef="['turn', 'white', 'black']"></cdk-header-row>
+  <cdk-row *cdkRowDef="let row; columns: ['turn', 'white', 'black']"></cdk-row>
+</cdk-table>

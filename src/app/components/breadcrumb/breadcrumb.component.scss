@@ -10,8 +10,12 @@
   a:hover,
   span:hover {
     color: dimgrey;
-    text-decoration: none;
     cursor: pointer;
+    text-decoration: none;
+  }
+  li:last-child > span:hover {
+    font-weight: bold;
+    cursor: default;
   }
   li {
     list-style: none;

@@ -23,7 +23,6 @@ export class BreadcrumbComponent implements OnInit {
   ) {
     this.breadcrumbs = this.buildBreadCrumb(this.activatedRoute.root);
     this.breadcrumbs.unshift({label: "home", url: "/home"});
-    console.warn(this.breadcrumbs);
   }
 
   ngOnInit(): void {

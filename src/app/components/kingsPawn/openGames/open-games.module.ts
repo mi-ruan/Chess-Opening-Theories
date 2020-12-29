@@ -3,21 +3,23 @@ import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-
-import { KingsPawnHomeComponent } from "./home.component";
 import { MaterialModule } from "src/app/material/material.module";
-import { BreadcrumbModule } from "../breadcrumb/breadcrumb.module";
+import { BreadcrumbModule } from "../../breadcrumb/breadcrumb.module";
+
+import { ItalianGameComponent } from "./italianGame/italian-game.component";
+import { MovesTableModule } from "../../movesTable/moves-table.module";
 
 @NgModule({
   declarations: [
-    KingsPawnHomeComponent
+    ItalianGameComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     RouterModule,
-    BreadcrumbModule
+    BreadcrumbModule,
+    MovesTableModule
   ]
 })
-export class KingsPawnModule { }
+export class OpenGamesModule { }

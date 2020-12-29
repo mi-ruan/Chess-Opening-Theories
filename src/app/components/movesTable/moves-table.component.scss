@@ -1,0 +1,21 @@
+cdk-row, cdk-header-row, cdk-footer-row {
+  display: flex;
+}
+
+cdk-cell, cdk-header-cell, cdk-footer-cell {
+  text-align: center;
+  flex: 1;
+  margin-bottom: 4px;
+  font-size: 18px;
+}
+
+.white-header-cell, .black-header-cell, .white-cell, .black-cell {
+  width: 100px;
+}
+
+.white-header-cell, .black-header-cell {
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+  border-bottom: 1px grey solid;
+  font-size: 20px;
+}
