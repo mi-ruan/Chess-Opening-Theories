@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MaterialModule } from "./material/material.module";
 import { EntryComponent } from "./components/entry/entry.component";
 import { AppRoutingModule } from "./app-routing.module";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BreadcrumbModule } from "./components/breadcrumb/breadcrumb.module";
 
 import { KingsPawnModule } from "./components/kingsPawn/kings-pawn.module";
@@ -26,6 +27,8 @@ import { FlankModule } from "./components/flankOpenings/flank.module";
     MaterialModule,
     AppRoutingModule,
     RouterModule,
+    ReactiveFormsModule,
+    FormsModule,
     BreadcrumbModule,
     KingsPawnModule,
     QueensPawnModule,
