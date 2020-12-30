@@ -4,12 +4,14 @@ import { RouterModule } from "@angular/router";
 
 import { AppComponent } from "./app.component";
 import { SearchComponent } from "./components/search/search.component";
+import { MainComponent } from "./components/main/main.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MaterialModule } from "./material/material.module";
 import { EntryComponent } from "./components/entry/entry.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BreadcrumbModule } from "./components/breadcrumb/breadcrumb.module";
+import { MovesTableModule } from "./components/movesTable/moves-table.module";
 
 import { KingsPawnModule } from "./components/kingsPawn/kings-pawn.module";
 import { QueensPawnModule } from "./components/queensPawn/queens-pawn.module";
@@ -19,7 +21,8 @@ import { FlankModule } from "./components/flankOpenings/flank.module";
   declarations: [
     AppComponent,
     SearchComponent,
-    EntryComponent
+    EntryComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { FlankModule } from "./components/flankOpenings/flank.module";
     BreadcrumbModule,
     KingsPawnModule,
     QueensPawnModule,
-    FlankModule
+    FlankModule,
+    MovesTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

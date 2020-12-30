@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
 import { FormControl } from "@angular/forms";
+import { Router } from "@angular/router";
 import { masterList } from "../../../resources/master-list";
 
 
@@ -17,6 +18,8 @@ export class SearchComponent implements OnInit {
 
   searchResult = new FormControl();
 
+  constructor(private router: Router) {}
+
   ngOnInit(): void {
     this.searchResult.valueChanges.subscribe(value => {
       if (value.length < 2) {
@@ -24,8 +27,15 @@ export class SearchComponent implements OnInit {
         this.noFilteredResult = false; 
         return;
       }
-      this.filteredList = masterList.filter(list => list.name.toLowerCase().startsWith(value));
+      this.filteredList = masterList.filter(list => list.name.toLowerCase().startsWith(value.toLowerCase()));
       this.noFilteredResult = this.filteredList.length === 0;
     })
+  }
+
+  navigate(): void {
+    const result = this.masterList.find(list => list.name === this.searchResult.value)
+    if (result) {
+      this.router.navigate(["/main"], {state: {data: result}});
+    }
   }
 }
