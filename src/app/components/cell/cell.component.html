@@ -1,2 +1,2 @@
-<span class="coordinates">{{coordinates}}</span>
-<div [class]="piece" class="pieces"></div>
+<span class="coordinates">{{(cellInfo | async).coord}}</span>
+<div [class]="(cellInfo | async).currentPiece" class="pieces"></div>

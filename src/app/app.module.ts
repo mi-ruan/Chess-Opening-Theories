@@ -1,6 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { RouterModule } from "@angular/router";
+import { RouteReuseStrategy, RouterModule } from "@angular/router";
+import { DefaultRouteReuseStrategy } from "./default-route-reuse-strategy";
 
 import { AppComponent } from "./app.component";
 import { SearchComponent } from "./components/search/search.component";
@@ -43,7 +44,10 @@ import { FlankModule } from "./components/flankOpenings/flank.module";
     FlankModule,
     MovesTableModule
   ],
-  providers: [],
+  providers: [    {
+    provide: RouteReuseStrategy,
+    useClass: DefaultRouteReuseStrategy,
+  },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

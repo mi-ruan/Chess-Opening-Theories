@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from "@angular/core";
-import { initialMap } from "./initial-map";
+import { Observable } from "rxjs";
+import { CellInfo } from "../board/board.component";
 
 @Component({
   selector: "app-cell",
@@ -7,18 +8,12 @@ import { initialMap } from "./initial-map";
   styleUrls: ["./cell.component.scss"]
 })
 export class CellComponent implements OnInit {
-  @Input() coordinates!: string;
-  @Input() piece!: string;
+  @Input() cellInfo!: Observable<Partial<CellInfo>>;
+  piece!: string;
 
-  ngOnInit():void {
-    this.initialPiece();
-  }
+  ngOnInit(): void {
+    this.cellInfo.subscribe(info => {
 
-  private initialPiece(): void {
-    if (this.coordinates) {
-      if (!this.piece) {
-        this.piece = initialMap[this.coordinates];
-      }
-    }
+    });
   }
 }

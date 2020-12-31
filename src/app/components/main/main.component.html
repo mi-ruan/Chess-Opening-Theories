@@ -1,2 +1,5 @@
 <app-breadcrumb></app-breadcrumb>
-<app-board></app-board>
+<div class="main"> 
+  <app-board [opening]="opening" (outputMoves)="handleMoves($event)"></app-board>
+  <app-moves-table [moves]="moves"></app-moves-table>
+</div>

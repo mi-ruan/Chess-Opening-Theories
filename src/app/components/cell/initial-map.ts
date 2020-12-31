@@ -46,5 +46,5 @@ export const initialMap = {
   e8: Pieces.BK,
   f8: Pieces.BB,
   g8: Pieces.BN,
-  h8: Pieces.BR,
+  h8: Pieces.BR
 }

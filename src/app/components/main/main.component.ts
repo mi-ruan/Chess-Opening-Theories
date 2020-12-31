@@ -12,8 +12,12 @@ import { ECO } from "../../../resources/master-list";
 export class MainComponent implements OnInit {
   opening!: ECO;
 
+  moves: Array<string> = [];
+
   constructor(private router: Router) {
-    this.opening = this.router.getCurrentNavigation().extras.state?.data;
+    const data = this.router.getCurrentNavigation().extras.state?.data;
+    this.opening = data;
+    if (!data) this.router.navigate(["/home"]);
   }
   
   ngOnInit(): void {
@@ -23,5 +27,9 @@ export class MainComponent implements OnInit {
     ).subscribe(() => {
       this.opening = this.router.getCurrentNavigation().extras.state?.data;
     });
+  }
+
+  handleMoves(moves: Array<string>): void {
+    this.moves = moves;
   }
 }
