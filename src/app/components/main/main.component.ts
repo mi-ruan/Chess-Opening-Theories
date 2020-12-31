@@ -23,7 +23,5 @@ export class MainComponent implements OnInit {
     ).subscribe(() => {
       this.opening = this.router.getCurrentNavigation().extras.state?.data;
     });
-
-
   }
 }

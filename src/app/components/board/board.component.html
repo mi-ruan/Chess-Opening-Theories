@@ -1,0 +1,7 @@
+<div class="grid">
+  <div *ngFor="let row of grid">
+    <div *ngFor="let cell of row" class="cell">
+      <app-cell [coordinates]="cell"></app-cell>
+    </div>
+  </div>
+</div>

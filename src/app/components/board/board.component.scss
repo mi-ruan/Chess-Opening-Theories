@@ -1,0 +1,21 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  border: 1px black solid;
+}
+
+.grid > div:nth-child(2n) > div:nth-child(2n - 1),
+.grid > div:nth-child(2n - 1) > div:nth-child(2n) {
+  background: #a76128;
+  color: white;
+}
+
+.grid > div:nth-child(2n) > div:nth-child(2n),
+.grid > div:nth-child(2n - 1) > div:nth-child(2n - 1) {
+  background: #f0d9b5;
+}
+
+.cell {
+  width: 6vw;
+  height: 6vw;
+}

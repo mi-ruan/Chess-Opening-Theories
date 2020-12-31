@@ -5,6 +5,9 @@ import { RouterModule } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { SearchComponent } from "./components/search/search.component";
 import { MainComponent } from "./components/main/main.component";
+import { BoardComponent } from "./components/board/board.component";
+import { CellComponent } from "./components/cell/cell.component";
+
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MaterialModule } from "./material/material.module";
 import { EntryComponent } from "./components/entry/entry.component";
@@ -22,7 +25,9 @@ import { FlankModule } from "./components/flankOpenings/flank.module";
     AppComponent,
     SearchComponent,
     EntryComponent,
-    MainComponent
+    MainComponent,
+    BoardComponent,
+    CellComponent
   ],
   imports: [
     BrowserModule,
