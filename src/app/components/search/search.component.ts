@@ -3,7 +3,7 @@ import { FormControl } from "@angular/forms";
 import { Router } from "@angular/router";
 import { filter } from "rxjs/operators";
 import { masterList } from "../../../resources/master-list";
-
+import * as fuzzysort from "fuzzysort";
 
 @Component({
   selector: "app-search",
@@ -23,7 +23,7 @@ export class SearchComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.searchResult.valueChanges.pipe(filter(value => !!value)).subscribe(value => {
+    this.searchResult.valueChanges.pipe(filter(value => value !== undefined)).subscribe(value => {
       if (value.length < 1) {
         this.filteredList = [];
         this.noFilteredResult = false; 
@@ -32,7 +32,7 @@ export class SearchComponent implements OnInit {
       if (this.cachedResult[value]) {
         this.filteredList = this.cachedResult[value] 
       } else {
-        this.filteredList = masterList.filter(list => list.name.toLowerCase().startsWith(value.toLowerCase()));
+        this.filteredList = fuzzysort.go(value, this.masterList, {keys: ["name"], limit: 100, allowTypo: false, threshold: -1000}).map(search => search.obj);
         this.cachedResult[value] = this.filteredList;
       } 
       this.noFilteredResult = this.filteredList.length === 0;
