@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   border: 1px black solid;
+  margin: 24px;
 }
 
 .grid > div:nth-child(2n) > div:nth-child(2n - 1),
@@ -16,6 +17,8 @@
 }
 
 .cell {
-  width: 6vw;
-  height: 6vw;
+  width: 4.5vw;
+  min-width: 50px;
+  height: 4.5vw;
+  min-height: 50px;
 }

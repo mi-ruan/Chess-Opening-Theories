@@ -16,7 +16,7 @@ export interface CellInfo {
 export class BoardComponent implements OnInit {
   @Input() opening!: ECO;
   @Output() outputMoves = new EventEmitter<Array<string>>();
-  coordMap: Map<string, BehaviorSubject<Partial<CellInfo>>> = new Map();
+  coordMap: Map<string, BehaviorSubject<CellInfo>> = new Map();
   grid = ["a", "b", "c", "d", "e", "f", "g", "h"].map(r =>
     [8, 7, 6, 5, 4, 3, 2, 1].map(c => {
       this.coordMap.set(r+c, this.makeNewSubject(r+c));
@@ -36,19 +36,20 @@ export class BoardComponent implements OnInit {
     const initialCoordSubject = this.coordMap.get(initialCoord);
     const destinationCoordSubject = this.coordMap.get(destinationCoord);
     const currentPiece = initialCoordSubject.value.currentPiece;
+    const destinationPiece = destinationCoordSubject.value.currentPiece;
     initialCoordSubject.next({...initialCoordSubject.value, currentPiece: undefined});
     destinationCoordSubject.next({...destinationCoordSubject.value, currentPiece});
-    this.moves.push(this.convertCurrentPieceToNotation(currentPiece)+destinationCoordSubject.value.coord);
+    this.moves.push(this.convertCurrentPieceToNotation(currentPiece, initialCoordSubject.value.coord, destinationPiece)+destinationCoordSubject.value.coord);
     this.outputMoves.emit(this.moves);
   }
 
-  private convertCurrentPieceToNotation(piece: Pieces): string {
+  private convertCurrentPieceToNotation(piece: Pieces, initialCoord: string, destPiece: Pieces): string {
     const name = piece.split("-")[1];
     const map = {pawn: "", knight: "N", bishop: "B", rook: "R", queen: "Q", king: "K"};
-    return map[name];
+    return destPiece ? name === "pawn" ? initialCoord[0]+"x"+map[name] : map[name]+"x" : map[name];
   }
 
-  private makeNewSubject(coord: string): BehaviorSubject<Partial<CellInfo>> {
-    return new BehaviorSubject<Partial<CellInfo>>({coord, currentPiece: initialMap[coord]});
+  private makeNewSubject(coord: string): BehaviorSubject<CellInfo> {
+    return new BehaviorSubject<CellInfo>({coord, currentPiece: initialMap[coord]});
   }
 }
