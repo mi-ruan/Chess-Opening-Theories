@@ -49,13 +49,13 @@ export const aeco = [
 	},
 	{
 		"eco": "A00",
-		"name": "Barnes Opening: Gedult Gambit",
+		"name": "Barnes Opening: Gedult Gambit: 1..d5",
 		"fen": "rnbqkbnr/ppp1pp1p/6p1/8/3Pp3/2P2P2/PP4PP/RNBQKBNR b KQkq -",
 		"moves": "f2f3 d7d5 e2e4 g7g6 d2d4 d5e4 c2c3\r"
 	},
 	{
 		"eco": "A00",
-		"name": "Barnes Opening: Gedult Gambit",
+		"name": "Barnes Opening: Gedult Gambit: 1..f5",
 		"fen": "rnbqkbnr/ppppp1pp/8/8/4p3/2N2P2/PPPP2PP/R1BQKBNR b KQkq -",
 		"moves": "f2f3 f7f5 e2e4 f5e4 b1c3\r"
 	},
@@ -391,13 +391,13 @@ export const aeco = [
 	},
 	{
 		"eco": "A00",
-		"name": "Kadas Opening: Kadas Gambit",
+		"name": "Kadas Opening: Kadas Gambit: 4. c3",
 		"fen": "rnbqkbnr/pp2pppp/8/3p4/3p3P/2P2N2/PP2PPP1/RNBQKB1R b KQkq -",
 		"moves": "h2h4 d7d5 d2d4 c7c5 g1f3 c5d4 c2c3\r"
 	},
 	{
 		"eco": "A00",
-		"name": "Kadas Opening: Kadas Gambit",
+		"name": "Kadas Opening: Kadas Gambit: 3. c3",
 		"fen": "rnbqkbnr/pppp1ppp/8/8/3p3P/2P5/PP2PPP1/RNBQKBNR b KQkq -",
 		"moves": "h2h4 e7e5 d2d4 e5d4 c2c3\r"
 	},
@@ -895,7 +895,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A01",
-		"name": "Nimzo-Larsen Attack: Classical Variation",
+		"name": "Reti Opening, ",
 		"fen": "rnbqkbnr/ppp1pppp/8/3p4/8/1P6/P1PPPPPP/RNBQKBNR w KQkq -",
 		"moves": "b2b3 d7d5\r"
 	},
@@ -931,19 +931,19 @@ export const aeco = [
 	},
 	{
 		"eco": "A01",
-		"name": "Nimzo-Larsen Attack: Modern Variation",
+		"name": "Nimzo-Larsen Attack: Modern Variation: 2. b2",
 		"fen": "rnbqkbnr/pppp1ppp/8/4p3/8/1P6/PBPPPPPP/RN1QKBNR b KQkq -",
 		"moves": "b2b3 e7e5 c1b2\r"
 	},
 	{
 		"eco": "A01",
-		"name": "Nimzo-Larsen Attack: Modern Variation",
+		"name": "Nimzo-Larsen Attack: Modern Variation: 2 b2 Nc6",
 		"fen": "r1bqkbnr/pppp1ppp/2n5/4p3/8/1P6/PBPPPPPP/RN1QKBNR w KQkq -",
 		"moves": "b2b3 e7e5 c1b2 b8c6\r"
 	},
 	{
 		"eco": "A01",
-		"name": "Nimzo-Larsen Attack: Modern Variation",
+		"name": "Nimzo-Larsen Attack: Modern Variation: 2 b2 Nc6 3. e3",
 		"fen": "r1bqkbnr/pppp1ppp/2n5/4p3/8/1P2P3/PBPP1PPP/RN1QKBNR b KQkq -",
 		"moves": "b2b3 e7e5 c1b2 b8c6 e2e3\r"
 	},
@@ -985,7 +985,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A02",
-		"name": "Bird Opening",
+		"name": "Bird Opening: 1...Nf6",
 		"fen": "rnbqkb1r/pppppppp/5n2/8/5P2/8/PPPPP1PP/RNBQKBNR w KQkq -",
 		"moves": "f2f4 g8f6\r"
 	},
@@ -1135,7 +1135,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A03",
-		"name": "Bird Opening: Williams Gambit",
+		"name": "Bird Opening: Williams Gambit Accepted",
 		"fen": "rnbqkb1r/ppp1pppp/5n2/8/4pP2/2N5/PPPPQ1PP/R1B1KBNR b KQkq -",
 		"moves": "f2f4 d7d5 e2e4 d5e4 b1c3 g8f6 d1e2\r"
 	},
@@ -1171,157 +1171,157 @@ export const aeco = [
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening",
+		"name": "Reti Opening",
 		"fen": "rnbqkbnr/pppppppp/8/8/8/5N2/PPPPPPPP/RNBQKB1R b KQkq -",
 		"moves": "g1f3\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: Arctic Defense",
+		"name": "Reti Opening: Arctic Defense",
 		"fen": "rnbqkbnr/ppppp1pp/5p2/8/8/5N2/PPPPPPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 f7f6\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: Arctic Defense, Drunken Knight Variation",
+		"name": "Reti Opening: Arctic Defense, Drunken Knight Variation",
 		"fen": "rnbqkb1r/pppppnpp/5p2/8/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 f7f6 e2e4 g8h6 d2d4 h6f7\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: Basman Defense",
+		"name": "Reti Opening: Basman Defense",
 		"fen": "rnbqkbnr/ppppppp1/7p/8/8/5N2/PPPPPPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 h7h6\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: Black Mustang Defense",
+		"name": "Reti Opening: Black Mustang Defense",
 		"fen": "r1bqkbnr/pppppppp/2n5/8/8/5N2/PPPPPPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 b8c6\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: Drunken Cavalry Variation",
+		"name": "Reti Opening: Drunken Cavalry Variation",
 		"fen": "r1bqkb1r/pppppppp/n6n/8/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 b8a6 e2e4 g8h6\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: Dutch Variation",
+		"name": "Reti Opening: Dutch Variation",
 		"fen": "rnbqkbnr/ppppp1pp/8/5p2/8/5N2/PPPPPPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 f7f5\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: Herrstrom Gambit",
+		"name": "Reti Opening: Herrstrom Gambit",
 		"fen": "rnbqkbnr/pppppp1p/8/6p1/8/5N2/PPPPPPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 g7g5\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: Kingside Fianchetto",
+		"name": "Reti Opening: Kingside Fianchetto",
 		"fen": "rnbqkbnr/pppppp1p/6p1/8/8/5N2/PPPPPPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 g7g6\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: Lisitsyn Gambit",
+		"name": "Reti Opening: Lisitsyn Gambit",
 		"fen": "rnbqkbnr/ppppp1pp/8/5p2/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq -",
 		"moves": "g1f3 f7f5 e2e4\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: Lisitsyn Gambit Deferred",
+		"name": "Reti Opening: Lisitsyn Gambit Deferred",
 		"fen": "rnbqkb1r/ppppp1pp/5n2/5p2/4P3/3P1N2/PPP2PPP/RNBQKB1R b KQkq -",
 		"moves": "g1f3 f7f5 d2d3 g8f6 e2e4\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: Pirc Invitation",
+		"name": "Reti Opening: Pirc Invitation",
 		"fen": "rnbqkbnr/ppp1pppp/3p4/8/8/5N2/PPPPPPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 d7d6\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: Polish Defense",
+		"name": "Reti Opening: Polish Defense",
 		"fen": "rnbqkbnr/p1pppppp/8/1p6/8/5N2/PPPPPPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 b7b5\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: Queens Gambit Invitation",
+		"name": "Reti Opening: Queens Gambit Invitation",
 		"fen": "rnbqkbnr/pppp1ppp/4p3/8/8/5N2/PPPPPPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 e7e6\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: Queenside Fianchetto Variation",
+		"name": "Reti Opening: Queenside Fianchetto Variation",
 		"fen": "rnbqkbnr/p1pppppp/1p6/8/8/5N2/PPPPPPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 b7b6\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: Ross Gambit",
+		"name": "Reti Opening: Ross Gambit",
 		"fen": "rnbqkbnr/pppp1ppp/8/4p3/8/5N2/PPPPPPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 e7e5\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: Shabalov Gambit",
+		"name": "Reti Opening: Shabalov Gambit",
 		"fen": "rnbqkbnr/3p1ppp/p3p3/1pp5/2P5/2N2NP1/PP1PPP1P/R1BQKB1R w KQkq -",
 		"moves": "g1f3 e7e6 c2c4 a7a6 b1c3 c7c5 g2g3 b7b5\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: Sicilian Invitation",
+		"name": "Reti Opening: Sicilian Invitation",
 		"fen": "rnbqkbnr/pp1ppppp/8/2p5/8/5N2/PPPPPPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 c7c5\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: Slav Invitation",
+		"name": "Reti Opening: Slav Invitation",
 		"fen": "rnbqkbnr/pp1ppppp/2p5/8/8/5N2/PPPPPPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 c7c6\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: Speelsmet Gambit",
+		"name": "Reti Opening: Speelsmet Gambit",
 		"fen": "rnbqkbnr/pp1ppppp/8/8/3p4/4PN2/PPP2PPP/RNBQKB1R b KQkq -",
 		"moves": "g1f3 c7c5 d2d4 c5d4 e2e3\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: St. George Defense",
+		"name": "Reti Opening: St. George Defense",
 		"fen": "rnbqkbnr/1ppppppp/p7/8/8/5N2/PPPPPPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 a7a6\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: The Walrus",
+		"name": "Reti Opening: The Walrus",
 		"fen": "r1bqkbnr/ppp2ppp/2p5/8/8/8/PPPPPPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 e7e5 f3e5 b8c6 e5c6 d7c6\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: Vos Gambit",
+		"name": "Reti Opening: Vos Gambit",
 		"fen": "rnbqkbnr/ppp2ppp/3p4/4p3/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 d7d6 d2d4 e7e5\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: Wade Defense",
+		"name": "Reti Opening: Wade Defense",
 		"fen": "rn1qkbnr/ppp1pppp/3p4/8/4P1b1/5N2/PPPP1PPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 d7d6 e2e4 c8g4\r"
 	},
 	{
 		"eco": "A04",
-		"name": "Zukertort Opening: Ware Defense",
+		"name": "Reti Opening: Ware Defense",
 		"fen": "rnbqkbnr/1ppppppp/8/p7/8/5N2/PPPPPPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 a7a5\r"
 	},
 	{
 		"eco": "A05",
-		"name": "Kings Indian Attack",
+		"name": "Kings Indian Attack: 2...d5",
 		"fen": "rnbqkb1r/ppp1pppp/5n2/3p4/8/5NP1/PPPPPP1P/RNBQKB1R w KQkq -",
 		"moves": "g1f3 g8f6 g2g3 d7d5\r"
 	},
@@ -1357,109 +1357,109 @@ export const aeco = [
 	},
 	{
 		"eco": "A05",
-		"name": "Zukertort Opening",
+		"name": "Reti Opening: 1...Nf6",
 		"fen": "rnbqkb1r/pppppppp/5n2/8/8/5N2/PPPPPPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 g8f6\r"
 	},
 	{
 		"eco": "A05",
-		"name": "Zukertort Opening",
+		"name": "Reti Opening: 1...Nf6 2. Nc3 Nc6",
 		"fen": "r1bqkb1r/pppppppp/2n2n2/8/8/2N2N2/PPPPPPPP/R1BQKB1R w KQkq -",
 		"moves": "g1f3 g8f6 b1c3 b8c6\r"
 	},
 	{
 		"eco": "A05",
-		"name": "Zukertort Opening: Double Fianchetto Attack",
+		"name": "Reti Opening: Double Fianchetto Attack",
 		"fen": "rnbq1rk1/ppp1ppbp/3p1np1/8/8/1P3NP1/PBPPPPBP/RN1Q1RK1 b - -",
 		"moves": "g1f3 g8f6 g2g3 g7g6 b2b3 f8g7 c1b2 e8g8 f1g2 d7d6 e1g1\r"
 	},
 	{
 		"eco": "A05",
-		"name": "Zukertort Opening: Lemberger Gambit",
+		"name": "Reti Opening: Lemberger Gambit",
 		"fen": "rnbqkb1r/pppppppp/5n2/8/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq -",
 		"moves": "g1f3 g8f6 e2e4\r"
 	},
 	{
 		"eco": "A05",
-		"name": "Zukertort Opening: Myers Polish Attack",
+		"name": "Reti Opening: Myers Polish Attack",
 		"fen": "rnbqkb1r/pppppp1p/5np1/8/PP6/5N2/2PPPPPP/RNBQKB1R b KQkq -",
 		"moves": "g1f3 g8f6 a2a4 g7g6 b2b4\r"
 	},
 	{
 		"eco": "A05",
-		"name": "Zukertort Opening: Nimzo-Larsen Variation",
+		"name": "Reti Opening: Nimzo-Larsen Variation",
 		"fen": "rnbqkb1r/pppppppp/5n2/8/8/1P3N2/P1PPPPPP/RNBQKB1R b KQkq -",
 		"moves": "g1f3 g8f6 b2b3\r"
 	},
 	{
 		"eco": "A05",
-		"name": "Zukertort Opening: Quiet System",
+		"name": "Reti Opening: Quiet System",
 		"fen": "rnbqkb1r/pppppppp/5n2/8/8/4PN2/PPPP1PPP/RNBQKB1R b KQkq -",
 		"moves": "g1f3 g8f6 e2e3\r"
 	},
 	{
 		"eco": "A06",
-		"name": "Nimzo-Larsen Attack: Classical Variation",
+		"name": "Reti Opening, Nimzo-Larsen Attack: Classical Variation",
 		"fen": "rnbqkbnr/ppp1pppp/8/3p4/8/1P3N2/P1PPPPPP/RNBQKB1R b KQkq -",
 		"moves": "g1f3 d7d5 b2b3\r"
 	},
 	{
 		"eco": "A06",
-		"name": "Nimzo-Larsen Attack: Norfolk Gambit",
+		"name": "Reti Opening, Nimzo-Larsen Attack: Norfolk Gambit",
 		"fen": "rnbqkbnr/pp2pppp/8/2pp4/4P3/1P3N2/P1PP1PPP/RNBQKB1R b KQkq -",
 		"moves": "g1f3 d7d5 b2b3 c7c5 e2e4\r"
 	},
 	{
 		"eco": "A06",
-		"name": "Nimzo-Larsen Attack: Norfolk Gambit",
+		"name": "Reti Opening, Nimzo-Larsen Attack: Norfolk Gambit, 4. e4",
 		"fen": "rnbqkb1r/pp2pppp/5n2/2pp4/4P3/1P3N2/PBPP1PPP/RN1QKB1R b KQkq -",
 		"moves": "g1f3 d7d5 b2b3 g8f6 c1b2 c7c5 e2e4\r"
 	},
 	{
 		"eco": "A06",
-		"name": "Zukertort Opening",
+		"name": "Reti Opening: 1...d5",
 		"fen": "rnbqkbnr/ppp1pppp/8/3p4/8/5N2/PPPPPPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 d7d5\r"
 	},
 	{
 		"eco": "A06",
-		"name": "Zukertort Opening: Ampel Variation",
+		"name": "Reti Opening: Ampel Variation",
 		"fen": "rnbqkbnr/ppp1pppp/8/3p4/8/5N2/PPPPPPPP/RNBQKBR1 b Qkq -",
 		"moves": "g1f3 d7d5 h1g1\r"
 	},
 	{
 		"eco": "A06",
-		"name": "Zukertort Opening: Old Indian Attack",
+		"name": "Reti Opening: Old Indian Attack",
 		"fen": "rnbqkbnr/ppp1pppp/8/3p4/8/3P1N2/PPP1PPPP/RNBQKB1R b KQkq -",
 		"moves": "g1f3 d7d5 d2d3\r"
 	},
 	{
 		"eco": "A06",
-		"name": "Zukertort Opening: Pachman Gambit",
+		"name": "Reti Opening: Pachman Gambit",
 		"fen": "rnbqkbnr/pp2pppp/8/2p5/2p5/1P2PN2/P2P1PPP/RNBQKB1R b KQkq -",
 		"moves": "g1f3 d7d5 e2e3 c7c5 c2c4 d5c4 b2b3\r"
 	},
 	{
 		"eco": "A06",
-		"name": "Zukertort Opening: Regina-Nu Gambit",
+		"name": "Reti Opening: Regina-Nu Gambit",
 		"fen": "rnbqkbnr/pp2pppp/8/2p5/2p5/1PN2N2/P2PPPPP/R1BQKB1R b KQkq -",
 		"moves": "g1f3 d7d5 b2b3 c7c5 c2c4 d5c4 b1c3\r"
 	},
 	{
 		"eco": "A06",
-		"name": "Zukertort Opening: Santasieres Folly",
+		"name": "Reti Opening: Santasieres Folly",
 		"fen": "rnbqkbnr/ppp1pppp/8/3p4/1P6/5N2/P1PPPPPP/RNBQKB1R b KQkq -",
 		"moves": "b2b4 d7d5 g1f3\r"
 	},
 	{
 		"eco": "A06",
-		"name": "Zukertort Opening: Tennison Gambit",
+		"name": "Reti Opening: Tennison Gambit",
 		"fen": "rnbqkbnr/ppp1pppp/8/3p4/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq -",
 		"moves": "e2e4 d7d5 g1f3\r"
 	},
 	{
 		"eco": "A06",
-		"name": "Zukertort Opening: The Potato",
+		"name": "Reti Opening: The Potato",
 		"fen": "rnbqkbnr/ppp1pppp/8/3p4/P7/5N2/1PPPPPPP/RNBQKB1R b KQkq -",
 		"moves": "g1f3 d7d5 a2a4\r"
 	},
@@ -1495,7 +1495,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A07",
-		"name": "Kings Indian Attack: Keres Variation",
+		"name": "Kings Indian Attack: Keres Variation: 3. Bg2",
 		"fen": "r2qkbnr/pppnpppp/8/3p4/6b1/5NP1/PPPPPPBP/RNBQK2R w KQkq -",
 		"moves": "g1f3 d7d5 g2g3 c8g4 f1g2 b8d7\r"
 	},
@@ -1529,69 +1529,69 @@ export const aeco = [
 		"fen": "r1bqkbnr/pp2pppp/2n5/2pp4/8/5NP1/PPPPPPBP/RNBQK2R w KQkq -",
 		"moves": "g1f3 d7d5 g2g3 c7c5 f1g2 b8c6\r"
 	},
+	// {
+	// 	"eco": "A08",
+	// 	"name": "Kings Indian Attack: Sicilian Variation",
+	// 	"fen": "r1bq1rk1/pp2bppp/2n1pn2/2pp4/4P3/3P1NP1/PPPN1PBP/R1BQR1K1 b - -",
+	// 	"moves": "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 c7c5 g2g3 b8c6 f1g2 f8e7 e1g1 e8g8 f1e1\r"
+	// },
 	{
 		"eco": "A08",
-		"name": "Kings Indian Attack: Sicilian Variation",
-		"fen": "r1bq1rk1/pp2bppp/2n1pn2/2pp4/4P3/3P1NP1/PPPN1PBP/R1BQR1K1 b - -",
-		"moves": "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 c7c5 g2g3 b8c6 f1g2 f8e7 e1g1 e8g8 f1e1\r"
-	},
-	{
-		"eco": "A08",
-		"name": "Kings Indian Attack: Sicilian Variation",
+		"name": "Kings Indian Attack: Sicilian Variation: 3...Bg2",
 		"fen": "rnbqkbnr/pp2pppp/8/2pp4/8/5NP1/PPPPPPBP/RNBQK2R b KQkq -",
 		"moves": "g1f3 d7d5 g2g3 c7c5 f1g2\r"
 	},
 	{
 		"eco": "A08",
-		"name": "Zukertort Opening: Grünfeld Reversed",
+		"name": "Reti Opening: Grünfeld Reversed",
 		"fen": "r1bqkbnr/pp3ppp/2n1p3/2pp4/3P4/5NP1/PPP1PPBP/RNBQ1RK1 b kq -",
 		"moves": "g1f3 d7d5 g2g3 c7c5 f1g2 b8c6 d2d4 e7e6 e1g1\r"
 	},
 	{
 		"eco": "A09",
-		"name": "Réti Opening",
+		"name": "Reti Opening: Reti Gambit",
 		"fen": "rnbqkbnr/ppp1pppp/8/3p4/2P5/5N2/PP1PPPPP/RNBQKB1R b KQkq -",
 		"moves": "g1f3 d7d5 c2c4\r"
 	},
 	{
 		"eco": "A09",
-		"name": "Réti Opening: Advance Variation",
+		"name": "Reti Opening: Reti Gambit: Advance Variation",
 		"fen": "rnbqkbnr/ppp1pppp/8/8/2Pp4/5N2/PP1PPPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 d7d5 c2c4 d5d4\r"
 	},
 	{
 		"eco": "A09",
-		"name": "Réti Opening: Advance Variation, Michel Gambit",
+		"name": "Reti Opening: Reti Gambit: Advance Variation, Michel Gambit",
 		"fen": "rnbqkbnr/pp2pppp/8/2p5/1PPp4/5N2/P2PPPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 d7d5 c2c4 d5d4 b2b4 c7c5\r"
 	},
 	{
 		"eco": "A09",
-		"name": "Réti Opening: Penguin Variation",
+		"name": "Reti Opening: Reti Gambit: Penguin Variation",
 		"fen": "rnbqkbnr/ppp1pppp/8/8/2Pp4/5N2/PP1PPPPP/RNBQKBR1 b Qkq -",
 		"moves": "g1f3 d7d5 c2c4 d5d4 h1g1\r"
 	},
 	{
 		"eco": "A09",
-		"name": "Réti Opening: Reversed Blumenfeld Gambit",
+		"name": "Reti Opening: Reti Gambit Reversed Blumenfeld Gambit",
 		"fen": "rnbqkbnr/pp2pppp/8/2p5/1PPp4/4PN2/P2P1PPP/RNBQKB1R b KQkq -",
 		"moves": "g1f3 d7d5 c2c4 d5d4 e2e3 c7c5 b2b4\r"
 	},
 	{
 		"eco": "A09",
-		"name": "Réti Opening: Réti Accepted",
+		"name": "Reti Opening: Reti Gambit Accepted",
 		"fen": "rnbqkbnr/ppp1pppp/8/8/2p5/5N2/PP1PPPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 d7d5 c2c4 d5c4\r"
 	},
 	{
 		"eco": "A09",
-		"name": "Réti Opening: Réti Gambit, Keres Variation",
+		"name": "Reti Opening: Reti Gambit, Keres Variation",
 		"fen": "rn1qkbnr/ppp1pppp/4b3/8/2p5/4PN2/PP1P1PPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 d7d5 c2c4 d5c4 e2e3 c8e6\r"
 	},
 	{
 		"eco": "A09",
-		"name": "Réti Opening: Zilbermints Gambit",
+		"name": "Reti Opening: Reti Gambit: Zilbermints Gambit",
 		"fen": "rnbqkbnr/p1p1pppp/8/1p1p4/2P5/5N2/PP1PPPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 d7d5 c2c4 b7b5\r"
 	},
@@ -1733,51 +1733,51 @@ export const aeco = [
 		"fen": "rnbqkbnr/pp1ppppp/2p5/8/2P5/8/PP1PPPPP/RNBQKBNR w KQkq -",
 		"moves": "c2c4 c7c6\r"
 	},
+	// {
+	// 	"eco": "A12",
+	// 	"name": "Réti Opening: Anglo-Slav Variation, Bled Variation",
+	// 	"fen": "rnbqkb1r/pp2pp1p/2p2np1/3p4/2P5/1P3N2/PB1PPPPP/RN1QKB1R w KQkq -",
+	// 	"moves": "g1f3 d7d5 b2b3 g8f6 c1b2 g7g6 c2c4 c7c6\r"
+	// },
 	{
 		"eco": "A12",
-		"name": "Réti Opening: Anglo-Slav Variation, Bled Variation",
-		"fen": "rnbqkb1r/pp2pp1p/2p2np1/3p4/2P5/1P3N2/PB1PPPPP/RN1QKB1R w KQkq -",
-		"moves": "g1f3 d7d5 b2b3 g8f6 c1b2 g7g6 c2c4 c7c6\r"
-	},
-	{
-		"eco": "A12",
-		"name": "Réti Opening: Anglo-Slav Variation, Bogoljubov Variation",
+		"name": "English Opening: Caro-Kann Defensive System: Anglo-Slav Variation, Bogoljubov Variation",
 		"fen": "rnbqkbnr/pp2pppp/2p5/3p4/2P5/1P3N2/P2PPPPP/RNBQKB1R b KQkq -",
 		"moves": "g1f3 d7d5 c2c4 c7c6 b2b3\r"
 	},
+	// {
+	// 	"eco": "A12",
+	// 	"name": "Réti Opening: Anglo-Slav Variation, Bogoljubov Variation",
+	// 	"fen": "rn1qkbnr/pp2pppp/2p5/3p4/2P3b1/1P3N2/P2PPPPP/RNBQKB1R w KQkq -",
+	// 	"moves": "g1f3 d7d5 c2c4 c7c6 b2b3 c8g4\r"
+	// },
 	{
 		"eco": "A12",
-		"name": "Réti Opening: Anglo-Slav Variation, Bogoljubov Variation",
-		"fen": "rn1qkbnr/pp2pppp/2p5/3p4/2P3b1/1P3N2/P2PPPPP/RNBQKB1R w KQkq -",
-		"moves": "g1f3 d7d5 c2c4 c7c6 b2b3 c8g4\r"
-	},
-	{
-		"eco": "A12",
-		"name": "Réti Opening: Anglo-Slav Variation, Bogoljubov Variation",
+		"name": "Réti Opening: Anglo-Slav Variation, Bogoljubov Variation: 3...Nf6",
 		"fen": "rnbqkb1r/pp2pppp/2p2n2/3p4/2P5/1P3N2/PB1PPPPP/RN1QKB1R b KQkq -",
 		"moves": "g1f3 g8f6 c2c4 c7c6 b2b3 d7d5 c1b2\r"
 	},
 	{
 		"eco": "A12",
-		"name": "Réti Opening: Anglo-Slav Variation, Capablanca Variation",
+		"name": "English Opening: Anglo-Slav Variation, Capablanca Variation",
 		"fen": "rn1qkb1r/pp2pppp/2p2n2/3p4/2P3b1/1P3N2/PB1PPPPP/RN1QKB1R w KQkq -",
 		"moves": "c2c4 g8f6 g1f3 c7c6 b2b3 d7d5 c1b2 c8g4\r"
 	},
 	{
 		"eco": "A12",
-		"name": "Réti Opening: Anglo-Slav Variation, London Defensive System",
+		"name": "English Opening: Anglo-Slav Variation, London Defensive System",
 		"fen": "rn1qkb1r/pp2pppp/2p2n2/3p1b2/2P5/1P3NP1/P2PPP1P/RNBQKB1R w KQkq -",
 		"moves": "c2c4 g8f6 g2g3 c7c6 g1f3 d7d5 b2b3 c8f5\r"
 	},
 	{
 		"eco": "A12",
-		"name": "Réti Opening: Anglo-Slav Variation, New York System",
+		"name": "English Opening: Anglo-Slav Variation, New York System",
 		"fen": "rn1qkb1r/pp2pppp/2p2n2/3p1b2/2P5/1P3N2/PB1PPPPP/RN1QKB1R w KQkq -",
 		"moves": "g1f3 g8f6 c2c4 c7c6 b2b3 d7d5 c1b2 c8f5\r"
 	},
 	{
 		"eco": "A12",
-		"name": "Réti Opening: Anglo-Slav Variation, Torre System",
+		"name": "English Opening: Anglo-Slav Variation, Torre System",
 		"fen": "rn1qkb1r/pp2pppp/2p2n2/3p4/2P3b1/1P3NP1/P2PPP1P/RNBQKB1R w KQkq -",
 		"moves": "c2c4 g8f6 g2g3 c7c6 g1f3 d7d5 b2b3 c8g4\r"
 	},
@@ -1789,13 +1789,13 @@ export const aeco = [
 	},
 	{
 		"eco": "A13",
-		"name": "English Opening: Agincourt Defense",
+		"name": "English Opening: Agincourt Defense: 2. Nf3",
 		"fen": "rnbqkbnr/pppp1ppp/4p3/8/2P5/5N2/PP1PPPPP/RNBQKB1R b KQkq -",
 		"moves": "c2c4 e7e6 g1f3\r"
 	},
 	{
 		"eco": "A13",
-		"name": "English Opening: Agincourt Defense",
+		"name": "English Opening: Agincourt Defense: 2. Nf3 d5",
 		"fen": "rnbqkbnr/ppp2ppp/4p3/3p4/2P5/5N2/PP1PPPPP/RNBQKB1R w KQkq -",
 		"moves": "c2c4 e7e6 g1f3 d7d5\r"
 	},
@@ -1813,7 +1813,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A13",
-		"name": "English Opening: Agincourt Defense, Catalan Defense",
+		"name": "English Opening: Agincourt Defense, Catalan Defense: 3...c5",
 		"fen": "rnbqkbnr/pp3ppp/4p3/2pp4/2P5/5NP1/PP1PPP1P/RNBQKB1R w KQkq -",
 		"moves": "g1f3 d7d5 c2c4 e7e6 g2g3 c7c5\r"
 	},
@@ -1885,7 +1885,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A14",
-		"name": "Réti Opening: Anglo-Slav Variation, Bogoljubov Variation, Stonewall Line",
+		"name": "English Opening: Anglo-Slav Variation, Bogoljubov Variation, Stonewall Line",
 		"fen": "rnbq1rk1/pp2bppp/2p1pn2/3p4/2P5/1P3NP1/PB1PPPBP/RN1Q1RK1 b - -",
 		"moves": "g1f3 d7d5 c2c4 e7e6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 b2b3 c7c6 c1b2\r"
 	},
@@ -1925,18 +1925,18 @@ export const aeco = [
 		"fen": "rnbqkb1r/ppp1pppp/3p1n2/8/2P5/5N2/PP1PPPPP/RNBQKB1R w KQkq -",
 		"moves": "g1f3 g8f6 c2c4 d7d6\r"
 	},
-	{
-		"eco": "A15",
-		"name": "English Opening: Anglo-Indian Defense, Queens Indian Formation",
-		"fen": "rnbqkb1r/p1pppppp/1p3n2/8/2P5/5N2/PP1PPPPP/RNBQKB1R w KQkq -",
-		"moves": "g1f3 g8f6 c2c4 b7b6\r"
-	},
-	{
-		"eco": "A15",
-		"name": "English Opening: Anglo-Indian Defense, Queens Indian Formation",
-		"fen": "rn1qkb1r/pbpp1ppp/1p2pn2/8/2P5/5NP1/PP1PPPBP/RNBQK2R w KQkq -",
-		"moves": "g1f3 g8f6 c2c4 e7e6 g2g3 b7b6 f1g2 c8b7\r"
-	},
+	// {
+	// 	"eco": "A15",
+	// 	"name": "English Opening: Anglo-Indian Defense, Queens Indian Formation",
+	// 	"fen": "rnbqkb1r/p1pppppp/1p3n2/8/2P5/5N2/PP1PPPPP/RNBQKB1R w KQkq -",
+	// 	"moves": "g1f3 g8f6 c2c4 b7b6\r"
+	// },
+	// {
+	// 	"eco": "A15",
+	// 	"name": "English Opening: Anglo-Indian Defense, Queens Indian Formation",
+	// 	"fen": "rn1qkb1r/pbpp1ppp/1p2pn2/8/2P5/5NP1/PP1PPPBP/RNBQK2R w KQkq -",
+	// 	"moves": "g1f3 g8f6 c2c4 e7e6 g2g3 b7b6 f1g2 c8b7\r"
+	// },
 	{
 		"eco": "A15",
 		"name": "English Opening: Anglo-Indian Defense, Romanishin Variation",
@@ -1987,19 +1987,19 @@ export const aeco = [
 	},
 	{
 		"eco": "A16",
-		"name": "English Opening: Anglo-Indian Defense, Anglo-Grünfeld Variation",
+		"name": "English Opening: Anglo-Indian Defense, Anglo-Grünfeld Variation: 3. cxd5 Nxd5 4. Nf3",
 		"fen": "rnbqkb1r/ppp1pppp/8/3n4/8/2N2N2/PP1PPPPP/R1BQKB1R b KQkq -",
 		"moves": "c2c4 g8f6 b1c3 d7d5 c4d5 f6d5 g1f3\r"
 	},
 	{
 		"eco": "A16",
-		"name": "English Opening: Anglo-Indian Defense, Anglo-Grünfeld Variation",
+		"name": "English Opening: Anglo-Indian Defense, Anglo-Grünfeld Variation: 3. cxd5 Nxd5 4. g3 g6 5. Bg2 Nb6",
 		"fen": "rnbqkb1r/ppp1pp1p/1n4p1/8/8/2N3P1/PP1PPPBP/R1BQK1NR w KQkq -",
 		"moves": "c2c4 g8f6 b1c3 d7d5 c4d5 f6d5 g2g3 g7g6 f1g2 d5b6\r"
 	},
 	{
 		"eco": "A16",
-		"name": "English Opening: Anglo-Indian Defense, Anglo-Grünfeld Variation",
+		"name": "English Opening: Anglo-Indian Defense, Anglo-Grünfeld Variation, Smyslov Defense",
 		"fen": "rnbqkb1r/ppp1pp1p/6p1/8/8/2n3P1/PP1PPPBP/R1BQK1NR w KQkq -",
 		"moves": "c2c4 g8f6 b1c3 d7d5 c4d5 f6d5 g2g3 g7g6 f1g2 d5c3\r"
 	},
@@ -2047,13 +2047,13 @@ export const aeco = [
 	},
 	{
 		"eco": "A18",
-		"name": "English Opening: Mikenas-Carls Variation",
+		"name": "English Opening: Mikenas-Carls Variation, 3...Nc6",
 		"fen": "r1bqkb1r/pppp1ppp/2n1pn2/8/2P1P3/2N5/PP1P1PPP/R1BQKBNR w KQkq -",
 		"moves": "c2c4 g8f6 b1c3 e7e6 e2e4 b8c6\r"
 	},
 	{
 		"eco": "A18",
-		"name": "English Opening: Mikenas-Carls Variation",
+		"name": "English Opening: Mikenas-Carls Variation, Flohr Variation",
 		"fen": "rnbqkb1r/ppp2ppp/4pn2/3pP3/2P5/2N5/PP1P1PPP/R1BQKBNR b KQkq -",
 		"moves": "c2c4 g8f6 b1c3 e7e6 e2e4 d7d5 e4e5\r"
 	},
@@ -2101,7 +2101,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A21",
-		"name": "English Opening: Kings English Variation",
+		"name": "English Opening: Kings English Variation, 2...d6, 3. Nf3",
 		"fen": "rnbqkbnr/ppp2ppp/3p4/4p3/2P5/2N2N2/PP1PPPPP/R1BQKB1R b KQkq -",
 		"moves": "c2c4 e7e5 b1c3 d7d6 g1f3\r"
 	},
@@ -2191,13 +2191,13 @@ export const aeco = [
 	},
 	{
 		"eco": "A25",
-		"name": "English Opening: Closed, Taimanov Variation",
+		"name": "English Opening: Closed, Taimanov Variation, Hungarian Attack",
 		"fen": "r1bqk2r/pppp1pbp/2n3pn/4p3/2P5/2N3P1/PP1PPPBP/1RBQK1NR w Kkq -",
 		"moves": "c2c4 e7e5 b1c3 b8c6 g2g3 g7g6 a1b1 g8h6 f1g2 f8g7\r"
 	},
 	{
 		"eco": "A25",
-		"name": "English Opening: Closed, Taimanov Variation",
+		"name": "English Opening: Closed, Taimanov Variation, Bremen-Hort Variation",
 		"fen": "r1bqk2r/ppp2pbp/2np2pn/4p3/2P5/2N1P1P1/PP1PNPBP/R1BQK2R w KQkq -",
 		"moves": "c2c4 e7e5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7 e2e3 d7d6 g1e2 g8h6\r"
 	},
@@ -2263,7 +2263,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A28",
-		"name": "English Opening: Kings English Variation, Four Knights Variation",
+		"name": "English Opening: Kings English Variation, Four Knights Variation, 4. d4",
 		"fen": "r1bqk2r/pppp1pp1/5n1p/4n3/2PN3B/2P5/P3PPPP/R2QKB1R w KQkq -",
 		"moves": "c2c4 e7e5 b1c3 g8f6 g1f3 b8c6 d2d4 e5d4 f3d4 f8b4 c1g5 h7h6 g5h4 b4c3 b2c3 c6e5\r"
 	},
@@ -2293,13 +2293,13 @@ export const aeco = [
 	},
 	{
 		"eco": "A28",
-		"name": "English Opening: Kings English Variation, Four Knights Variation, Quiet Line",
+		"name": "English Opening: Kings English Variation, Four Knights Variation, Quiet Line, 4...Bb4 5. Qc2 Bxc3",
 		"fen": "r1bqk2r/pppp1ppp/2n2n2/4p3/2P5/2b1PN2/PPQP1PPP/R1B1KB1R w KQkq -",
 		"moves": "c2c4 e7e5 b1c3 g8f6 g1f3 b8c6 e2e3 f8b4 d1c2 b4c3\r"
 	},
 	{
 		"eco": "A28",
-		"name": "English Opening: Kings English Variation, Four Knights Variation, Quiet Line",
+		"name": "English Opening: Kings English Variation, Four Knights Variation, Quiet Line, 4...Bb4 5. Qc2 O-O",
 		"fen": "r1bqr1k1/pppp1ppp/2n2n2/3NpQ2/1bP5/4PN2/PP1P1PPP/R1B1KB1R b KQ -",
 		"moves": "c2c4 e7e5 b1c3 g8f6 g1f3 b8c6 e2e3 f8b4 d1c2 e8g8 c3d5 f8e8 c2f5\r"
 	},
@@ -2347,7 +2347,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A32",
-		"name": "English Opening: Symmetrical Variation, Anti-Benoni Variation, Spielmann Defense",
+		"name": "English Opening: Symmetrical Variation, Anti-Benoni Variation, Spielmann Defense. 1. d4",
 		"fen": "rnbqkb1r/pp1p1ppp/4pn2/8/2PN4/8/PP2PPPP/RNBQKB1R w KQkq -",
 		"moves": "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e6\r"
 	},
@@ -2359,7 +2359,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A33",
-		"name": "English Opening: Symmetrical Variation, Anti-Benoni Variation, Spielmann Defense",
+		"name": "English Opening: Symmetrical Variation, Anti-Benoni Variation, Spielmann Defense, 1. Nf3",
 		"fen": "r1bqkb1r/pp1p1ppp/2n1pn2/8/2PN4/2N5/PP2PPPP/R1BQKB1R w KQkq -",
 		"moves": "g1f3 g8f6 c2c4 c7c5 b1c3 b8c6 d2d4 c5d4 f3d4 e7e6\r"
 	},
@@ -2413,7 +2413,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A36",
-		"name": "English Opening: Symmetrical Variation, Fianchetto Variation",
+		"name": "English Opening: Symmetrical Variation, Fianchetto Variation, Ultra-Symetrical Line",
 		"fen": "r1bqkbnr/pp1ppppp/2n5/2p5/2P5/2N3P1/PP1PPP1P/R1BQKBNR b KQkq -",
 		"moves": "c2c4 c7c5 b1c3 b8c6 g2g3\r"
 	},
@@ -2425,7 +2425,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A37",
-		"name": "English Opening: Symmetrical Variation, Botvinnik System Reversed",
+		"name": "English Opening: Two Knights: Symmetrical Variation, Botvinnik System Reversed",
 		"fen": "r1bqk1nr/pp1p1pbp/2n3p1/2p1p3/2P5/2N2NP1/PP1PPPBP/R1BQK2R w KQkq -",
 		"moves": "g1f3 c7c5 c2c4 b8c6 b1c3 e7e5 g2g3 g7g6 f1g2 f8g7\r"
 	},
@@ -2509,7 +2509,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A40",
-		"name": "English Defense",
+		"name": "Queens Pawn Game: English Defense",
 		"fen": "rnbqkbnr/p1pp1ppp/1p2p3/8/2PP4/8/PP2PPPP/RNBQKBNR w KQkq -",
 		"moves": "d2d4 e7e6 c2c4 b7b6\r"
 	},
@@ -2617,7 +2617,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A40",
-		"name": "Englund Gambit Complex: Zilbermints Gambit",
+		"name": "Englund Gambit Complex: Zilbermints Gambit, 3...h6",
 		"fen": "r1bqkbnr/pppp1pp1/2n4p/4P3/8/5N2/PPP1PPPP/RNBQKB1R w KQkq -",
 		"moves": "d2d4 e7e5 d4e5 b8c6 g1f3 h7h6\r"
 	},
@@ -2827,19 +2827,19 @@ export const aeco = [
 	},
 	{
 		"eco": "A41",
-		"name": "Modern Defense",
+		"name": "Modern Defense, 2. c4 Bg7 3. Nf3 d6",
 		"fen": "rnbqk1nr/ppp1ppbp/3p2p1/8/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq -",
 		"moves": "d2d4 g7g6 c2c4 f8g7 b1c3 d7d6\r"
 	},
+	// {
+	// 	"eco": "A41",
+	// 	"name": "Old Indian Defense",
+	// 	"fen": "rnbqkbnr/ppp1pppp/3p4/8/2PP4/8/PP2PPPP/RNBQKBNR b KQkq -",
+	// 	"moves": "d2d4 d7d6 c2c4\r"
+	// },
 	{
 		"eco": "A41",
-		"name": "Old Indian Defense",
-		"fen": "rnbqkbnr/ppp1pppp/3p4/8/2PP4/8/PP2PPPP/RNBQKBNR b KQkq -",
-		"moves": "d2d4 d7d6 c2c4\r"
-	},
-	{
-		"eco": "A41",
-		"name": "Queens Pawn Game",
+		"name": "Queens Pawn Game: 1...d6",
 		"fen": "rnbqkbnr/ppp1pppp/3p4/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq -",
 		"moves": "d2d4 d7d6\r"
 	},
@@ -2959,13 +2959,13 @@ export const aeco = [
 	},
 	{
 		"eco": "A43",
-		"name": "Benoni Defense: Old Benoni",
+		"name": "Benoni Defense: Old Benoni, 2. d5",
 		"fen": "rnbqkbnr/pp1ppppp/8/2pP4/8/8/PPP1PPPP/RNBQKBNR b KQkq -",
 		"moves": "d2d4 c7c5 d4d5\r"
 	},
 	{
 		"eco": "A43",
-		"name": "Benoni Defense: Old Benoni",
+		"name": "Benoni Defense: Old Benoni, 2. d5 d6",
 		"fen": "rnbqkbnr/pp2pppp/3p4/2pP4/8/8/PPP1PPPP/RNBQKBNR w KQkq -",
 		"moves": "d2d4 c7c5 d4d5 d7d6\r"
 	},
@@ -2999,12 +2999,12 @@ export const aeco = [
 		"fen": "rnbqkbnr/pp1ppppp/8/2p5/1P1P4/8/P1P1PPPP/RNBQKBNR b KQkq -",
 		"moves": "d2d4 c7c5 b2b4\r"
 	},
-	{
-		"eco": "A43",
-		"name": "Benoni Defense: Zilbermints-Benoni Gambit",
-		"fen": "rnbqkbnr/pp1ppppp/8/8/1P1p4/5N2/P1P1PPPP/RNBQKB1R b KQkq -",
-		"moves": "d2d4 c7c5 g1f3 c5d4 b2b4\r"
-	},
+	// {
+	// 	"eco": "A43",
+	// 	"name": "Benoni Defense: Zilbermints-Benoni Gambit",
+	// 	"fen": "rnbqkbnr/pp1ppppp/8/8/1P1p4/5N2/P1P1PPPP/RNBQKB1R b KQkq -",
+	// 	"moves": "d2d4 c7c5 g1f3 c5d4 b2b4\r"
+	// },
 	{
 		"eco": "A43",
 		"name": "Benoni Defense: Zilbermints-Benoni Gambit, Tamarkin Countergambit",
@@ -3025,7 +3025,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A44",
-		"name": "Benoni Defense: Old Benoni",
+		"name": "Benoni Defense: Old Benoni: 2. d5 e5",
 		"fen": "rnbqkbnr/pp1p1ppp/8/2pPp3/8/8/PPP1PPPP/RNBQKBNR w KQkq e6",
 		"moves": "d2d4 c7c5 d4d5 e7e5\r"
 	},
@@ -3205,7 +3205,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A45",
-		"name": "Trompowsky Attack: Edge Variation, Hergert Gambit",
+		"name": "Trompowsky Attack: Edge Variation, Hergert Gambit: 6. e4",
 		"fen": "rn1qkb1r/ppp1pppp/5n2/3p1b2/3PP2B/2N2P2/PPP3PP/R2QKBNR b KQkq -",
 		"moves": "d2d4 g8f6 c1g5 f6e4 g5h4 d7d5 f2f3 e4f6 b1c3 c8f5 e2e4\r"
 	},
@@ -3277,7 +3277,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A46",
-		"name": "Old Indian Defense: Czech Variation",
+		"name": "Old Indian Defense: Czech Variation, 3...c6",
 		"fen": "rnbqkb1r/pp2pppp/2pp1n2/8/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq -",
 		"moves": "d2d4 g8f6 g1f3 c7c6 c2c4 d7d6\r"
 	},
@@ -3379,7 +3379,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A48",
-		"name": "Torre Attack",
+		"name": "Torre Attack: 3. Bg5",
 		"fen": "rnbqkb1r/pppppp1p/5np1/6B1/3P4/5N2/PPP1PPPP/RN1QKB1R b KQkq -",
 		"moves": "d2d4 g8f6 g1f3 g7g6 c1g5\r"
 	},
@@ -3469,7 +3469,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A52",
-		"name": "Indian Game: Budapest Defense",
+		"name": "Indian Game: Budapest Defense, 3. dxe5 Ng4",
 		"fen": "rnbqkb1r/pppp1ppp/8/4P3/2P3n1/8/PP2PPPP/RNBQKBNR w KQkq -",
 		"moves": "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4\r"
 	},
@@ -3529,13 +3529,13 @@ export const aeco = [
 	},
 	{
 		"eco": "A53",
-		"name": "Old Indian Defense: Janowski Variation, Fianchetto Variation",
+		"name": "Old Indian Defense: Janowski Variation, Fianchetto Variation, 4. Nf3",
 		"fen": "rn1qkb1r/ppp1pppp/3p1n2/5b2/2PP4/2N2N2/PP2PPPP/R1BQKB1R b KQkq -",
 		"moves": "d2d4 g8f6 c2c4 d7d6 b1c3 c8f5 g1f3\r"
 	},
 	{
 		"eco": "A53",
-		"name": "Old Indian Defense: Janowski Variation, Fianchetto Variation",
+		"name": "Old Indian Defense: Janowski Variation, Fianchetto Variation, 4. g3",
 		"fen": "rn1qkb1r/ppp1pppp/3p1n2/5b2/2PP4/2N3P1/PP2PP1P/R1BQKBNR b KQkq -",
 		"moves": "d2d4 g8f6 c2c4 d7d6 b1c3 c8f5 g2g3\r"
 	},
@@ -3739,7 +3739,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A59",
-		"name": "Benko Gambit",
+		"name": "Benko Gambit Accepted: 5...Bxa6 6. Nc3 g6",
 		"fen": "rn1qkb1r/4pp1p/3p1np1/2pP4/4P3/2N3P1/PP3P1P/R1BQ1KNR b kq -",
 		"moves": "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 g7g6 b1c3 c8a6 e2e4 a6f1 e1f1 d7d6 g2g3\r"
 	},
@@ -3757,7 +3757,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A59",
-		"name": "Benko Gambit Accepted: Yugoslav",
+		"name": "Benko Gambit Accepted: Yugoslav: 5...g6",
 		"fen": "rn1qkb1r/4pp1p/3p1np1/2pP4/4P3/2N5/PP2NPPP/R1BQ1K1R b kq -",
 		"moves": "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 g7g6 b1c3 c8a6 e2e4 a6f1 e1f1 d7d6 g1e2\r"
 	},
@@ -3773,12 +3773,12 @@ export const aeco = [
 		"fen": "rnbqk2r/pp1p1ppp/3b1n2/2pP4/8/2N5/PP2PPPP/R1BQKBNR w KQkq -",
 		"moves": "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 f8d6\r"
 	},
-	{
-		"eco": "A61",
-		"name": "Benoni Defense",
-		"fen": "rnbqkb1r/pp3p1p/3p1np1/2pP4/8/2N2N2/PP2PPPP/R1BQKB1R w KQkq -",
-		"moves": "d2d4 g8f6 c2c4 e7e6 g1f3 c7c5 d4d5 e6d5 c4d5 d7d6 b1c3 g7g6\r"
-	},
+	// {
+	// 	"eco": "A61",
+	// 	"name": "Benoni Defense",
+	// 	"fen": "rnbqkb1r/pp3p1p/3p1np1/2pP4/8/2N2N2/PP2PPPP/R1BQKB1R w KQkq -",
+	// 	"moves": "d2d4 g8f6 c2c4 e7e6 g1f3 c7c5 d4d5 e6d5 c4d5 d7d6 b1c3 g7g6\r"
+	// },
 	{
 		"eco": "A61",
 		"name": "Benoni Defense: Fianchetto Variation",
@@ -3799,7 +3799,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A62",
-		"name": "Benoni Defense: Fianchetto Variation",
+		"name": "Benoni Defense: Fianchetto Variation, 8. Bg2",
 		"fen": "rnbq1rk1/pp3pbp/3p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQK2R w KQ -",
 		"moves": "d2d4 g8f6 c2c4 e7e6 g2g3 c7c5 d4d5 e6d5 c4d5 d7d6 b1c3 g7g6 f1g2 f8g7 g1f3 e8g8\r"
 	},
@@ -3913,13 +3913,13 @@ export const aeco = [
 	},
 	{
 		"eco": "A78",
-		"name": "Benoni Defense: Classical Variation, Czerniak Defense",
+		"name": "Benoni Defense: Classical Variation, Czerniak Defense, Tal Line, 10...Na6",
 		"fen": "r1bqr1k1/pp3pbp/n2p1np1/2pP4/4P3/2N5/PP1NBPPP/R1BQ1RK1 w - -",
 		"moves": "d2d4 g8f6 c2c4 e7e6 g1f3 c7c5 d4d5 e6d5 c4d5 d7d6 b1c3 g7g6 e2e4 f8g7 f1e2 e8g8 e1g1 f8e8 f3d2 b8a6\r"
 	},
 	{
 		"eco": "A79",
-		"name": "Benoni Defense: Classical Variation, Czerniak Defense",
+		"name": "Benoni Defense: Classical Variation, Czerniak Defense, Tal Line, 10...Na6, 11. f3",
 		"fen": "r1bqr1k1/pp3pbp/n2p1np1/2pP4/4P3/2N2P2/PP1NB1PP/R1BQ1RK1 b - -",
 		"moves": "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 g7g6 g1f3 f8g7 f1e2 e8g8 e1g1 f8e8 f3d2 b8a6 f2f3\r"
 	},
@@ -4105,7 +4105,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A83",
-		"name": "Dutch Defense: Staunton Gambit",
+		"name": "Dutch Defense: Staunton Gambit Accepted, 3. Nc3 Nf6 4. Bg5",
 		"fen": "rnbqkb1r/ppppp1pp/5n2/6B1/3Pp3/2N5/PPP2PPP/R2QKBNR b KQkq -",
 		"moves": "d2d4 f7f5 e2e4 f5e4 b1c3 g8f6 c1g5\r"
 	},
@@ -4135,7 +4135,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A84",
-		"name": "Dutch Defense",
+		"name": "Dutch Defense: 2. c4",
 		"fen": "rnbqkbnr/ppppp1pp/8/5p2/2PP4/8/PP2PPPP/RNBQKBNR b KQkq -",
 		"moves": "d2d4 f7f5 c2c4\r"
 	},
@@ -4145,12 +4145,12 @@ export const aeco = [
 		"fen": "rnbqkb1r/ppppp2p/6pn/5p2/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq -",
 		"moves": "d2d4 f7f5 c2c4 g7g6 b1c3 g8h6\r"
 	},
-	{
-		"eco": "A84",
-		"name": "Dutch Defense: Classical Variation",
-		"fen": "rnbqkbnr/pppp2pp/4p3/5p2/2PP4/8/PP2PPPP/RNBQKBNR w KQkq -",
-		"moves": "d2d4 e7e6 c2c4 f7f5\r"
-	},
+	// {
+	// 	"eco": "A84",
+	// 	"name": "Dutch Defense: Classical Variation",
+	// 	"fen": "rnbqkbnr/pppp2pp/4p3/5p2/2PP4/8/PP2PPPP/RNBQKBNR w KQkq -",
+	// 	"moves": "d2d4 e7e6 c2c4 f7f5\r"
+	// },
 	{
 		"eco": "A84",
 		"name": "Dutch Defense: Normal Variation",
@@ -4195,7 +4195,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A87",
-		"name": "Dutch Defense: Leningrad Variation",
+		"name": "Dutch Defense: Leningrad Variation, Main Line",
 		"fen": "rnbqk2r/ppppp1bp/5np1/5p2/2PP4/5NP1/PP2PPBP/RNBQK2R b KQkq -",
 		"moves": "d2d4 f7f5 c2c4 g8f6 g2g3 g7g6 f1g2 f8g7 g1f3\r"
 	},
@@ -4231,7 +4231,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A91",
-		"name": "Dutch Defense: Classical Variation",
+		"name": "Dutch Defense: Classical Variation, 4...Be7",
 		"fen": "rnbqk2r/ppppb1pp/4pn2/5p2/2PP4/6P1/PP2PPBP/RNBQK1NR w KQkq -",
 		"moves": "d2d4 e7e6 c2c4 f7f5 g2g3 g8f6 f1g2 f8e7\r"
 	},
@@ -4249,7 +4249,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A92",
-		"name": "Dutch Defense: Classical Variation",
+		"name": "Dutch Defense: Classical Variation, 4...Be7 5. Nf3 O-O",
 		"fen": "rnbq1rk1/ppppb1pp/4pn2/5p2/2PP4/5NP1/PP2PPBP/RNBQK2R w KQ -",
 		"moves": "d2d4 e7e6 c2c4 f7f5 g2g3 g8f6 f1g2 f8e7 g1f3 e8g8\r"
 	},
@@ -4273,13 +4273,13 @@ export const aeco = [
 	},
 	{
 		"eco": "A94",
-		"name": "Dutch Defense: Classical Variation, Stonewall Variation",
+		"name": "Dutch Defense: Classical Variation, Stonewall Variation, 7...c6 8. Ba3",
 		"fen": "rnbq1rk1/pp2b1pp/2p1pn2/3p1p2/2PP4/BP3NP1/P3PPBP/RN1Q1RK1 b - -",
 		"moves": "d2d4 e7e6 c2c4 f7f5 g2g3 g8f6 f1g2 f8e7 g1f3 d7d5 e1g1 e8g8 b2b3 c7c6 c1a3\r"
 	},
 	{
 		"eco": "A95",
-		"name": "Dutch Defense: Classical Variation, Stonewall Variation",
+		"name": "Dutch Defense: Classical Variation, Stonewall Variation, 7. Nc3 c6",
 		"fen": "rnbq1rk1/pp2b1pp/2p1pn2/3p1p2/2PP4/2N2NP1/PP2PPBP/R1BQ1RK1 w - -",
 		"moves": "d2d4 e7e6 c2c4 f7f5 g2g3 g8f6 f1g2 d7d5 g1f3 f8e7 e1g1 e8g8 b1c3 c7c6\r"
 	},
@@ -4291,7 +4291,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A96",
-		"name": "Dutch Defense: Classical Variation",
+		"name": "Dutch Defense: Classical Variation,  4...Be7 5. Nf3 O-O 6. O-O d6",
 		"fen": "rnbq1rk1/ppp1b1pp/3ppn2/5p2/2PP4/5NP1/PP2PPBP/RNBQ1RK1 w - -",
 		"moves": "d2d4 e7e6 c2c4 f7f5 g2g3 g8f6 f1g2 f8e7 g1f3 e8g8 e1g1 d7d6\r"
 	},
