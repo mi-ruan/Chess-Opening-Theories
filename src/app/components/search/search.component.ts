@@ -31,8 +31,9 @@ export class SearchComponent implements OnInit {
       mapForDupMoves[opening.moves] ? mapForDupMoves[opening.moves].push(opening) : mapForDupMoves[opening.moves] = [opening];
     });
 
-    console.warn(Object.values(mapForDupNames as Record<any, any>).filter(value => value.length > 1));
-    console.warn(Object.values(mapForDupMoves as Record<any, any>).filter(value => value.length > 1));
+    // console.warn(Object.values(mapForDupNames as Record<any, any>).filter(value => value.length > 1));
+    // console.warn(Object.values(mapForDupMoves as Record<any, any>).filter(value => value.length > 1));
+    console.warn(mapForDupMoves);
 
     this.searchResult.valueChanges.pipe(filter(value => value !== undefined)).subscribe(value => {
       if (value.length < 1) {
