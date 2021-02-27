@@ -85,7 +85,7 @@ export const beco = [
 	},
 	{
 		"eco": "B00",
-		"name": "Hippopotamus Defense",
+		"name": "Hippopotamus Defense: 2. d4",
 		"fen": "rnbqkb1r/ppppp2p/5ppn/8/2PPP3/8/PP3PPP/RNBQKBNR w KQkq -",
 		"moves": "e2e4 g8h6 d2d4 g7g6 c2c4 f7f6\r"
 	},
@@ -163,13 +163,13 @@ export const beco = [
 	},
 	{
 		"eco": "B00",
-		"name": "Nimzowitsch Defense: Franco-Hiva Gambit",
+		"name": "Nimzowitsch Defense: Franco-Hiva Gambit, 3. Nc3",
 		"fen": "r1bqkb1r/pppp2pp/2n1pn2/5P2/3P4/2N5/PPP2PPP/R1BQKBNR w KQkq -",
 		"moves": "e2e4 b8c6 d2d4 e7e6 b1c3 f7f5 e4f5 g8f6\r"
 	},
 	{
 		"eco": "B00",
-		"name": "Nimzowitsch Defense: Franco-Hiva Gambit",
+		"name": "Nimzowitsch Defense: Franco-Hiva Gambit, 3. Nf3",
 		"fen": "r1bqkb1r/pppp2pp/2n1pn2/5P2/3P4/5N2/PPP2PPP/RNBQKB1R w KQkq -",
 		"moves": "e2e4 b8c6 d2d4 e7e6 g1f3 f7f5 e4f5 g8f6\r"
 	},
@@ -427,13 +427,13 @@ export const beco = [
 	},
 	{
 		"eco": "B00",
-		"name": "Pirc Defense",
+		"name": "Pirc Defense: 2. d4",
 		"fen": "rnbqkbnr/ppp1pppp/3p4/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq -",
 		"moves": "e2e4 d7d6 d2d4\r"
 	},
 	{
 		"eco": "B00",
-		"name": "Pirc Defense",
+		"name": "Pirc Defense: 2. d4 Nf6",
 		"fen": "rnbqkb1r/ppp1pppp/3p1n2/8/3PP3/8/PPP2PPP/RNBQKBNR w KQkq -",
 		"moves": "e2e4 d7d6 d2d4 g8f6\r"
 	},
@@ -523,7 +523,7 @@ export const beco = [
 	},
 	{
 		"eco": "B01",
-		"name": "Scandinavian Defense",
+		"name": "Scandinavian Defense: 2. b3",
 		"fen": "rnbqkbnr/ppp1pppp/8/3p4/4P3/1P6/P1PP1PPP/RNBQKBNR b KQkq -",
 		"moves": "e2e4 d7d5 b2b3\r"
 	},
@@ -661,7 +661,7 @@ export const beco = [
 	},
 	{
 		"eco": "B01",
-		"name": "Scandinavian Defense: Modern Variation",
+		"name": "Scandinavian Defense: Modern Variation, 3. d4",
 		"fen": "rnbqkb1r/ppp1pppp/5n2/3P4/3P4/8/PPP2PPP/RNBQKBNR b KQkq -",
 		"moves": "e2e4 d7d5 e4d5 g8f6 d2d4\r"
 	},
@@ -703,7 +703,7 @@ export const beco = [
 	},
 	{
 		"eco": "B01",
-		"name": "Scandinavian Defense: Richter Variation",
+		"name": "Scandinavian Defense: Richter Variation, 3..g6",
 		"fen": "rnbqkb1r/ppp1pp1p/5np1/3P4/3P4/8/PPP2PPP/RNBQKBNR w KQkq -",
 		"moves": "e2e4 d7d5 e4d5 g8f6 d2d4 g7g6\r"
 	},
@@ -901,19 +901,19 @@ export const beco = [
 	},
 	{
 		"eco": "B03",
-		"name": "Alekhine Defense",
+		"name": "Alekhine Defense: 2. e5 Nd5 3. d4 ",
 		"fen": "rnbqkb1r/pppppppp/8/3nP3/3P4/8/PPP2PPP/RNBQKBNR b KQkq -",
 		"moves": "e2e4 g8f6 e4e5 f6d5 d2d4\r"
 	},
 	{
 		"eco": "B03",
-		"name": "Alekhine Defense",
+		"name": "Alekhine Defense: 2. e5 Nd5 3. d4 d6",
 		"fen": "rnbqkb1r/ppp1pppp/3p4/3nP3/3P4/8/PPP2PPP/RNBQKBNR w KQkq -",
 		"moves": "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6\r"
 	},
 	{
 		"eco": "B03",
-		"name": "Alekhine Defense",
+		"name": "Alekhine Defense: 2. e5 Nd5 3. d4 d6 4. c4",
 		"fen": "rnbqkb1r/ppp1pppp/3p4/3nP3/2PP4/8/PP3PPP/RNBQKBNR b KQkq -",
 		"moves": "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 c2c4\r"
 	},
@@ -1075,7 +1075,7 @@ export const beco = [
 	},
 	{
 		"eco": "B06",
-		"name": "Modern Defense",
+		"name": "Modern Defense: 2. d4 Bg7",
 		"fen": "rnbqk1nr/ppppppbp/6p1/8/3PP3/8/PPP2PPP/RNBQKBNR w KQkq -",
 		"moves": "e2e4 g7g6 d2d4 f8g7\r"
 	},
@@ -1141,13 +1141,13 @@ export const beco = [
 	},
 	{
 		"eco": "B06",
-		"name": "Modern Defense: Mongredien Defense",
+		"name": "Modern Defense: Mongredien Defense: 3. Nc3",
 		"fen": "rnbqk1nr/p1ppppbp/1p4p1/8/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq -",
 		"moves": "e2e4 g7g6 d2d4 f8g7 b1c3 b7b6\r"
 	},
 	{
 		"eco": "B06",
-		"name": "Modern Defense: Mongredien Defense",
+		"name": "Modern Defense: Mongredien Defense: 3. Nf3",
 		"fen": "rnbqk1nr/p1ppppbp/1p4p1/8/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq -",
 		"moves": "e2e4 g7g6 d2d4 f8g7 g1f3 b7b6\r"
 	},
@@ -1393,13 +1393,13 @@ export const beco = [
 	},
 	{
 		"eco": "B07",
-		"name": "Pirc Defense",
+		"name": "Pirc Defense: 2. d4 Nf6 3. Nc3",
 		"fen": "rnbqkb1r/ppp1pppp/3p1n2/8/3PP3/2N5/PPP2PPP/R1BQKBNR b KQkq -",
 		"moves": "e2e4 d7d6 d2d4 g8f6 b1c3\r"
 	},
 	{
 		"eco": "B07",
-		"name": "Pirc Defense",
+		"name": "Pirc Defense: 2. d4 Nf6 3. Nc3 g6",
 		"fen": "rnbqkb1r/ppp1pp1p/3p1np1/8/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq -",
 		"moves": "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6\r"
 	},
@@ -1441,7 +1441,7 @@ export const beco = [
 	},
 	{
 		"eco": "B07",
-		"name": "Pirc Defense: Classical Variation",
+		"name": "Pirc Defense: Classical Variation, 4. Ne2",
 		"fen": "rnbqkb1r/ppp1pp1p/3p1np1/8/3PP3/2N5/PPP1BPPP/R1BQK1NR b KQkq -",
 		"moves": "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f1e2\r"
 	},
@@ -1459,13 +1459,13 @@ export const beco = [
 	},
 	{
 		"eco": "B08",
-		"name": "Pirc Defense: Classical Variation",
+		"name": "Pirc Defense: Classical Variation, 4. Nf3",
 		"fen": "rnbqkb1r/ppp1pp1p/3p1np1/8/3PP3/2N2N2/PPP2PPP/R1BQKB1R b KQkq -",
 		"moves": "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 g1f3\r"
 	},
 	{
 		"eco": "B08",
-		"name": "Pirc Defense: Classical Variation",
+		"name": "Pirc Defense: Classical Variation, 4. Nf3 Bg7",
 		"fen": "rnbqk2r/ppp1ppbp/3p1np1/8/3PP3/2N2N2/PPP2PPP/R1BQKB1R w KQkq -",
 		"moves": "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 g1f3 f8g7\r"
 	},
@@ -1507,7 +1507,7 @@ export const beco = [
 	},
 	{
 		"eco": "B09",
-		"name": "Pirc Defense: Austrian Attack",
+		"name": "Pirc Defense: Austrian Attack, 4..Bg7",
 		"fen": "rnbq1rk1/ppp1ppbp/3p1np1/8/3PPP2/2N2N2/PPP3PP/R1BQKB1R w KQ -",
 		"moves": "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f2f4 f8g7 g1f3 e8g8\r"
 	},
@@ -1555,13 +1555,13 @@ export const beco = [
 	},
 	{
 		"eco": "B10",
-		"name": "Caro-Kann Defense",
+		"name": "Caro-Kann Defense: 2. Nf3",
 		"fen": "rnbqkbnr/pp1ppppp/2p5/8/4P3/2N5/PPPP1PPP/R1BQKBNR b KQkq -",
 		"moves": "e2e4 c7c6 b1c3\r"
 	},
 	{
 		"eco": "B10",
-		"name": "Caro-Kann Defense",
+		"name": "Caro-Kann Defense: 2. Nf3 d5",
 		"fen": "rnbqkbnr/pp2pppp/2p5/3p4/4P3/2N5/PPPP1PPP/R1BQKBNR w KQkq -",
 		"moves": "e2e4 c7c6 b1c3 d7d5\r"
 	},
@@ -1573,7 +1573,7 @@ export const beco = [
 	},
 	{
 		"eco": "B10",
-		"name": "Caro-Kann Defense: Accelerated Panov Attack",
+		"name": "Caro-Kann Defense: Accelerated Panov Attack: 2..d5",
 		"fen": "rnbqkbnr/pp2pppp/2p5/3p4/2P1P3/8/PP1P1PPP/RNBQKBNR w KQkq -",
 		"moves": "e2e4 c7c6 c2c4 d7d5\r"
 	},
@@ -1711,13 +1711,13 @@ export const beco = [
 	},
 	{
 		"eco": "B12",
-		"name": "Caro-Kann Defense",
+		"name": "Caro-Kann Defense: 2. d4",
 		"fen": "rnbqkbnr/pp1ppppp/2p5/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq -",
 		"moves": "e2e4 c7c6 d2d4\r"
 	},
 	{
 		"eco": "B12",
-		"name": "Caro-Kann Defense",
+		"name": "Caro-Kann Defense: 2. d4 d5",
 		"fen": "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/8/PPP2PPP/RNBQKBNR w KQkq -",
 		"moves": "e2e4 c7c6 d2d4 d7d5\r"
 	},
@@ -1771,7 +1771,7 @@ export const beco = [
 	},
 	{
 		"eco": "B12",
-		"name": "Caro-Kann Defense: Advance Variation, Van der Wiel Attack",
+		"name": "Caro-Kann Defense: Advance Variation, Van der Wiel Attack, 4..e6",
 		"fen": "rn1qkbnr/pp3ppp/4p1b1/2ppP3/3P2PP/2N5/PPP1NP2/R1BQKB1R b KQkq -",
 		"moves": "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 b1c3 e7e6 g2g4 f5g6 g1e2 c6c5 h2h4\r"
 	},
@@ -1795,7 +1795,7 @@ export const beco = [
 	},
 	{
 		"eco": "B12",
-		"name": "Caro-Kann Defense: De Bruycker Defense",
+		"name": "Caro-Kann Defense: De Bruycker Defense, 3. Nc3",
 		"fen": "r1bqkbnr/ppnppppp/2p5/8/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq -",
 		"moves": "e2e4 c7c6 d2d4 b8a6 b1c3 a6c7\r"
 	},
@@ -1879,7 +1879,7 @@ export const beco = [
 	},
 	{
 		"eco": "B13",
-		"name": "Caro-Kann Defense: Panov Attack",
+		"name": "Caro-Kann Defense: Panov Attack, 4..Nf6, 5. Nc3",
 		"fen": "rnbqkb1r/pp2pppp/5n2/3p4/2PP4/2N5/PP3PPP/R1BQKBNR b KQkq -",
 		"moves": "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 c2c4 g8f6 b1c3\r"
 	},
@@ -1927,7 +1927,7 @@ export const beco = [
 	},
 	{
 		"eco": "B14",
-		"name": "Caro-Kann Defense: Panov Attack",
+		"name": "Caro-Kann Defense: Panov Attack, 4..Nf6, 5. Nc3 e6",
 		"fen": "rnbqkb1r/pp3ppp/4pn2/3p4/2PP4/2N5/PP3PPP/R1BQKBNR w KQkq -",
 		"moves": "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 c2c4 g8f6 b1c3 e7e6\r"
 	},
@@ -1951,7 +1951,7 @@ export const beco = [
 	},
 	{
 		"eco": "B15",
-		"name": "Caro-Kann Defense",
+		"name": "Caro-Kann Defense: 2. d4 d5 3. Nf3",
 		"fen": "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/2N5/PPP2PPP/R1BQKBNR b KQkq -",
 		"moves": "e2e4 c7c6 d2d4 d7d5 b1c3\r"
 	},
@@ -2089,7 +2089,7 @@ export const beco = [
 	},
 	{
 		"eco": "B19",
-		"name": "Caro-Kann Defense: Classical Variation",
+		"name": "Caro-Kann Defense: Classical Variation, 5. Ng3",
 		"fen": "r2qkbnr/pp1nppp1/2p3bp/8/3P3P/5NN1/PPP2PP1/R1BQKB1R w KQkq -",
 		"moves": "e2e4 c7c6 d2d4 d7d5 b1d2 d5e4 d2e4 c8f5 e4g3 f5g6 h2h4 h7h6 g1f3 b8d7\r"
 	},
@@ -2197,13 +2197,13 @@ export const beco = [
 	},
 	{
 		"eco": "B20",
-		"name": "Sicilian Defense: Myers Attack",
+		"name": "Sicilian Defense: Myers Attack: 2. a4",
 		"fen": "rnbqkbnr/pp1ppppp/8/2p5/P3P3/8/1PPP1PPP/RNBQKBNR b KQkq -",
 		"moves": "e2e4 c7c5 a2a4\r"
 	},
 	{
 		"eco": "B20",
-		"name": "Sicilian Defense: Myers Attack",
+		"name": "Sicilian Defense: Myers Attack: 2. h4",
 		"fen": "rnbqkbnr/pp1ppppp/8/2p5/4P2P/8/PPPP1PP1/RNBQKBNR b KQkq -",
 		"moves": "e2e4 c7c5 h2h4\r"
 	},
@@ -2323,7 +2323,7 @@ export const beco = [
 	},
 	{
 		"eco": "B21",
-		"name": "Sicilian Defense: Smith-Morra Gambit",
+		"name": "Sicilian Defense: Smith-Morra Gambit: 2..cxd4, 3. c3",
 		"fen": "rnbqkbnr/pp1ppppp/8/8/3pP3/2P5/PP3PPP/RNBQKBNR b KQkq -",
 		"moves": "e2e4 c7c5 d2d4 c5d4 c2c3\r"
 	},
@@ -2515,13 +2515,13 @@ export const beco = [
 	},
 	{
 		"eco": "B23",
-		"name": "Sicilian Defense: Closed",
+		"name": "Sicilian Defense: Closed, 2..e6",
 		"fen": "rnbqkbnr/pp1p1ppp/4p3/2p5/4P3/2N5/PPPP1PPP/R1BQKBNR w KQkq -",
 		"moves": "e2e4 c7c5 b1c3 e7e6\r"
 	},
 	{
 		"eco": "B23",
-		"name": "Sicilian Defense: Closed",
+		"name": "Sicilian Defense: Closed, 2..e6, 3. g3",
 		"fen": "rnbqkbnr/pp1p1ppp/4p3/2p5/4P3/2N3P1/PPPP1P1P/R1BQKBNR b KQkq -",
 		"moves": "e2e4 c7c5 b1c3 e7e6 g2g3\r"
 	},
@@ -2563,13 +2563,13 @@ export const beco = [
 	},
 	{
 		"eco": "B24",
-		"name": "Sicilian Defense: Closed",
+		"name": "Sicilian Defense: Closed, 2..Nc6, 3. g3 g6",
 		"fen": "r1bqkbnr/pp1ppp1p/2n3p1/2p5/4P3/2N3P1/PPPP1P1P/R1BQKBNR w KQkq -",
 		"moves": "e2e4 c7c5 b1c3 b8c6 g2g3 g7g6\r"
 	},
 	{
 		"eco": "B24",
-		"name": "Sicilian Defense: Closed",
+		"name": "Sicilian Defense: Closed, 2..Nc6, 3. g3 g6, 4. Bg2 Bg7",
 		"fen": "r1bqk1nr/pp1pppbp/2n3p1/2p5/4P3/2N3P1/PPPP1PBP/R1BQK1NR w KQkq -",
 		"moves": "e2e4 c7c5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7\r"
 	},
@@ -2587,25 +2587,25 @@ export const beco = [
 	},
 	{
 		"eco": "B25",
-		"name": "Sicilian Defense: Closed",
+		"name": "Sicilian Defense: Closed, 2..Nc6, 3. g3 g6, 4. Bg2 Bg7, 5. d3 d6",
 		"fen": "r1bqk1nr/pp2ppbp/2np2p1/2p5/4P3/2NP2P1/PPP2PBP/R1BQK1NR w KQkq -",
 		"moves": "e2e4 c7c5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7 d2d3 d7d6\r"
 	},
 	{
 		"eco": "B25",
-		"name": "Sicilian Defense: Closed",
+		"name": "Sicilian Defense: Closed, 2..Nc6, 3. g3 g6, 4. Bg2 Bg7, 5. d3 d6, 6. f4",
 		"fen": "r1bqk1nr/pp2ppbp/2np2p1/2p5/4PP2/2NP2P1/PPP3BP/R1BQK1NR b KQkq -",
 		"moves": "e2e4 c7c5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7 d2d3 d7d6 f2f4\r"
 	},
 	{
 		"eco": "B25",
-		"name": "Sicilian Defense: Closed, Botvinnik Defense",
+		"name": "Sicilian Defense: Closed, Botvinnik Defense, 6. f4 e5",
 		"fen": "r1bqk1nr/pp3pbp/2np2p1/2p1p3/4PP2/2NP2P1/PPP3BP/R1BQK1NR w KQkq -",
 		"moves": "e2e4 c7c5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7 d2d3 d7d6 f2f4 e7e5\r"
 	},
 	{
 		"eco": "B25",
-		"name": "Sicilian Defense: Closed, Botvinnik Defense",
+		"name": "Sicilian Defense: Closed, Botvinnik Defense, 6. Ne2 e5",
 		"fen": "r1bqk1nr/pp3pbp/2np2p1/2p1p3/4P3/2NP2P1/PPP1NPBP/R1BQK2R w KQkq -",
 		"moves": "e2e4 c7c5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7 d2d3 d7d6 g1e2 e7e5\r"
 	},
@@ -2617,7 +2617,7 @@ export const beco = [
 	},
 	{
 		"eco": "B26",
-		"name": "Sicilian Defense: Closed",
+		"name": "Sicilian Defense: Closed, 2..Nc6, 3. g3 g6, 4. Bg2 Bg7, 5. d3 d6, 6. Be3",
 		"fen": "r1bqk1nr/pp2ppbp/2np2p1/2p5/4P3/2NPB1P1/PPP2PBP/R2QK1NR b KQkq -",
 		"moves": "e2e4 c7c5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7 d2d3 d7d6 c1e3\r"
 	},
@@ -2671,7 +2671,7 @@ export const beco = [
 	},
 	{
 		"eco": "B27",
-		"name": "Sicilian Defense",
+		"name": "Sicilian Defense: 2. Nf3",
 		"fen": "rnbqkbnr/pp1ppppp/8/2p5/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq -",
 		"moves": "e2e4 c7c5 g1f3\r"
 	},
@@ -2971,7 +2971,7 @@ export const beco = [
 	},
 	{
 		"eco": "B32",
-		"name": "Sicilian Defense: Accelerated Dragon",
+		"name": "Sicilian Defense: Accelerated Dragon, 2..Nc6",
 		"fen": "r1bqkbnr/pp1ppp1p/2n3p1/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq -",
 		"moves": "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6\r"
 	},
@@ -3025,13 +3025,13 @@ export const beco = [
 	},
 	{
 		"eco": "B32",
-		"name": "Sicilian Defense: Open",
+		"name": "Sicilian Defense: Open: 3..cxd4",
 		"fen": "r1bqkbnr/pp1ppppp/2n5/8/3pP3/5N2/PPP2PPP/RNBQKB1R w KQkq -",
 		"moves": "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4\r"
 	},
 	{
 		"eco": "B32",
-		"name": "Sicilian Defense: Open",
+		"name": "Sicilian Defense: Open: 3..cxd4 4. Nxd4",
 		"fen": "r1bqkbnr/pp1ppppp/2n5/8/3NP3/8/PPP2PPP/RNBQKB1R b KQkq -",
 		"moves": "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4\r"
 	},
@@ -3079,7 +3079,7 @@ export const beco = [
 	},
 	{
 		"eco": "B33",
-		"name": "Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation",
+		"name": "Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation, 9. Bxf6",
 		"fen": "r1bqkb1r/5p1p/p1np4/1p1Npp2/4P3/N7/PPP2PPP/R2QKB1R w KQkq -",
 		"moves": "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 b7b5 g5f6 g7f6 c3d5 f6f5\r"
 	},
@@ -3103,7 +3103,7 @@ export const beco = [
 	},
 	{
 		"eco": "B33",
-		"name": "Sicilian Defense: Open",
+		"name": "Sicilian Defense: Open: 3..cxd4, 4. Nxd4 Nf6",
 		"fen": "r1bqkb1r/pp1ppppp/2n2n2/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq -",
 		"moves": "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6\r"
 	},
@@ -3157,7 +3157,7 @@ export const beco = [
 	},
 	{
 		"eco": "B38",
-		"name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind",
+		"name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind, 5..Bg7",
 		"fen": "r1bqk1nr/pp1pppbp/2n3p1/8/2PNP3/4B3/PP3PPP/RN1QKB1R b KQkq -",
 		"moves": "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 c2c4 f8g7 c1e3\r"
 	},
@@ -3295,7 +3295,7 @@ export const beco = [
 	},
 	{
 		"eco": "B41",
-		"name": "Sicilian Defense: Kan Variation, Maróczy Bind, Bronstein Variation",
+		"name": "Sicilian Defense: Kan Variation, Maróczy Bind, Bronstein Variation, 8. Bc2",
 		"fen": "r1bqk2r/1p1p1ppp/p1n1pn2/8/1bPNP3/2N5/PPB2PPP/R1BQK2R b KQkq -",
 		"moves": "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 c2c4 g8f6 b1c3 f8b4 f1d3 b8c6 d3c2\r"
 	},
@@ -3397,7 +3397,7 @@ export const beco = [
 	},
 	{
 		"eco": "B46",
-		"name": "Sicilian Defense: Paulsen Variation",
+		"name": "Sicilian Defense: Paulsen Variation, 5. Nc3 a6",
 		"fen": "r1bqkbnr/1p1p1ppp/p1n1p3/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq -",
 		"moves": "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 a7a6\r"
 	},
@@ -3421,43 +3421,43 @@ export const beco = [
 	},
 	{
 		"eco": "B48",
-		"name": "Sicilian Defense: Paulsen Variation, Bastrikov Variation",
+		"name": "Sicilian Defense: Paulsen Variation, Bastrikov Variation, 6. Be3",
 		"fen": "r1b1kbnr/ppqp1ppp/2n1p3/8/3NP3/2N1B3/PPP2PPP/R2QKB1R b KQkq -",
 		"moves": "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 c1e3\r"
 	},
 	{
 		"eco": "B48",
-		"name": "Sicilian Defense: Paulsen Variation, Bastrikov Variation, English Attack",
+		"name": "Sicilian Defense: Paulsen Variation, Bastrikov Variation, English Attack, 7. f3",
 		"fen": "r1b1kbnr/1pqp1ppp/p1n1p3/8/3NP3/2N1BP2/PPP3PP/R2QKB1R b KQkq -",
 		"moves": "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 d8c7 b1c3 e7e6 c1e3 a7a6 f2f3\r"
 	},
 	{
 		"eco": "B48",
-		"name": "Sicilian Defense: Paulsen Variation, Bastrikov Variation, English Attack",
+		"name": "Sicilian Defense: Paulsen Variation, Bastrikov Variation, English Attack, 7. Qd2",
 		"fen": "r1b1kbnr/1pqp1ppp/p1n1p3/8/3NP3/2N1B3/PPPQ1PPP/R3KB1R b KQkq -",
 		"moves": "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 c1e3 a7a6 d1d2\r"
 	},
 	{
 		"eco": "B49",
-		"name": "Sicilian Defense: Paulsen Variation, Bastrikov Variation",
+		"name": "Sicilian Defense: Paulsen Variation, Bastrikov Variation, 6. Be3 a6, 7. Be2",
 		"fen": "r1b1kbnr/1pqp1ppp/p1n1p3/8/3NP3/2N1B3/PPP1BPPP/R2QK2R b KQkq -",
 		"moves": "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 c1e3 a7a6 f1e2\r"
 	},
 	{
 		"eco": "B50",
-		"name": "Sicilian Defense",
+		"name": "Sicilian Defense: 2. Nf3 d6",
 		"fen": "rnbqkbnr/pp2pppp/3p4/2p5/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq -",
 		"moves": "e2e4 c7c5 g1f3 d7d6\r"
 	},
 	{
 		"eco": "B50",
-		"name": "Sicilian Defense",
+		"name": "Sicilian Defense: 2. Nf3 d6 3. d4",
 		"fen": "rnbqkbnr/pp2pppp/3p4/2p5/3PP3/5N2/PPP2PPP/RNBQKB1R b KQkq -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4\r"
 	},
 	{
 		"eco": "B50",
-		"name": "Sicilian Defense",
+		"name": "Sicilian Defense: 2. Nf3 d6 3. d4 cxd4",
 		"fen": "rnbqkbnr/pp2pppp/3p4/8/3pP3/5N2/PPP2PPP/RNBQKB1R w KQkq -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4\r"
 	},
@@ -3559,7 +3559,7 @@ export const beco = [
 	},
 	{
 		"eco": "B54",
-		"name": "Sicilian Defense: Accelerated Dragon",
+		"name": "Sicilian Defense: Accelerated Dragon, 2..d6",
 		"fen": "rnbqkbnr/pp2pp1p/3p2p1/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g7g6\r"
 	},
@@ -3655,7 +3655,7 @@ export const beco = [
 	},
 	{
 		"eco": "B58",
-		"name": "Sicilian Defense: Classical Variation",
+		"name": "Sicilian Defense: Classical Variation, 6. Be2",
 		"fen": "r1bqkb1r/pp2pppp/2np1n2/8/3NP3/2N5/PPP1BPPP/R1BQK2R b KQkq -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1e2\r"
 	},
@@ -3667,7 +3667,7 @@ export const beco = [
 	},
 	{
 		"eco": "B59",
-		"name": "Sicilian Defense: Boleslavsky Variation",
+		"name": "Sicilian Defense: Boleslavsky Variation, 7. Nb3",
 		"fen": "r1bqkb1r/pp3ppp/2np1n2/4p3/4P3/1NN5/PPP1BPPP/R1BQK2R b KQkq -",
 		"moves": "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 d7d6 f1e2 e7e5 d4b3\r"
 	},
@@ -3691,19 +3691,19 @@ export const beco = [
 	},
 	{
 		"eco": "B61",
-		"name": "Sicilian Defense: Richter-Rauzer Variation, Modern Variation",
+		"name": "Sicilian Defense: Richter-Rauzer Variation, Modern Variation, 7. Qd2",
 		"fen": "r2qkb1r/pp1bpppp/2np1n2/6B1/3NP3/2N5/PPPQ1PPP/R3KB1R b KQkq -",
 		"moves": "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 d7d6 c1g5 c8d7 d1d2\r"
 	},
 	{
 		"eco": "B62",
-		"name": "Sicilian Defense: Richter-Rauzer Variation",
+		"name": "Sicilian Defense: Richter-Rauzer Variation, 6..e6",
 		"fen": "r1bqkb1r/pp3ppp/2nppn2/6B1/3NP3/2N5/PPP2PPP/R2QKB1R w KQkq -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6\r"
 	},
 	{
 		"eco": "B62",
-		"name": "Sicilian Defense: Richter-Rauzer Variation",
+		"name": "Sicilian Defense: Richter-Rauzer Variation, 6..e6, 7. Qd3",
 		"fen": "r1bqkb1r/pp3ppp/2nppn2/6B1/3NP3/2NQ4/PPP2PPP/R3KB1R b KQkq -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d3\r"
 	},
@@ -3751,19 +3751,19 @@ export const beco = [
 	},
 	{
 		"eco": "B64",
-		"name": "Sicilian Defense: Richter-Rauzer Variation, Classical Variation",
+		"name": "Sicilian Defense: Richter-Rauzer Variation, Classical Variation,  8. O-O-O O-O, 9. f4 e5",
 		"fen": "r1bq1rk1/pp2bppp/2np1n2/4p1B1/3NPP2/2N5/PPPQ2PP/2KR1B1R w - -",
 		"moves": "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 d7d6 c1g5 e7e6 d1d2 f8e7 e1c1 e8g8 f2f4 e6e5\r"
 	},
 	{
 		"eco": "B64",
-		"name": "Sicilian Defense: Richter-Rauzer Variation, Classical Variation",
+		"name": "Sicilian Defense: Richter-Rauzer Variation, Classical Variation, 8. O-O-O O-O, 9. f4",
 		"fen": "r1bq1rk1/pp2bppp/2nppn2/6B1/3NPP2/2N5/PPPQ2PP/2KR1B1R b - -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 f8e7 e1c1 e8g8 f2f4\r"
 	},
 	{
 		"eco": "B65",
-		"name": "Sicilian Defense: Richter-Rauzer Variation, Classical Variation",
+		"name": "Sicilian Defense: Richter-Rauzer Variation, Classical Variation, 8. O-O-O O-O, 9. f4 Nxd4, 10. Qxd4",
 		"fen": "r1bq1rk1/pp2bppp/3ppn2/6B1/3QPP2/2N5/PPP3PP/2KR1B1R b - -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 f8e7 e1c1 e8g8 f2f4 c6d4 d2d4\r"
 	},
@@ -3787,7 +3787,7 @@ export const beco = [
 	},
 	{
 		"eco": "B68",
-		"name": "Sicilian Defense: Richter-Rauzer Variation, Neo-Modern Variation",
+		"name": "Sicilian Defense: Richter-Rauzer Variation, Neo-Modern Variation, 9. f4",
 		"fen": "r2qk2r/1p1bbppp/p1nppn2/6B1/3NPP2/2N5/PPPQ2PP/2KR1B1R w kq -",
 		"moves": "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 d7d6 c1g5 e7e6 d1d2 a7a6 e1c1 c8d7 f2f4 f8e7\r"
 	},
@@ -3805,7 +3805,7 @@ export const beco = [
 	},
 	{
 		"eco": "B70",
-		"name": "Sicilian Defense: Dragon Variation, Classical Variation",
+		"name": "Sicilian Defense: Dragon Variation, Classical Variation, 6. Be2",
 		"fen": "rnbqkb1r/pp2pp1p/3p1np1/8/3NP3/2N5/PPP1BPPP/R1BQK2R b KQkq -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 f1e2\r"
 	},
@@ -3829,25 +3829,25 @@ export const beco = [
 	},
 	{
 		"eco": "B72",
-		"name": "Sicilian Defense: Dragon Variation",
+		"name": "Sicilian Defense: Dragon Variation, 6. Be3",
 		"fen": "rnbqkb1r/pp2pp1p/3p1np1/8/3NP3/2N1B3/PPP2PPP/R2QKB1R b KQkq -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3\r"
 	},
 	{
 		"eco": "B72",
-		"name": "Sicilian Defense: Dragon Variation, Classical Variation",
+		"name": "Sicilian Defense: Dragon Variation, Classical Variation, 6. Be3 Bg7, 7. Be2",
 		"fen": "rnbqk2r/pp2ppbp/3p1np1/8/3NP3/2N1B3/PPP1BPPP/R2QK2R b KQkq -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f1e2\r"
 	},
 	{
 		"eco": "B72",
-		"name": "Sicilian Defense: Dragon Variation, Classical Variation",
+		"name": "Sicilian Defense: Dragon Variation, Classical Variation, 6. Be3 Bg7, 7. Be2 Nc6",
 		"fen": "r1bqk2r/pp2ppbp/2np1np1/8/3NP3/2N1B3/PPP1BPPP/R2QK2R w KQkq -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f1e2 b8c6\r"
 	},
 	{
 		"eco": "B72",
-		"name": "Sicilian Defense: Dragon Variation, Classical Variation",
+		"name": "Sicilian Defense: Dragon Variation, Classical Variation, 6. Be3 Bg7, 7. Be2 Nc6, 8. Nb3",
 		"fen": "r1bqk2r/pp2ppbp/2np1np1/8/4P3/1NN1B3/PPP1BPPP/R2QK2R b KQkq -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f1e2 b8c6 d4b3\r"
 	},
@@ -3943,7 +3943,7 @@ export const beco = [
 	},
 	{
 		"eco": "B76",
-		"name": "Sicilian Defense: Dragon Variation, Yugoslav Attack",
+		"name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, 8. Qd2 Nc6",
 		"fen": "r1bq1rk1/pp2ppbp/2np1np1/8/3NP3/2N1BP2/PPPQ2PP/R3KB1R w KQ -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6\r"
 	},
@@ -3961,7 +3961,7 @@ export const beco = [
 	},
 	{
 		"eco": "B77",
-		"name": "Sicilian Defense: Dragon Variation, Yugoslav Attack",
+		"name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, 8. Qd2 Nc6, 9. Bc4 Bd7",
 		"fen": "r2q1rk1/pp1bppbp/2np1np1/8/2BNP3/2N1BP2/PPPQ2PP/R3K2R w KQ -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 f1c4 c8d7\r"
 	},
@@ -3991,7 +3991,7 @@ export const beco = [
 	},
 	{
 		"eco": "B78",
-		"name": "Sicilian Defense: Dragon Variation, Yugoslav Attack",
+		"name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, 8. Qd2 Nc6, 9. Bc4 Bd7, 10. O-O-O",
 		"fen": "r2q1rk1/pp1bppbp/2np1np1/8/2BNP3/2N1BP2/PPPQ2PP/2KR3R b - -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 f1c4 c8d7 e1c1\r"
 	},
@@ -4003,7 +4003,7 @@ export const beco = [
 	},
 	{
 		"eco": "B79",
-		"name": "Sicilian Defense: Dragon Variation, Yugoslav Attack",
+		"name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, 8. Qd2 Nc6, 9. Bc4 Bd7, 10. h4",
 		"fen": "r1r3k1/pp1bppbp/2np1np1/q7/3NP2P/1BN1BP2/PPPQ2P1/2KR3R b - -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 f1c4 c8d7 h2h4 d8a5 e1c1 f8c8 c4b3\r"
 	},
@@ -4021,7 +4021,7 @@ export const beco = [
 	},
 	{
 		"eco": "B80",
-		"name": "Sicilian Defense: Scheveningen Variation, English Attack",
+		"name": "Sicilian Defense: Scheveningen Variation, English Attack, 7. Qd2",
 		"fen": "rnbqkb1r/1p3ppp/p2ppn2/8/3NP3/2N1B3/PPPQ1PPP/R3KB1R b KQkq -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1e3 e7e6 d1d2\r"
 	},
@@ -4057,13 +4057,13 @@ export const beco = [
 	},
 	{
 		"eco": "B83",
-		"name": "Sicilian Defense: Scheveningen Variation, Classical Variation",
+		"name": "Sicilian Defense: Scheveningen Variation, Classical Variation, 5..d6, 6. Be2",
 		"fen": "rnbqkb1r/pp3ppp/3ppn2/8/3NP3/2N5/PPP1BPPP/R1BQK2R b KQkq -",
 		"moves": "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 d7d6 f1e2\r"
 	},
 	{
 		"eco": "B83",
-		"name": "Sicilian Defense: Scheveningen Variation, Modern Variation",
+		"name": "Sicilian Defense: Scheveningen Variation, Modern Variation, 4..Nc6",
 		"fen": "r1bqkb1r/pp3ppp/2nppn2/8/3NP3/2N5/PPP1BPPP/R1BQK2R w KQkq -",
 		"moves": "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d7d6 f1e2 g8f6\r"
 	},
@@ -4075,7 +4075,7 @@ export const beco = [
 	},
 	{
 		"eco": "B83",
-		"name": "Sicilian Defense: Scheveningen Variation, Modern Variation",
+		"name": "Sicilian Defense: Scheveningen Variation, Modern Variation, 9..Bd7 ",
 		"fen": "r2q1rk1/pp1bbppp/2nppn2/8/4PP2/1NN1B3/PPP1B1PP/R2Q1RK1 b - -",
 		"moves": "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 d7d6 f1e2 f8e7 e1g1 e8g8 f2f4 b8c6 c1e3 c8d7 d4b3\r"
 	},
@@ -4087,13 +4087,13 @@ export const beco = [
 	},
 	{
 		"eco": "B84",
-		"name": "Sicilian Defense: Scheveningen Variation, Classical Variation",
+		"name": "Sicilian Defense: Scheveningen Variation, Classical Variation, 5..a6, 6. Be2 e6",
 		"fen": "rnbqkb1r/1p3ppp/p2ppn2/8/3NP3/2N5/PPP1BPPP/R1BQK2R w KQkq -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 f1e2 e7e6\r"
 	},
 	{
 		"eco": "B84",
-		"name": "Sicilian Defense: Scheveningen Variation, Classical Variation",
+		"name": "Sicilian Defense: Scheveningen Variation, Classical Variation, 5..a6, 6. Be2 e6, 7. O-O Qc7",
 		"fen": "rnb1kb1r/1pq2ppp/p2ppn2/8/3NP3/2N5/PPP1BPPP/R1BQ1RK1 w kq -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 f1e2 e7e6 e1g1 d8c7\r"
 	},
@@ -4105,19 +4105,19 @@ export const beco = [
 	},
 	{
 		"eco": "B85",
-		"name": "Sicilian Defense: Scheveningen Variation, Classical Variation, Paulsen Variation",
+		"name": "Sicilian Defense: Scheveningen Variation, Classical Variation, Paulsen Variation, 4..Nf6",
 		"fen": "r1b1kb1r/1pq2ppp/p1nppn2/8/3NPP2/2N5/PPP1B1PP/R1BQ1RK1 w kq -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 f2f4 e7e6 f1e2 d8c7 e1g1 b8c6\r"
 	},
 	{
 		"eco": "B85",
-		"name": "Sicilian Defense: Scheveningen Variation, Classical Variation, Paulsen Variation",
+		"name": "Sicilian Defense: Scheveningen Variation, Classical Variation, Paulsen Variation, 8. Be3",
 		"fen": "r1b1kb1r/1pq2ppp/p1nppn2/8/3NPP2/2N1B3/PPP1B1PP/R2Q1RK1 b kq -",
 		"moves": "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 f1e2 a7a6 e1g1 g8f6 c1e3 d7d6 f2f4\r"
 	},
 	{
 		"eco": "B85",
-		"name": "Sicilian Defense: Scheveningen Variation, Classical Variation, Paulsen Variation",
+		"name": "Sicilian Defense: Scheveningen Variation, Classical Variation, Paulsen Variation, 8. Kh1",
 		"fen": "r1b1k2r/1pq1bppp/p1nppn2/8/P2NPP2/2N5/1PP1B1PP/R1BQ1R1K b kq -",
 		"moves": "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 f1e2 a7a6 e1g1 g8f6 g1h1 f8e7 f2f4 d7d6 a2a4\r"
 	},
@@ -4219,7 +4219,7 @@ export const beco = [
 	},
 	{
 		"eco": "B90",
-		"name": "Sicilian Defense: Scheveningen Variation, English Attack",
+		"name": "Sicilian Defense: Scheveningen Variation, English Attack, 7. f3",
 		"fen": "rnbqkb1r/1p3ppp/p2ppn2/8/3NP3/2N1BP2/PPP3PP/R2QKB1R b KQkq -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1e3 e7e6 f2f3\r"
 	},
@@ -4255,7 +4255,7 @@ export const beco = [
 	},
 	{
 		"eco": "B94",
-		"name": "Sicilian Defense: Najdorf Variation",
+		"name": "Sicilian Defense: Najdorf Variation, 6. Bg5",
 		"fen": "rnbqkb1r/1p2pppp/p2p1n2/6B1/3NP3/2N5/PPP2PPP/R2QKB1R b KQkq -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5\r"
 	},
@@ -4267,13 +4267,13 @@ export const beco = [
 	},
 	{
 		"eco": "B95",
-		"name": "Sicilian Defense: Najdorf Variation",
+		"name": "Sicilian Defense: Najdorf Variation, 6. Bg5 e6",
 		"fen": "rnbqkb1r/1p3ppp/p2ppn2/6B1/3NP3/2N5/PPP2PPP/R2QKB1R w KQkq -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6\r"
 	},
 	{
 		"eco": "B96",
-		"name": "Sicilian Defense: Najdorf Variation",
+		"name": "Sicilian Defense: Najdorf Variation, 6. Bg5 e6, 7. f4",
 		"fen": "rnbqkb1r/1p3ppp/p2ppn2/6B1/3NPP2/2N5/PPP3PP/R2QKB1R b KQkq -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4\r"
 	},
@@ -4309,7 +4309,7 @@ export const beco = [
 	},
 	{
 		"eco": "B98",
-		"name": "Sicilian Defense: Najdorf Variation",
+		"name": "Sicilian Defense: Najdorf Variation, 6. Bg5 e6, 7. f4 Be7",
 		"fen": "rnbqk2r/1p2bppp/p2ppn2/6B1/3NPP2/2N5/PPP3PP/R2QKB1R w KQkq -",
 		"moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4 f8e7\r"
 	},
