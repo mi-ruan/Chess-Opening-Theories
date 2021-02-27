@@ -4,7 +4,7 @@ import { Router } from "@angular/router";
 import { filter } from "rxjs/operators";
 import { masterList } from "../../../resources/master-list";
 import * as fuzzysort from "fuzzysort";
-import { beco } from "../../../resources/b-eco";
+import { ceco } from "../../../resources/c-eco";
 
 @Component({
   selector: "app-search",
@@ -26,7 +26,7 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
     const mapForDupNames = {};
     const mapForDupMoves = {}
-    beco.forEach(opening => {
+    ceco.forEach(opening => {
      mapForDupNames[opening.name] ? mapForDupNames[opening.name].push(opening) : mapForDupNames[opening.name] = [opening];
       mapForDupMoves[opening.moves] ? mapForDupMoves[opening.moves].push(opening) : mapForDupMoves[opening.moves] = [opening];
     });

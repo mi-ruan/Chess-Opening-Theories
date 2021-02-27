@@ -7,7 +7,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C00",
-		"name": "French Defense",
+		"name": "French Defense: 2. d4 d5",
 		"fen": "rnbqkbnr/ppp2ppp/4p3/3p4/3PP3/8/PPP2PPP/RNBQKBNR w KQkq -",
 		"moves": "e2e4 e7e6 d2d4 d7d5\r"
 	},
@@ -55,13 +55,13 @@ export const ceco = [
 	},
 	{
 		"eco": "C00",
-		"name": "French Defense: Franco-Hiva Gambit",
+		"name": "French Defense: Franco-Hiva Gambit, 2. d3",
 		"fen": "rnbqkbnr/pppp2pp/4p3/5p2/4P3/3P4/PPP2PPP/RNBQKBNR w KQkq -",
 		"moves": "e2e4 e7e6 d2d3 f7f5\r"
 	},
 	{
 		"eco": "C00",
-		"name": "French Defense: Franco-Hiva Gambit",
+		"name": "French Defense: Franco-Hiva Gambit, 2. Nf3",
 		"fen": "rnbqkbnr/pppp2pp/4p3/5p2/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq -",
 		"moves": "e2e4 e7e6 g1f3 f7f5\r"
 	},
@@ -277,19 +277,19 @@ export const ceco = [
 	},
 	{
 		"eco": "C02",
-		"name": "French Defense: Advance Variation",
+		"name": "French Defense: Advance Variation, 3..c5",
 		"fen": "rnbqkbnr/pp3ppp/4p3/2ppP3/3P4/8/PPP2PPP/RNBQKBNR w KQkq -",
 		"moves": "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5\r"
 	},
 	{
 		"eco": "C02",
-		"name": "French Defense: Advance Variation",
+		"name": "French Defense: Advance Variation, 3..c5, 4. c3",
 		"fen": "rnbqkbnr/pp3ppp/4p3/2ppP3/3P4/2P5/PP3PPP/RNBQKBNR b KQkq -",
 		"moves": "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3\r"
 	},
 	{
 		"eco": "C02",
-		"name": "French Defense: Advance Variation",
+		"name": "French Defense: Advance Variation, 3..c5, 4. c3 Nc6",
 		"fen": "r1bqkbnr/pp3ppp/2n1p3/2ppP3/3P4/2P5/PP3PPP/RNBQKBNR w KQkq -",
 		"moves": "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 b8c6\r"
 	},
@@ -427,7 +427,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C05",
-		"name": "French Defense: Tarrasch Variation, Closed Variation",
+		"name": "French Defense: Tarrasch Variation, Closed Variation, 4. e5",
 		"fen": "r1bqkb1r/pp1n1ppp/2n1p3/2ppP3/3P4/2PB4/PP1N1PPP/R1BQK1NR w KQkq -",
 		"moves": "e2e4 e7e6 d2d4 d7d5 b1d2 g8f6 e4e5 f6d7 f1d3 c7c5 c2c3 b8c6\r"
 	},
@@ -493,7 +493,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C08",
-		"name": "French Defense: Tarrasch Variation, Open System",
+		"name": "French Defense: Tarrasch Variation, Open System, 4. exd5",
 		"fen": "rnbqkbnr/pp3ppp/8/2pp4/3P4/8/PPPN1PPP/R1BQKBNR w KQkq -",
 		"moves": "e2e4 e7e6 d2d4 d7d5 b1d2 c7c5 e4d5 e6d5\r"
 	},
@@ -619,13 +619,13 @@ export const ceco = [
 	},
 	{
 		"eco": "C11",
-		"name": "French Defense: Steinitz Variation",
+		"name": "French Defense: Steinitz Variation, 6. dxc5",
 		"fen": "r1bqkb1r/pp1n1ppp/2n1p3/2PpP3/5P2/2N5/PPP3PP/R1BQKBNR w KQkq -",
 		"moves": "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 e4e5 f6d7 f2f4 c7c5 d4c5 b8c6\r"
 	},
 	{
 		"eco": "C11",
-		"name": "French Defense: Steinitz Variation",
+		"name": "French Defense: Steinitz Variation, 6. Nf3",
 		"fen": "rnbqkb1r/pp1n1ppp/4p3/2ppP3/3P1P2/2N2N2/PPP3PP/R1BQKB1R b KQkq -",
 		"moves": "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 e4e5 f6d7 f2f4 c7c5 g1f3\r"
 	},
@@ -721,7 +721,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C12",
-		"name": "French Defense: MacCutcheon Variation, Lasker Variation",
+		"name": "French Defense: MacCutcheon Variation, Lasker Variation, 7. bxc3",
 		"fen": "rnbqk2r/ppp2p2/4p1pp/3pP3/3Pn1Q1/2P5/P1PB1PPP/R3KBNR w KQkq -",
 		"moves": "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8b4 e4e5 h7h6 g5d2 b4c3 b2c3 f6e4 d1g4 g7g6\r"
 	},
@@ -787,7 +787,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C13",
-		"name": "French Defense: Classical Variation, Richter Attack",
+		"name": "French Defense: Classical Variation, Richter Attack, Bxf6",
 		"fen": "rnbqk2r/ppp1bppp/4p3/3pP3/3P2Q1/2N5/PPP2PPP/R3KBNR b KQkq -",
 		"moves": "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7 g5f6 e7f6 e4e5 f6e7 d1g4\r"
 	},
@@ -805,7 +805,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C14",
-		"name": "French Defense: Classical Variation",
+		"name": "French Defense: Classical Variation, 4. Bg5",
 		"fen": "rnb1k2r/pppnqppp/4p3/3pP3/3P4/2N5/PPP2PPP/R2QKBNR w KQkq -",
 		"moves": "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7 e4e5 f6d7 g5e7 d8e7\r"
 	},
@@ -835,7 +835,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C14",
-		"name": "French Defense: Classical Variation, Steinitz Variation",
+		"name": "French Defense: Classical Variation, Steinitz Variation, 4. Bg5",
 		"fen": "rnb1k2r/pppnqppp/4p3/3pP3/3P1P2/2N5/PPP3PP/R2QKBNR b KQkq -",
 		"moves": "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7 e4e5 f6d7 g5e7 d8e7 f2f4\r"
 	},
@@ -943,19 +943,19 @@ export const ceco = [
 	},
 	{
 		"eco": "C17",
-		"name": "French Defense: Winawer Variation, Advance Variation",
+		"name": "French Defense: Winawer Variation, Advance Variation, 4..c5",
 		"fen": "rnbqk1nr/pp3ppp/4p3/2ppP3/1b1P4/2N5/PPP2PPP/R1BQKBNR w KQkq -",
 		"moves": "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5\r"
 	},
 	{
 		"eco": "C17",
-		"name": "French Defense: Winawer Variation, Advance Variation",
+		"name": "French Defense: Winawer Variation, Advance Variation, 4..c5 5. a3",
 		"fen": "rnbqk1nr/pp3ppp/4p3/2ppP3/1b1P4/P1N5/1PP2PPP/R1BQKBNR b KQkq -",
 		"moves": "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3\r"
 	},
 	{
 		"eco": "C17",
-		"name": "French Defense: Winawer Variation, Advance Variation",
+		"name": "French Defense: Winawer Variation, Advance Variation, 4..c5 5. a3 cxd4, 6. axb4 dxc3, 7. Nf3",
 		"fen": "rnbqk1nr/pp3ppp/4p3/3pP3/1P6/2p2N2/1PP2PPP/R1BQKB1R b KQkq -",
 		"moves": "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 c5d4 a3b4 d4c3 g1f3\r"
 	},
@@ -997,7 +997,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C18",
-		"name": "French Defense: Winawer Variation, Advance Variation",
+		"name": "French Defense: Winawer Variation, Advance Variation, 4..c5, 5. a3 Bxc3+, 6. bxc3",
 		"fen": "rnbqk1nr/pp3ppp/4p3/2ppP3/3P4/P1P5/2P2PPP/R1BQKBNR b KQkq -",
 		"moves": "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3\r"
 	},
@@ -1009,13 +1009,13 @@ export const ceco = [
 	},
 	{
 		"eco": "C19",
-		"name": "French Defense: Winawer Variation, Advance Variation",
+		"name": "French Defense: Winawer Variation, Advance Variation, 4..c5, 5. a3 Bxc3+, 6. bxc3 Ne7",
 		"fen": "rnbqk2r/pp2nppp/4p3/2ppP3/3P4/P1P5/2P2PPP/R1BQKBNR w KQkq -",
 		"moves": "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7\r"
 	},
 	{
 		"eco": "C19",
-		"name": "French Defense: Winawer Variation, Advance Variation",
+		"name": "French Defense: Winawer Variation, Advance Variation, 4..c5, 5. a3 Bxc3+, 6. bxc3 Ne7, 7. a4",
 		"fen": "rnbqk2r/pp2nppp/4p3/2ppP3/P2P4/2P5/2P2PPP/R1BQKBNR b KQkq -",
 		"moves": "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 a3a4\r"
 	},
@@ -1105,7 +1105,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C20",
-		"name": "Kings Pawn Game: Kings Head Opening",
+		"name": "Kings Pawn Game: Kings Head Opening, 2..Nf6",
 		"fen": "rnbqkb1r/pppp1ppp/5n2/4p3/4P3/2N2P2/PPPP2PP/R1BQKBNR b KQkq -",
 		"moves": "e2e4 e7e5 f2f3 g8f6 b1c3\r"
 	},
@@ -1219,7 +1219,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C21",
-		"name": "Center Game",
+		"name": "Center Game: 2..exd4, 3. Qd4",
 		"fen": "rnbqkbnr/pppp1ppp/8/8/3QP3/8/PPP2PPP/RNB1KBNR b KQkq -",
 		"moves": "e2e4 e7e5 d2d4 e5d4 d1d4\r"
 	},
@@ -1249,19 +1249,19 @@ export const ceco = [
 	},
 	{
 		"eco": "C21",
-		"name": "Center Game: Kieseritzky Variation",
+		"name": "Center Game: Kieseritzky Variation, 3..c5",
 		"fen": "rnbqkbnr/pp1p1ppp/8/2p5/3pP3/5N2/PPP2PPP/RNBQKB1R w KQkq -",
 		"moves": "e2e4 e7e5 d2d4 e5d4 g1f3 c7c5\r"
 	},
 	{
 		"eco": "C21",
-		"name": "Center Game: Kieseritzky Variation",
+		"name": "Center Game: Kieseritzky Variation, 3..c5, 4. Bc4",
 		"fen": "rnbqkbnr/pp1p1ppp/8/2p5/2BpP3/5N2/PPP2PPP/RNBQK2R b KQkq -",
 		"moves": "e2e4 e7e5 d2d4 e5d4 g1f3 c7c5 f1c4\r"
 	},
 	{
 		"eco": "C21",
-		"name": "Center Game: Kieseritzky Variation",
+		"name": "Center Game: Kieseritzky Variation, 3..c5, 4. Bc4 b5",
 		"fen": "rnbqkbnr/p2p1ppp/8/1pp5/2BpP3/5N2/PPP2PPP/RNBQK2R w KQkq -",
 		"moves": "e2e4 e7e5 d2d4 e5d4 g1f3 c7c5 f1c4 b7b5\r"
 	},
@@ -1429,7 +1429,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C23",
-		"name": "Bishops Opening: Lewis Countergambit",
+		"name": "Bishops Opening: Lewis Countergambit, 4. Bxd5",
 		"fen": "rnbqk2r/ppp2ppp/5n2/2bBp3/4P3/2P5/PP1P1PPP/RNBQK1NR w KQkq -",
 		"moves": "e2e4 e7e5 f1c4 f8c5 c2c3 d7d5 c4d5 g8f6\r"
 	},
@@ -1639,7 +1639,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C25",
-		"name": "Vienna Game: Paulsen Variation",
+		"name": "Vienna Game: Paulsen Variation, 3..Nf6",
 		"fen": "r1bqk2r/ppp2ppp/2n2n2/2bpp3/4P3/2N3P1/PPPPNPBP/R1BQK2R w KQkq -",
 		"moves": "e2e4 e7e5 b1c3 b8c6 g2g3 g8f6 f1g2 f8c5 g1e2 d7d5\r"
 	},
@@ -1669,7 +1669,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C25",
-		"name": "Vienna Game: Vienna Gambit",
+		"name": "Vienna Game: Vienna Gambit, 2..Nc6",
 		"fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4PP2/2N5/PPPP2PP/R1BQKBNR b KQkq -",
 		"moves": "e2e4 e7e5 b1c3 b8c6 f2f4\r"
 	},
@@ -1825,7 +1825,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C26",
-		"name": "Vienna Game: Vienna Gambit",
+		"name": "Vienna Game: Vienna Gambit, 2..Nf6",
 		"fen": "rnbqkb1r/pppp1ppp/5n2/4p3/4PP2/2N5/PPPP2PP/R1BQKBNR b KQkq -",
 		"moves": "e2e4 e7e5 b1c3 g8f6 f2f4\r"
 	},
@@ -1957,7 +1957,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C30",
-		"name": "Kings Gambit Declined: Classical Variation",
+		"name": "Kings Gambit Declined: Classical Variation, 3..Nf3",
 		"fen": "rnbqk1nr/ppp2ppp/3p4/2b1p3/4PP2/2P2N2/PP1P2PP/RNBQKB1R b KQkq -",
 		"moves": "e2e4 e7e5 f2f4 f8c5 g1f3 d7d6 c2c3\r"
 	},
@@ -2023,7 +2023,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C30",
-		"name": "Kings Gambit Declined: Keenes Defense",
+		"name": "Kings Gambit Declined: Keenes Defense, 3. g3",
 		"fen": "rnb1kbnr/pppp1ppp/8/4p3/4PP1q/6P1/PPPP3P/RNBQKBNR b KQkq -",
 		"moves": "e2e4 e7e5 f2f4 d8h4 g2g3\r"
 	},
@@ -2227,7 +2227,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C32",
-		"name": "Kings Gambit Declined: Falkbeer Countergambit, Charousek Gambit",
+		"name": "Kings Gambit Declined: Falkbeer Countergambit, Charousek Gambit, 4..Nf6, 5. dxe4 Nxe4, 6. Qe2",
 		"fen": "rnbqkb1r/ppp2ppp/8/3P4/4nP2/8/PPP1Q1PP/RNB1KBNR b KQkq -",
 		"moves": "e2e4 e7e5 f2f4 d7d5 e4d5 e5e4 d2d3 g8f6 d3e4 f6e4 d1e2\r"
 	},
@@ -2425,13 +2425,13 @@ export const ceco = [
 	},
 	{
 		"eco": "C33",
-		"name": "Kings Gambit Accepted: Bishops Gambit, McDonnell Attack",
+		"name": "Kings Gambit Accepted: Bishops Gambit, McDonnell Attack, 6. d4",
 		"fen": "rnb1k2r/ppppnpbp/8/6p1/2BPPp1q/2N3P1/PPP4P/R1BQ1KNR b kq -",
 		"moves": "e2e4 e7e5 f2f4 e5f4 f1c4 d8h4 e1f1 g7g5 b1c3 f8g7 d2d4 g8e7 g2g3\r"
 	},
 	{
 		"eco": "C33",
-		"name": "Kings Gambit Accepted: Bishops Gambit, McDonnell Attack",
+		"name": "Kings Gambit Accepted: Bishops Gambit, McDonnell Attack, 6. g3",
 		"fen": "rnb1k1nr/pppp1pbp/8/6p1/2B1Pp1q/2N3P1/PPPP3P/R1BQ1KNR b kq -",
 		"moves": "e2e4 e7e5 f2f4 e5f4 f1c4 d8h4 e1f1 g7g5 b1c3 f8g7 g2g3\r"
 	},
@@ -2503,13 +2503,13 @@ export const ceco = [
 	},
 	{
 		"eco": "C33",
-		"name": "Kings Gambit Accepted: Schurig Gambit",
+		"name": "Kings Gambit Accepted: Schurig Gambit, 3. Bb5",
 		"fen": "rnbqkbnr/pppp1ppp/8/1B6/4Pp2/8/PPPP2PP/RNBQK1NR b KQkq -",
 		"moves": "e2e4 e7e5 f2f4 e5f4 f1b5\r"
 	},
 	{
 		"eco": "C33",
-		"name": "Kings Gambit Accepted: Schurig Gambit",
+		"name": "Kings Gambit Accepted: Schurig Gambit, 3. Bd3",
 		"fen": "rnbqkbnr/pppp1ppp/8/8/4Pp2/3B4/PPPP2PP/RNBQK1NR b KQkq -",
 		"moves": "e2e4 e7e5 f2f4 e5f4 f1d3\r"
 	},
@@ -2581,7 +2581,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C34",
-		"name": "Kings Gambit Accepted: Greco Gambit",
+		"name": "Kings Gambit Accepted: Greco Gambit, 3..d6",
 		"fen": "rnbqk1nr/ppp2pb1/3p3p/6p1/2BPPp1P/5N2/PPP3P1/RNBQK2R w KQkq -",
 		"moves": "e2e4 e7e5 f2f4 e5f4 g1f3 d7d6 f1c4 h7h6 d2d4 g7g5 h2h4 f8g7\r"
 	},
@@ -2629,7 +2629,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C35",
-		"name": "Kings Gambit Accepted: Cunningham Defense, Bertin Gambit",
+		"name": "Kings Gambit Accepted: Cunningham Defense, Bertin Gambit, 5..fxg3",
 		"fen": "rnbqk1nr/pppp1ppp/8/8/2B1P2b/5N2/PPPP3p/RNBQ1R1K b kq -",
 		"moves": "e2e4 e7e5 f2f4 e5f4 g1f3 f8e7 f1c4 e7h4 g2g3 f4g3 e1g1 g3h2 g1h1\r"
 	},
@@ -2659,7 +2659,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C36",
-		"name": "Kings Gambit Accepted: Modern Defense",
+		"name": "Kings Gambit Accepted: Modern Defense, 4. exd5",
 		"fen": "rnbqkbnr/ppp2ppp/8/3P4/5p2/5N2/PPPP2PP/RNBQKB1R b KQkq -",
 		"moves": "e2e4 e7e5 f2f4 e5f4 g1f3 d7d5 e4d5\r"
 	},
@@ -2713,13 +2713,13 @@ export const ceco = [
 	},
 	{
 		"eco": "C37",
-		"name": "Kings Gambit Accepted: Ghulam-Kassim Gambit",
+		"name": "Kings Gambit Accepted: Ghulam-Kassim Gambit, 5..gxf3",
 		"fen": "rnbqkbnr/pppp1p1p/8/8/2BPPp2/5Q2/PPP3PP/RNB1K2R b KQkq -",
 		"moves": "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 f1c4 g5g4 d2d4 g4f3 d1f3\r"
 	},
 	{
 		"eco": "C37",
-		"name": "Kings Gambit Accepted: Kings Knight Gambit",
+		"name": "Kings Gambit Accepted: Kings Knight Gambit, 3..g5, 4. Bc4",
 		"fen": "rnbqkbnr/pppp1p1p/8/6p1/2B1Pp2/5N2/PPPP2PP/RNBQK2R b KQkq -",
 		"moves": "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 f1c4\r"
 	},
@@ -2869,7 +2869,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C38",
-		"name": "Kings Gambit Accepted: Greco Gambit",
+		"name": "Kings Gambit Accepted: Greco Gambit, 3..g5",
 		"fen": "rnbqk1nb/pp3p2/2pp4/4N1p1/2BPPp2/2N5/PPP3P1/R1BQK3 b Qq -",
 		"moves": "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 f1c4 f8g7 h2h4 h7h6 d2d4 d7d6 b1c3 c7c6 h4g5 h6g5 h1h8 g7h8 f3e5\r"
 	},
@@ -2995,7 +2995,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C39",
-		"name": "Kings Gambit Accepted: Kieseritzky Gambit, Brentano Defense",
+		"name": "Kings Gambit Accepted: Kieseritzky Gambit, Brentano Defense, 6. d4",
 		"fen": "rnbqkb1r/ppp2p1p/5n2/3pN3/3PPBpP/8/PPP3P1/RN1QKB1R b KQkq -",
 		"moves": "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 h2h4 g5g4 f3e5 d7d5 d2d4 g8f6 c1f4\r"
 	},
@@ -3085,7 +3085,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C39",
-		"name": "Kings Gambit Accepted: King Knights Gambit",
+		"name": "Kings Gambit Accepted: King Knights Gambit, 4. h4",
 		"fen": "rnbqkbnr/pppp1p1p/8/6p1/4Pp1P/5N2/PPPP2P1/RNBQKB1R b KQkq -",
 		"moves": "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 h2h4\r"
 	},
@@ -3337,19 +3337,19 @@ export const ceco = [
 	},
 	{
 		"eco": "C41",
-		"name": "Philidor Defense",
+		"name": "Philidor Defense, 3. d4",
 		"fen": "rnbqkbnr/ppp2ppp/3p4/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 d7d6 d2d4\r"
 	},
 	{
 		"eco": "C41",
-		"name": "Philidor Defense",
+		"name": "Philidor Defense, 3. Bc4",
 		"fen": "rnbqkbnr/ppp2ppp/3p4/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 d7d6 f1c4\r"
 	},
 	{
 		"eco": "C41",
-		"name": "Philidor Defense",
+		"name": "Philidor Defense, 3. Bc4 Be7",
 		"fen": "rnbqk1nr/ppp1bppp/3p4/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 d7d6 f1c4 f8e7\r"
 	},
@@ -3385,13 +3385,13 @@ export const ceco = [
 	},
 	{
 		"eco": "C41",
-		"name": "Philidor Defense: Exchange Variation",
+		"name": "Philidor Defense: Exchange Variation, 4. Nxd4",
 		"fen": "rnbqkbnr/ppp2ppp/3p4/8/3NP3/8/PPP2PPP/RNBQKB1R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 d7d6 d2d4 e5d4 f3d4\r"
 	},
 	{
 		"eco": "C41",
-		"name": "Philidor Defense: Exchange Variation",
+		"name": "Philidor Defense: Exchange Variation, 4. Nxd4 Nf6",
 		"fen": "rnbqkb1r/ppp2ppp/3p1n2/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 d7d6 d2d4 e5d4 f3d4 g8f6\r"
 	},
@@ -3517,7 +3517,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C41",
-		"name": "Philidor Defense: Nimzowitsch Variation",
+		"name": "Philidor Defense: Nimzowitsch Variation, 4. dxe5",
 		"fen": "rnbqkb1r/ppp2ppp/3p1n2/4P3/4P3/5N2/PPP2PPP/RNBQKB1R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 d7d6 d2d4 g8f6 d4e5\r"
 	},
@@ -3595,229 +3595,229 @@ export const ceco = [
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game",
+		"name": "Russian Game (Petrov Defense)",
 		"fen": "rnbqkb1r/pppp1ppp/5n2/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game",
+		"name": "Russian Game (Petrov Defense): 3. Nxe5",
 		"fen": "rnbqkb1r/pppp1ppp/5n2/4N3/4P3/8/PPPP1PPP/RNBQKB1R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game",
+		"name": "Russian Game (Petrov Defense): 3. Nxe5 d6",
 		"fen": "rnbqkb1r/ppp2ppp/3p1n2/4N3/4P3/8/PPPP1PPP/RNBQKB1R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game",
+		"name": "Russian Game (Petrov Defense): 3. Nxe5 d6, 4. Nf3",
 		"fen": "rnbqkb1r/ppp2ppp/3p1n2/8/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game",
+		"name": "Russian Game (Petrov Defense): 3. Nxe5 d6, 4. Nf3 Nxe4",
 		"fen": "rnbqkb1r/ppp2ppp/3p4/8/4n3/5N2/PPPP1PPP/RNBQKB1R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Classical Attack",
+		"name": "Russian Game (Petrov Defense): Classical Attack",
 		"fen": "rnbqkb1r/ppp2ppp/3p4/8/3Pn3/5N2/PPP2PPP/RNBQKB1R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Classical Attack, Berger Variation",
+		"name": "Russian Game (Petrov Defense): Classical Attack, Berger Variation",
 		"fen": "r2qk2r/ppp1b1pp/2n5/3p1p2/3Pn1b1/2PB1N2/PP1N1PPP/R1BQR1K1 b kq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8e7 e1g1 b8c6 f1e1 c8g4 c2c3 f7f5 b1d2\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Classical Attack, Chigorin Variation",
+		"name": "Russian Game (Petrov Defense): Classical Attack, Chigorin Variation",
 		"fen": "r1bqk2r/ppp1bppp/2n5/3p4/3Pn3/3B1N2/PPP2PPP/RNBQR1K1 b kq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8e7 e1g1 b8c6 f1e1\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Classical Attack, Chigorin Variation, Browne Attack",
+		"name": "Russian Game (Petrov Defense): Classical Attack, Chigorin Variation, Browne Attack",
 		"fen": "r1bqk2r/ppp1bppp/8/3P4/1n1Pn3/3B1N2/PP3PPP/RNBQ1RK1 b kq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 b8c6 e1g1 f8e7 c2c4 c6b4 c4d5\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Classical Attack, Chigorin Variation, Main Line",
+		"name": "Russian Game (Petrov Defense): Classical Attack, Chigorin Variation, Main Line",
 		"fen": "r1bqk2r/ppp1bppp/8/3p4/1nPPn3/5N2/PP2BPPP/RNBQ1RK1 b kq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 b8c6 e1g1 f8e7 c2c4 c6b4 d3e2\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Classical Attack, Closed Variation",
+		"name": "Russian Game (Petrov Defense): Classical Attack, Closed Variation",
 		"fen": "rnbqkb1r/ppp2ppp/3p1n2/8/3P4/5N2/PPP2PPP/RNBQKB1R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 e4f6\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Classical Attack, Jaenisch Variation",
+		"name": "Russian Game (Petrov Defense): Classical Attack, Jaenisch Variation",
 		"fen": "r1bqk2r/ppp1bppp/2n5/3p4/2PPn3/3B1N2/PP3PPP/RNBQ1RK1 b kq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 b8c6 e1g1 f8e7 c2c4\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Classical Attack, Krause Variation",
+		"name": "Russian Game (Petrov Defense): Classical Attack, Krause Variation",
 		"fen": "r2qk2r/ppp1b1pp/2n5/3p1p2/2PPn1b1/3B1N2/PP3PPP/RNBQR1K1 b kq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 b8c6 e1g1 f8e7 f1e1 c8g4 c2c3 f7f5 c3c4\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Classical Attack, Marshall Trap",
+		"name": "Russian Game (Petrov Defense): Classical Attack, Marshall Trap",
 		"fen": "rn1q1rk1/ppp3pp/8/3P1p2/3Pn1b1/3B1N2/PP3PPb/RNBQR1K1 w - -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8d6 e1g1 e8g8 c2c4 c8g4 c4d5 f7f5 f1e1 d6h2\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Classical Attack, Marshall Variation",
+		"name": "Russian Game (Petrov Defense): Classical Attack, Marshall Variation",
 		"fen": "rnbqk2r/ppp2ppp/3b4/3p4/3Pn3/3B1N2/PPP2PPP/RNBQK2R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8d6\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Classical Attack, Marshall Variation, Chinese Gambit",
+		"name": "Russian Game (Petrov Defense): Classical Attack, Marshall Variation, Chinese Gambit",
 		"fen": "rn1q1rk1/pp3ppp/2pb4/3p4/2PPn1b1/3B1N2/PP3PPP/RNBQR1K1 w - -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8d6 e1g1 e8g8 c2c4 c7c6 f1e1 c8g4\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Classical Attack, Maróczy Variation",
+		"name": "Russian Game (Petrov Defense): Classical Attack, Maróczy Variation",
 		"fen": "r2qk2r/ppp3pp/2n5/3p1p2/2PPn1bb/3B1N2/PP3PPP/RNBQR1K1 w kq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8e7 e1g1 b8c6 f1e1 c8g4 c2c3 f7f5 c3c4 e7h4\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Classical Attack, Mason Variation",
+		"name": "Russian Game (Petrov Defense): Classical Attack, Mason Variation",
 		"fen": "rnbq1rk1/ppp1bppp/8/3p4/3Pn3/3B1N2/PPP2PPP/RNBQ1RK1 w - -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8e7 e1g1 e8g8\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Classical Attack, Mason-Showalter Variation",
+		"name": "Russian Game (Petrov Defense): Classical Attack, Mason-Showalter Variation",
 		"fen": "r1bqkb1r/ppp2ppp/2n5/3p4/3Pn3/3B1N2/PPP2PPP/RNBQK2R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 b8c6\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Classical Attack, Staunton Variation",
+		"name": "Russian Game (Petrov Defense): Classical Attack, Staunton Variation",
 		"fen": "rnbq1rk1/pp3ppp/2pb4/3p4/2PPn3/3B1N2/PP3PPP/RNBQ1RK1 w - -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8d6 e1g1 e8g8 c2c4 c7c6\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Classical Attack, Tarrasch Variation",
+		"name": "Russian Game (Petrov Defense): Classical Attack, Tarrasch Variation",
 		"fen": "rn1q1rk1/ppp2ppp/3b4/3p4/2PPn1b1/3B1N2/PP3PPP/RNBQ1RK1 w - -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8d6 e1g1 e8g8 c2c4 c8g4\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Cochrane Gambit",
+		"name": "Russian Game (Petrov Defense): Cochrane Gambit",
 		"fen": "rnbqkb1r/ppp2Npp/3p1n2/8/4P3/8/PPPP1PPP/RNBQKB1R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f7\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Cochrane Gambit, Bishop Check Line",
+		"name": "Russian Game (Petrov Defense): Cochrane Gambit, Bishop Check Line",
 		"fen": "rnbq1b1r/ppp2kpp/3p1n2/8/2B1P3/8/PPPP1PPP/RNBQK2R b KQ -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f7 e8f7 f1c4\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Cochrane Gambit, Center Variation",
+		"name": "Russian Game (Petrov Defense): Cochrane Gambit, Center Variation",
 		"fen": "rnbq1b1r/ppp2kpp/3p1n2/8/3PP3/8/PPP2PPP/RNBQKB1R b KQ -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f7 e8f7 d2d4\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Cozio (Lasker) Attack",
+		"name": "Russian Game (Petrov Defense): Cozio (Lasker) Attack",
 		"fen": "rnbqkb1r/ppp2ppp/3p4/8/4n3/5N2/PPPPQPPP/RNB1KB1R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d1e2\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Damiano Variation",
+		"name": "Russian Game (Petrov Defense): Damiano Variation",
 		"fen": "rnbqkb1r/pppp1ppp/8/4N3/4n3/8/PPPP1PPP/RNBQKB1R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 f6e4\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Damiano Variation, Kholmov Gambit",
+		"name": "Russian Game (Petrov Defense): Damiano Variation, Kholmov Gambit",
 		"fen": "rnb1kb1r/ppppqppp/8/4N3/4n3/8/PPPPQPPP/RNB1KB1R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 f6e4 d1e2 d8e7\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: French Attack",
+		"name": "Russian Game (Petrov Defense): French Attack",
 		"fen": "rnbqkb1r/ppp2ppp/3p4/8/4n3/3P1N2/PPP2PPP/RNBQKB1R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d3\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Karklins-Martinovsky Variation",
+		"name": "Russian Game (Petrov Defense): Karklins-Martinovsky Variation",
 		"fen": "rnbqkb1r/ppp2ppp/3p1n2/8/4P3/3N4/PPPP1PPP/RNBQKB1R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5d3\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Kaufmann Attack",
+		"name": "Russian Game (Petrov Defense): Kaufmann Attack",
 		"fen": "rnbqkb1r/ppp2ppp/3p4/8/2P1n3/5N2/PP1P1PPP/RNBQKB1R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 c2c4\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Millennium Attack",
+		"name": "Russian Game (Petrov Defense): Millennium Attack",
 		"fen": "rnbqkb1r/ppp2ppp/3p4/8/4n3/3B1N2/PPPP1PPP/RNBQK2R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 f1d3\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Moody Gambit",
+		"name": "Russian Game (Petrov Defense): Moody Gambit",
 		"fen": "r1bqkb1r/pppp1ppp/2n2n2/4p3/3PP3/5N2/PPP1QPPP/RNB1KB1R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 d1e2 b8c6 d2d4\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Nimzowitsch Attack",
+		"name": "Russian Game (Petrov Defense): Nimzowitsch Attack",
 		"fen": "rnbqkb1r/ppp2ppp/3p4/8/4n3/2N2N2/PPPP1PPP/R1BQKB1R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 b1c3\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Paulsen Attack",
+		"name": "Russian Game (Petrov Defense): Paulsen Attack",
 		"fen": "rnbqkb1r/ppp2ppp/3p1n2/8/2N1P3/8/PPPP1PPP/RNBQKB1R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5c4\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Stafford Gambit",
+		"name": "Russian Game (Petrov Defense): Stafford Gambit",
 		"fen": "r1bqkb1r/pppp1ppp/2n2n2/4N3/4P3/8/PPPP1PPP/RNBQKB1R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 b8c6\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Stafford Gambit",
+		"name": "Russian Game (Petrov Defense): Stafford Gambit, 4. Nxc6 dxc6",
 		"fen": "r1bqkb1r/ppp2ppp/2p2n2/8/4P3/8/PPPP1PPP/RNBQKB1R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f3e5 b8c6 e5c6 d7c6\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Three Knights Game",
+		"name": "Russian Game (Petrov Defense): Three Knights Game",
 		"fen": "rnbqkb1r/pppp1ppp/5n2/4p3/4P3/2N2N2/PPPP1PPP/R1BQKB1R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 b1c3\r"
 	},
 	{
 		"eco": "C42",
-		"name": "Russian Game: Urusov Gambit",
+		"name": "Russian Game (Petrov Defense): Urusov Gambit",
 		"fen": "rnbqkb1r/pppp1ppp/5n2/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 f1c4\r"
 	},
@@ -3835,67 +3835,67 @@ export const ceco = [
 	},
 	{
 		"eco": "C43",
-		"name": "Russian Game: Modern Attack",
+		"name": "Russian Game (Petrov Defense): Modern Attack",
 		"fen": "rnbqkb1r/pppp1ppp/5n2/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 d2d4\r"
 	},
 	{
 		"eco": "C43",
-		"name": "Russian Game: Modern Attack",
+		"name": "Russian Game (Petrov Defense): Modern Attack, 3..exd4",
 		"fen": "rnbqkb1r/pppp1ppp/5n2/8/3pP3/5N2/PPP2PPP/RNBQKB1R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 d2d4 e5d4\r"
 	},
 	{
 		"eco": "C43",
-		"name": "Russian Game: Modern Attack, Bardeleben Variation",
+		"name": "Russian Game (Petrov Defense): Modern Attack, Bardeleben Variation",
 		"fen": "r1bqkb1r/pppp1ppp/2n5/2n1P3/3N4/8/PPP1QPPP/RNB1KB1R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 d2d4 e5d4 e4e5 f6e4 d1e2 e4c5 f3d4 b8c6\r"
 	},
 	{
 		"eco": "C43",
-		"name": "Russian Game: Modern Attack, Center Attack",
+		"name": "Russian Game (Petrov Defense): Modern Attack, Center Attack",
 		"fen": "rnbqkb1r/pppp1ppp/8/4P3/3Qn3/5N2/PPP2PPP/RNB1KB1R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 d2d4 e5d4 e4e5 f6e4 d1d4\r"
 	},
 	{
 		"eco": "C43",
-		"name": "Russian Game: Modern Attack, Center Variation",
+		"name": "Russian Game (Petrov Defense): Modern Attack, Center Variation",
 		"fen": "rnbqkb1r/pppp1ppp/8/4p3/3Pn3/3B1N2/PPP2PPP/RNBQK2R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 d2d4 f6e4 f1d3\r"
 	},
 	{
 		"eco": "C43",
-		"name": "Russian Game: Modern Attack, Murrey Variation",
+		"name": "Russian Game (Petrov Defense): Modern Attack, Murrey Variation",
 		"fen": "r1bqkb1r/pppp1ppp/2n5/4p3/3Pn3/3B1N2/PPP2PPP/RNBQK2R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 d2d4 f6e4 f1d3 b8c6\r"
 	},
 	{
 		"eco": "C43",
-		"name": "Russian Game: Modern Attack, Steinitz Variation",
+		"name": "Russian Game (Petrov Defense): Modern Attack, Steinitz Variation",
 		"fen": "rnbqkb1r/pppp1ppp/8/4P3/3pn3/5N2/PPP1QPPP/RNB1KB1R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 d2d4 e5d4 e4e5 f6e4 d1e2\r"
 	},
 	{
 		"eco": "C43",
-		"name": "Russian Game: Modern Attack, Symmetrical Variation",
+		"name": "Russian Game (Petrov Defense): Modern Attack, Symmetrical Variation, 3..d5",
 		"fen": "rnbqkb1r/ppp2ppp/5n2/3pp3/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 d2d4 d7d5\r"
 	},
 	{
 		"eco": "C43",
-		"name": "Russian Game: Modern Attack, Symmetrical Variation",
+		"name": "Russian Game (Petrov Defense): Modern Attack, Symmetrical Variation, 3..Nxe4",
 		"fen": "rnbqkb1r/pppp1ppp/8/4p3/3Pn3/5N2/PPP2PPP/RNBQKB1R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 d2d4 f6e4\r"
 	},
 	{
 		"eco": "C43",
-		"name": "Russian Game: Modern Attack, Tal Gambit",
+		"name": "Russian Game (Petrov Defense): Modern Attack, Tal Gambit",
 		"fen": "rnbqkb1r/pppp1ppp/8/1B2P3/3pn3/5N2/PPP2PPP/RNBQK2R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 d2d4 e5d4 e4e5 f6e4 f1b5\r"
 	},
 	{
 		"eco": "C43",
-		"name": "Russian Game: Modern Attack, Trifunovic Variation",
+		"name": "Russian Game (Petrov Defense): Modern Attack, Trifunovic Variation",
 		"fen": "rnbq1rk1/ppp2ppp/8/3pb3/2PPn3/3B4/PP3PPP/RNBQ1RK1 w - -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 d2d4 f6e4 f1d3 d7d5 f3e5 f8d6 e1g1 e8g8 c2c4 d6e5\r"
 	},
@@ -4057,7 +4057,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C44",
-		"name": "Scotch Game",
+		"name": "Scotch Game: 3..exd4",
 		"fen": "r1bqkbnr/pppp1ppp/2n5/8/3pP3/5N2/PPP2PPP/RNBQKB1R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4\r"
 	},
@@ -4069,13 +4069,13 @@ export const ceco = [
 	},
 	{
 		"eco": "C44",
-		"name": "Scotch Game: Cochrane Variation",
+		"name": "Scotch Game: Cochrane Variation, 3..Nxd4",
 		"fen": "r1bqkb1r/pp1p1Npp/2p1nn2/8/2B1P3/8/PPP2PPP/RNBQ1RK1 b kq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 d2d4 c6d4 f3e5 d4e6 f1c4 c7c6 e1g1 g8f6 e5f7\r"
 	},
 	{
 		"eco": "C44",
-		"name": "Scotch Game: Cochrane Variation",
+		"name": "Scotch Game: Cochrane Variation, 3..exd4",
 		"fen": "r1bqk1nr/pppp1ppp/2n5/b3P3/2B5/2P2N2/P4PPP/RNBQK2R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f1c4 f8b4 c2c3 d4c3 b2c3 b4a5 e4e5\r"
 	},
@@ -4207,13 +4207,13 @@ export const ceco = [
 	},
 	{
 		"eco": "C45",
-		"name": "Scotch Game",
+		"name": "Scotch Game: 3..exd4, 4. Nxd4",
 		"fen": "r1bqkbnr/pppp1ppp/2n5/8/3NP3/8/PPP2PPP/RNBQKB1R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4\r"
 	},
 	{
 		"eco": "C45",
-		"name": "Scotch Game",
+		"name": "Scotch Game: 3..exd4, 4. Nxd4 Qh4",
 		"fen": "r1b1k1nr/pppp1ppp/2n5/1N6/1b2P2q/8/PPPB1PPP/RN1QKB1R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 d8h4 d4b5 f8b4 c1d2\r"
 	},
@@ -4381,7 +4381,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C45",
-		"name": "Scotch Game: Steinitz Variation",
+		"name": "Scotch Game: Steinitz Variation, 5. Nc3",
 		"fen": "r1b1kbnr/pppp1ppp/2n5/8/3NP2q/2N5/PPP2PPP/R1BQKB1R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 d8h4 b1c3\r"
 	},
@@ -4423,7 +4423,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C46",
-		"name": "Four Knights Game: Italian Variation",
+		"name": "Four Knights Game: Italian Variation, 3..Nf6",
 		"fen": "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/2N2N2/PPPP1PPP/R1BQK2R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 b1c3\r"
 	},
@@ -4441,7 +4441,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C46",
-		"name": "Three Knights Opening",
+		"name": "Three Knights Opening: 3..Bb4",
 		"fen": "r1bqk1nr/pppp1ppp/2n5/4p3/1b2P3/2N2N2/PPPP1PPP/R1BQKB1R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 b1c3 f8b4\r"
 	},
@@ -4579,7 +4579,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C48",
-		"name": "Four Knights Game: Spanish Variation, Rubinstein Variation",
+		"name": "Four Knights Game: Spanish Variation, Rubinstein Variation, 5. Nxe5",
 		"fen": "r1b1kb1r/ppppqppp/5n2/1B2N3/3nPP2/2N5/PPPP2PP/R1BQK2R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 g8f6 b1c3 b8c6 f1b5 c6d4 f3e5 d8e7 f2f4\r"
 	},
@@ -4609,7 +4609,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C49",
-		"name": "Four Knights Game: Double Spanish",
+		"name": "Four Knights Game: Double Spanish, 5. O-O",
 		"fen": "r1bq1rk1/pppp1ppp/2n2n2/1B2p3/1b2P3/2NP1N2/PPP2PPP/R1BQ1RK1 b - -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 f8b4 e1g1 e8g8 d2d3\r"
 	},
@@ -4633,7 +4633,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C49",
-		"name": "Four Knights Game: Spanish Variation",
+		"name": "Four Knights Game: Spanish Variation, 4..Bb4",
 		"fen": "r1bq1rk1/pppp1ppp/2n2n2/1B2p3/4P3/2bP1N2/PPP2PPP/R1BQ1RK1 w - -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 f8b4 e1g1 e8g8 d2d3 b4c3\r"
 	},
@@ -4645,19 +4645,19 @@ export const ceco = [
 	},
 	{
 		"eco": "C49",
-		"name": "Four Knights Game: Spanish Variation, Symmetrical Variation",
+		"name": "Four Knights Game: Spanish Variation, Symmetrical Variation, 7. Bg5 Bxc3",
 		"fen": "r2n1rk1/ppp1qppp/3p1n2/1B2p1B1/3PP1b1/2P2N2/P1P2PPP/R2QR1K1 w - -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 f8b4 e1g1 e8g8 d2d3 d7d6 c1g5 b4c3 b2c3 d8e7 f1e1 c6d8 d3d4 c8g4\r"
 	},
 	{
 		"eco": "C49",
-		"name": "Four Knights Game: Spanish Variation, Symmetrical Variation",
+		"name": "Four Knights Game: Spanish Variation, Symmetrical Variation, 7. Bg5 Ne7",
 		"fen": "r1bq1rk1/ppp1nppp/3p1n2/1B2p1B1/1b2P3/2NP1N2/PPP2PPP/R2Q1RK1 w - -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 f8b4 e1g1 e8g8 d2d3 d7d6 c1g5 c6e7\r"
 	},
 	{
 		"eco": "C49",
-		"name": "Four Knights Game: Spanish Variation, Symmetrical Variation",
+		"name": "Four Knights Game: Spanish Variation, Symmetrical Variation, 7. Ne2",
 		"fen": "r1bq1rk1/ppp2ppp/2np1n2/1B2p3/1b2P3/3P1N2/PPP1NPPP/R1BQ1RK1 b - -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 f8b4 e1g1 e8g8 d2d3 d7d6 c3e2\r"
 	},
@@ -4693,7 +4693,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C50",
-		"name": "Four Knights Game: Italian Variation",
+		"name": "Four Knights Game: Italian Variation, 3..Bc5",
 		"fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/2N2N2/PPPP1PPP/R1BQK2R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b1c3 g8f6\r"
 	},
@@ -4807,7 +4807,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C51",
-		"name": "Italian Game: Evans Gambit",
+		"name": "Italian Game: Evans Gambit, 5..Bc5",
 		"fen": "r2qk1nr/ppp2ppp/1bnp4/8/2BPP1b1/2N2N2/P4PPP/R1BQ1RK1 w kq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4c5 d2d4 e5d4 e1g1 d7d6 c3d4 c5b6 b1c3 c8g4\r"
 	},
@@ -4825,7 +4825,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C51",
-		"name": "Italian Game: Evans Gambit Declined",
+		"name": "Italian Game: Evans Gambit Declined, 5. a4",
 		"fen": "r1bqk1nr/pppp1ppp/1bn5/4p3/PPB1P3/5N2/2PP1PPP/RNBQK2R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b6 a2a4\r"
 	},
@@ -4975,7 +4975,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C52",
-		"name": "Italian Game: Evans Gambit",
+		"name": "Italian Game: Evans Gambit, 5..Ba5",
 		"fen": "r1bqk1nr/ppp2ppp/2np4/b3p3/2B1P3/2P2N2/P2P1PPP/RNBQ1RK1 w kq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4a5 e1g1 d7d6\r"
 	},
@@ -5119,7 +5119,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C53",
-		"name": "Italian Game: Classical Variation",
+		"name": "Italian Game: Classical Variation, 4..Nf6",
 		"fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/2P2N2/PP1P1PPP/RNBQK2R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 c2c3 g8f6\r"
 	},
@@ -5305,13 +5305,13 @@ export const ceco = [
 	},
 	{
 		"eco": "C55",
-		"name": "Italian Game: Scotch Gambit Declined",
+		"name": "Italian Game: Scotch Gambit Declined, 4..d6",
 		"fen": "r1bqkb1r/ppp2ppp/2np1n2/4p3/2BPP3/5N2/PPP2PPP/RNBQK2R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 d2d4 d7d6\r"
 	},
 	{
 		"eco": "C55",
-		"name": "Italian Game: Scotch Gambit Declined",
+		"name": "Italian Game: Scotch Gambit Declined, 4..Bd6",
 		"fen": "r1bqk2r/pppp1ppp/2nb1n2/4p3/2BPP3/5N2/PPP2PPP/RNBQK2R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 d2d4 f8d6\r"
 	},
@@ -5359,7 +5359,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C55",
-		"name": "Italian Game: Two Knights Defense",
+		"name": "Italian Game: Two Knights Defense, 4. d4",
 		"fen": "r1bqkb1r/pppp1ppp/2n5/4p3/2BPn3/5N2/PPP2PPP/RNBQK2R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 d2d4 f6e4\r"
 	},
@@ -5557,7 +5557,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C58",
-		"name": "Italian Game: Two Knights Defense",
+		"name": "Italian Game: Two Knights Defense, 4. Ng5",
 		"fen": "r1bqkb1r/p4ppp/2p2n2/n3p1N1/8/8/PPPPBPPP/RNBQK2R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6 b5e2\r"
 	},
@@ -5911,7 +5911,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C65",
-		"name": "Ruy Lopez: Berlin Defense",
+		"name": "Ruy Lopez: Berlin Defense, 4. O-O",
 		"fen": "r1bqkb1r/pppp1ppp/2n2n2/1B2p3/4P3/5N2/PPPP1PPP/RNBQ1RK1 b kq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1\r"
 	},
@@ -6055,7 +6055,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C67",
-		"name": "Ruy Lopez: Berlin Defense, Rio de Janeiro Variation",
+		"name": "Ruy Lopez: Berlin Defense, Rio de Janeiro Variation, 6. Qe2",
 		"fen": "r1bq1rk1/p1ppbppp/8/2p1P3/3B4/2N5/PPP1QPPP/R3R1K1 w - -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 f8e7 d1e2 e4d6 b5c6 b7c6 d4e5 d6b7 b1c3 e8g8 f1e1 b7c5 f3d4 c5e6 c1e3 e6d4 e3d4 c6c5\r"
 	},
@@ -6259,19 +6259,19 @@ export const ceco = [
 	},
 	{
 		"eco": "C71",
-		"name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense",
+		"name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense, 5. Nc3",
 		"fen": "r1bqkbnr/1pp2ppp/p1np4/4p3/B3P3/2N2N2/PPPP1PPP/R1BQK2R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 d7d6 b1c3\r"
 	},
 	{
 		"eco": "C71",
-		"name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense",
+		"name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense, 5. c4",
 		"fen": "r1bqkbnr/1pp2ppp/p1np4/4p3/B1P1P3/5N2/PP1P1PPP/RNBQK2R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 d7d6 c2c4\r"
 	},
 	{
 		"eco": "C71",
-		"name": "Ruy Lopez: Noahs Ark Trap",
+		"name": "Ruy Lopez: Noahs Ark Trap, 4..b5",
 		"fen": "r1bqkbnr/5ppp/p2p4/1pp5/3QP3/1B6/PPP2PPP/RNB1K2R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 b7b5 a4b3 d7d6 d2d4 c6d4 f3d4 e5d4 d1d4 c7c5\r"
 	},
@@ -6283,31 +6283,31 @@ export const ceco = [
 	},
 	{
 		"eco": "C72",
-		"name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense",
+		"name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense, 5. O-O",
 		"fen": "r1bqkbnr/1pp2ppp/p1np4/4p3/B3P3/5N2/PPPP1PPP/RNBQ1RK1 b kq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 d7d6 e1g1\r"
 	},
 	{
 		"eco": "C73",
-		"name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense",
+		"name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense, 5. Bxc6 bxc6, 6. d4",
 		"fen": "r1bqkbnr/2p2ppp/p1pp4/4p3/3PP3/5N2/PPP2PPP/RNBQK2R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 d7d6 a4c6 b7c6 d2d4\r"
 	},
 	{
 		"eco": "C73",
-		"name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense",
+		"name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense, 5. Bxc6 bxc6, 6. d4 f6",
 		"fen": "r1bqkbnr/2p3pp/p1pp1p2/4p3/3PP3/5N2/PPP2PPP/RNBQK2R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 d7d6 a4c6 b7c6 d2d4 f7f6\r"
 	},
 	{
 		"eco": "C74",
-		"name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense",
+		"name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense, 5. c3",
 		"fen": "r1bqkbnr/1pp2ppp/p1np4/4p3/B3P3/2P2N2/PP1P1PPP/RNBQK2R b KQkq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 d7d6 c2c3\r"
 	},
 	{
 		"eco": "C74",
-		"name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense",
+		"name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense, 5. c3 f5",
 		"fen": "r2qkbnr/1pp3pp/p1np4/4pb2/B7/2P2N2/PP1P1PPP/RNBQ1RK1 b kq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 d7d6 c2c3 f7f5 e4f5 c8f5 e1g1\r"
 	},
@@ -6319,13 +6319,13 @@ export const ceco = [
 	},
 	{
 		"eco": "C75",
-		"name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense",
+		"name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense, 5. c3 Bd7",
 		"fen": "r2qkbnr/1ppb1ppp/p1np4/4p3/B3P3/2P2N2/PP1P1PPP/RNBQK2R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 d7d6 c2c3 c8d7\r"
 	},
 	{
 		"eco": "C75",
-		"name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense",
+		"name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense 5. c3 Bd7, 6. d4 Nge7",
 		"fen": "r2qkb1r/1ppbnppp/p1np4/4p3/B2PP3/2P2N2/PP3PPP/RNBQK2R w KQkq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 d7d6 c2c3 c8d7 d2d4 g8e7\r"
 	},
@@ -6397,13 +6397,13 @@ export const ceco = [
 	},
 	{
 		"eco": "C78",
-		"name": "Ruy Lopez: Morphy Defense",
+		"name": "Ruy Lopez: Morphy Defense, 4. Ba4 Nf6, 5. O-O",
 		"fen": "r1bqkb1r/1ppp1ppp/p1n2n2/4p3/B3P3/5N2/PPPP1PPP/RNBQ1RK1 b kq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1\r"
 	},
 	{
 		"eco": "C78",
-		"name": "Ruy Lopez: Morphy Defense",
+		"name": "Ruy Lopez: Morphy Defense, 4. Ba4 Nf6, 5. O-O b5",
 		"fen": "r1bqkb1r/2p2ppp/p1np1n2/1p2p3/4P3/1B3N2/PPPP1PPP/RNBQ1RK1 w kq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 b7b5 a4b3 d7d6\r"
 	},
@@ -6439,7 +6439,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C79",
-		"name": "Ruy Lopez: Morphy Defense, Steinitz Deferred",
+		"name": "Ruy Lopez: Morphy Defense, Steinitz Deferred, 6. Bxc6+",
 		"fen": "r1bqkb1r/2p2ppp/p1pp4/4p3/3Pn3/5N2/PPP2PPP/RNBQ1RK1 w kq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 d7d6 a4c6 b7c6 d2d4 f6e4\r"
 	},
@@ -6469,19 +6469,19 @@ export const ceco = [
 	},
 	{
 		"eco": "C80",
-		"name": "Ruy Lopez: Open",
+		"name": "Ruy Lopez: Open: 6. d4",
 		"fen": "r1bqkb1r/1ppp1ppp/p1n5/4p3/B2Pn3/5N2/PPP2PPP/RNBQ1RK1 b kq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4\r"
 	},
 	{
 		"eco": "C80",
-		"name": "Ruy Lopez: Open",
+		"name": "Ruy Lopez: Open: 6. d4 b5, 7. Bb3",
 		"fen": "r1bqkb1r/2pp1ppp/p1n5/1p2p3/3Pn3/1B3N2/PPP2PPP/RNBQ1RK1 b kq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3\r"
 	},
 	{
 		"eco": "C80",
-		"name": "Ruy Lopez: Open",
+		"name": "Ruy Lopez: Open: 6. d4 b5, 7. Bb3 d5, 8. dxe5",
 		"fen": "r1bqkb1r/2p2ppp/p1n5/1p1pP3/4n3/1B3N2/PPP2PPP/RNBQ1RK1 b kq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5\r"
 	},
@@ -6571,7 +6571,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C81",
-		"name": "Ruy Lopez: Open, Howell Attack",
+		"name": "Ruy Lopez: Open, Howell Attack, 9..Be7",
 		"fen": "r2qk2r/2p1bppp/p1n1b3/1p1pP3/2P1n3/1B3N2/PP2QPPP/RNB2RK1 b kq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 d1e2 f8e7 c2c4\r"
 	},
@@ -6583,7 +6583,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C82",
-		"name": "Ruy Lopez: Open",
+		"name": "Ruy Lopez: Open: : 6. d4 b5, 7. Bb3 d5, 8. dxe5 Be6, 9. c3",
 		"fen": "r2qkb1r/2p2ppp/p1n1b3/1p1pP3/4n3/1BP2N2/PP3PPP/RNBQ1RK1 b kq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 c2c3\r"
 	},
@@ -6721,13 +6721,13 @@ export const ceco = [
 	},
 	{
 		"eco": "C88",
-		"name": "Ruy Lopez: Closed",
+		"name": "Ruy Lopez: Closed, 6. Re1 b5, 7. Bb3",
 		"fen": "r1bqk2r/2ppbppp/p1n2n2/1p2p3/4P3/1B3N2/PPPP1PPP/RNBQR1K1 b kq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3\r"
 	},
 	{
 		"eco": "C88",
-		"name": "Ruy Lopez: Closed",
+		"name": "Ruy Lopez: Closed, 6. Re1 b5, 7. Bb3 O-O",
 		"fen": "r1bq1rk1/2ppbppp/p1n2n2/1p2p3/4P3/1B3N2/PPPP1PPP/RNBQR1K1 w - -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8\r"
 	},
@@ -6769,7 +6769,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C88",
-		"name": "Ruy Lopez: Noahs Ark Trap",
+		"name": "Ruy Lopez: Noahs Ark Trap, 4..Nf6",
 		"fen": "r1bqk2r/4bppp/p2p1n2/1pp5/3QP3/1B6/PPP2PPP/RNB1R1K1 w kq -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 d2d4 c6d4 f3d4 e5d4 d1d4 c7c5\r"
 	},
@@ -6865,7 +6865,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C92",
-		"name": "Ruy Lopez: Closed",
+		"name": "Ruy Lopez: Closed, , 6. Re1 b5, 7. Bb3 d6",
 		"fen": "r1bq1rk1/2p1bppp/p1np1n2/1p2p3/4P3/1BP2N1P/PP1P1PP1/RNBQR1K1 b - -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3\r"
 	},
@@ -6877,13 +6877,13 @@ export const ceco = [
 	},
 	{
 		"eco": "C92",
-		"name": "Ruy Lopez: Closed, Keres Defense",
+		"name": "Ruy Lopez: Closed, Keres Defense, 9..Nd7",
 		"fen": "r1bq1rk1/2pnbppp/p1np4/1p2p3/4P3/1BP2N1P/PP1P1PP1/RNBQR1K1 w - -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 f6d7\r"
 	},
 	{
 		"eco": "C92",
-		"name": "Ruy Lopez: Closed, Keres Defense",
+		"name": "Ruy Lopez: Closed, Keres Defense, 9..a5",
 		"fen": "r1bq1rk1/2p1bppp/2np1n2/pp2p3/4P3/1BP2N1P/PP1P1PP1/RNBQR1K1 w - -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8 c2c3 d7d6 h2h3 a6a5\r"
 	},
@@ -6931,13 +6931,13 @@ export const ceco = [
 	},
 	{
 		"eco": "C95",
-		"name": "Ruy Lopez: Closed, Breyer Defense",
+		"name": "Ruy Lopez: Closed, Breyer Defense, 11. Nbd2",
 		"fen": "r2q1rk1/1b1nbppp/p2p1n2/1pp1p3/3PP3/2P2N1P/PPBN1PP1/R1BQR1K1 w - -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c6b8 d2d4 b8d7 b1d2 c8b7 b3c2 c7c5\r"
 	},
 	{
 		"eco": "C95",
-		"name": "Ruy Lopez: Closed, Breyer Defense",
+		"name": "Ruy Lopez: Closed, Breyer Defense, 11. Nh4",
 		"fen": "r1bq1rk1/2pnbppp/p2p1n2/1p2p3/3PP2N/1BP4P/PP3PP1/RNBQR1K1 b - -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c6b8 d2d4 b8d7 f3h4\r"
 	},
@@ -6955,19 +6955,19 @@ export const ceco = [
 	},
 	{
 		"eco": "C96",
-		"name": "Ruy Lopez: Closed, Closed Defense",
+		"name": "Ruy Lopez: Closed, Closed Defense, 9. h3 Na5, 10. Bc2",
 		"fen": "r1bq1rk1/2p1bppp/p2p1n2/np2p3/4P3/2P2N1P/PPBP1PP1/RNBQR1K1 b - -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c6a5 b3c2\r"
 	},
 	{
 		"eco": "C96",
-		"name": "Ruy Lopez: Closed, Closed Defense",
+		"name": "Ruy Lopez: Closed, Closed Defense, 9. h3 Na5, 10. Bc2 c5",
 		"fen": "r1bq1rk1/4bppp/p2p1n2/npp1p3/4P3/2P2N1P/PPBP1PP1/RNBQR1K1 w - -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c6a5 b3c2 c7c5\r"
 	},
 	{
 		"eco": "C96",
-		"name": "Ruy Lopez: Closed, Keres Defense",
+		"name": "Ruy Lopez: Closed, Keres Defense, 9..Na5",
 		"fen": "r1bq1rk1/3nbppp/p2p4/npp1p3/3PP3/2P2N1P/PPB2PP1/RNBQR1K1 w - -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c6a5 b3c2 c7c5 d2d4 f6d7\r"
 	},
@@ -6991,13 +6991,13 @@ export const ceco = [
 	},
 	{
 		"eco": "C98",
-		"name": "Ruy Lopez: Closed, Chigorin Defense",
+		"name": "Ruy Lopez: Closed, Chigorin Defense, 12. Nbd2 Nc6",
 		"fen": "r1b2rk1/2q1bppp/p1np1n2/1pp1p3/3PP3/2P2N1P/PPBN1PP1/R1BQR1K1 w - -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c6a5 b3c2 c7c5 d2d4 d8c7 b1d2 a5c6\r"
 	},
 	{
 		"eco": "C98",
-		"name": "Ruy Lopez: Closed, Chigorin Defense",
+		"name": "Ruy Lopez: Closed, Chigorin Defense, 12. Nbd2 Nc6, 13. dxc5",
 		"fen": "r1b2rk1/2q1bppp/p1np1n2/1pP1p3/4P3/2P2N1P/PPBN1PP1/R1BQR1K1 b - -",
 		"moves": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c6a5 b3c2 c7c5 d2d4 d8c7 b1d2 a5c6 d4c5\r"
 	},
