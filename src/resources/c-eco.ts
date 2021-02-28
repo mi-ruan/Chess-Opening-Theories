@@ -217,7 +217,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C00",
-		"name": "St. George Defense",
+		"name": "St. George Defense: 1..e6",
 		"fen": "rnbqkbnr/1ppp1ppp/p3p3/8/3PP3/8/PPP2PPP/RNBQKBNR w KQkq -",
 		"moves": "e2e4 e7e6 d2d4 a7a6\r"
 	},
@@ -3475,7 +3475,7 @@ export const ceco = [
 	},
 	{
 		"eco": "C41",
-		"name": "Philidor Defense: Lion Variation, Lions Claw",
+		"name": "Philidor Defense: Lion Variation, Lions Claw, 1..e5",
 		"fen": "r1bqk2r/pppnbpp1/3p1n1p/4p3/2BPP3/2N2N2/PPP2PPP/R1BQ1RK1 w kq -",
 		"moves": "e2e4 e7e5 g1f3 d7d6 d2d4 g8f6 b1c3 b8d7 f1c4 h7h6 e1g1 f8e7\r"
 	},

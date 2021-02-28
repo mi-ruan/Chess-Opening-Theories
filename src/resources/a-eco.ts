@@ -2467,7 +2467,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A40",
-		"name": "Borg Defense: Borg Gambit",
+		"name": "Borg Defense: Borg Gambit, 1. d4",
 		"fen": "rnbqkbnr/pppppp1p/8/6p1/3P4/8/PPP1PPPP/RNBQKBNR w KQkq -",
 		"moves": "d2d4 g7g5\r"
 	},
@@ -2683,7 +2683,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A40",
-		"name": "Modern Defense",
+		"name": "Modern Defense: 1. d4",
 		"fen": "rnbqkbnr/pppppp1p/6p1/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq -",
 		"moves": "d2d4 g7g6\r"
 	},
@@ -3151,7 +3151,7 @@ export const aeco = [
 	},
 	{
 		"eco": "A45",
-		"name": "Queens Pawn Game: Chigorin Variation",
+		"name": "Queens Pawn Game: Chigorin Variation, 2..d5",
 		"fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/2N5/PPP1PPPP/R1BQKBNR w KQkq -",
 		"moves": "d2d4 g8f6 b1c3 d7d5\r"
 	},

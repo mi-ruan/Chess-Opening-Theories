@@ -13,7 +13,7 @@ export const beco = [
 	},
 	{
 		"eco": "B00",
-		"name": "Borg Defense: Borg Gambit",
+		"name": "Borg Defense: Borg Gambit, 1. e4",
 		"fen": "rnbqk1nr/ppppppbp/8/6p1/3PP3/8/PPP2PPP/RNBQKBNR w KQkq -",
 		"moves": "e2e4 g7g5 d2d4 f8g7\r"
 	},
@@ -1069,7 +1069,7 @@ export const beco = [
 	},
 	{
 		"eco": "B06",
-		"name": "Modern Defense",
+		"name": "Modern Defense: 1. e4",
 		"fen": "rnbqkbnr/pppppp1p/6p1/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq -",
 		"moves": "e2e4 g7g6\r"
 	},
@@ -1387,7 +1387,7 @@ export const beco = [
 	},
 	{
 		"eco": "B07",
-		"name": "Philidor Defense: Lion Variation, Lions Claw",
+		"name": "Philidor Defense: Lion Variation, Lions Claw, 1..d6",
 		"fen": "r1bqk2r/pp1nbppp/2pp1n2/4p3/3PP3/2N2N2/PPP1BPPP/R1BQ1RK1 w kq -",
 		"moves": "e2e4 d7d6 d2d4 g8f6 b1c3 c7c6 f1e2 b8d7 g1f3 e7e5 e1g1 f8e7\r"
 	},

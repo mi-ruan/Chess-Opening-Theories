@@ -241,7 +241,7 @@ export const deco = [
 	},
 	{
 		"eco": "D00",
-		"name": "Queens Pawn Game",
+		"name": "Queens Pawn Game: 1..d5",
 		"fen": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq -",
 		"moves": "d2d4 d7d5\r"
 	},
