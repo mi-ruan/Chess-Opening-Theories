@@ -7,19 +7,19 @@ export const deco = [
 	},
 	{
 		"eco": "D00",
-		"name": "Blackmar Gambit",
+		"name": "Blackmar Gambit:",
 		"fen": "rnbqkbnr/ppp1pppp/8/3p4/3PP3/8/PPP2PPP/RNBQKBNR b KQkq -",
 		"moves": "d2d4 d7d5 e2e4\r"
 	},
 	{
 		"eco": "D00",
-		"name": "Blackmar-Diemer Gambit",
+		"name": "Blackmar-Diemer Gambit: 1..d5",
 		"fen": "rnbqkbnr/ppp1pppp/8/8/3Pp3/2N5/PPP2PPP/R1BQKBNR b KQkq -",
 		"moves": "d2d4 d7d5 e2e4 d5e4 b1c3\r"
 	},
 	{
 		"eco": "D00",
-		"name": "Blackmar-Diemer Gambit",
+		"name": "Blackmar-Diemer Gambit: 1..Nf6",
 		"fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3PP3/2N5/PPP2PPP/R1BQKBNR b KQkq -",
 		"moves": "d2d4 g8f6 b1c3 d7d5 e2e4\r"
 	},
@@ -247,13 +247,13 @@ export const deco = [
 	},
 	{
 		"eco": "D00",
-		"name": "Queens Pawn Game",
+		"name": "Queens Pawn Game, 2. e3",
 		"fen": "rnbqkbnr/ppp1pppp/8/3p4/3P4/4P3/PPP2PPP/RNBQKBNR b KQkq -",
 		"moves": "d2d4 d7d5 e2e3\r"
 	},
 	{
 		"eco": "D00",
-		"name": "Queens Pawn Game",
+		"name": "Queens Pawn Game, 2.e3 Nf6",
 		"fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/4P3/PPP2PPP/RNBQKBNR w KQkq -",
 		"moves": "d2d4 d7d5 e2e3 g8f6\r"
 	},
@@ -391,7 +391,7 @@ export const deco = [
 	},
 	{
 		"eco": "D01",
-		"name": "Richter-Veresov Attack",
+		"name": "Richter-Veresov Attack: 3..Bf5",
 		"fen": "rn1qkb1r/ppp1pppp/5n2/3p1bB1/3P4/2N5/PPP1PPPP/R2QKBNR w KQkq -",
 		"moves": "d2d4 g8f6 b1c3 d7d5 c1g5 c8f5\r"
 	},
@@ -433,7 +433,7 @@ export const deco = [
 	},
 	{
 		"eco": "D02",
-		"name": "Queens Pawn Game: Chigorin Variation",
+		"name": "Queens Pawn Game: Chigorin Variation, 2. Nf3 Nc6",
 		"fen": "r1bqkbnr/ppp1pppp/2n5/3p4/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq -",
 		"moves": "d2d4 d7d5 g1f3 b8c6\r"
 	},
@@ -523,13 +523,13 @@ export const deco = [
 	},
 	{
 		"eco": "D05",
-		"name": "Queens Pawn Game: Colle System",
+		"name": "Queens Pawn Game: Colle System, 3..e6",
 		"fen": "rnbqkb1r/ppp2ppp/4pn2/3p4/3P4/4PN2/PPP2PPP/RNBQKB1R w KQkq -",
 		"moves": "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6\r"
 	},
 	{
 		"eco": "D05",
-		"name": "Queens Pawn Game: Colle System",
+		"name": "Queens Pawn Game: Colle System, 3..e6, 4. Bd3",
 		"fen": "rnbqkb1r/ppp2ppp/4pn2/3p4/3P4/3BPN2/PPP2PPP/RNBQK2R b KQkq -",
 		"moves": "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3\r"
 	},
@@ -649,13 +649,13 @@ export const deco = [
 	},
 	{
 		"eco": "D07",
-		"name": "Queens Gambit Declined: Chigorin Defense",
+		"name": "Queens Gambit Declined: Chigorin Defense, 3. Nc3",
 		"fen": "r1bqkbnr/ppp1pppp/2n5/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq -",
 		"moves": "d2d4 d7d5 c2c4 b8c6 b1c3\r"
 	},
 	{
 		"eco": "D07",
-		"name": "Queens Gambit Declined: Chigorin Defense",
+		"name": "Queens Gambit Declined: Chigorin Defense, 3. Nc3 dxc4",
 		"fen": "r1bqkbnr/ppp1pppp/2n5/8/2pP4/2N5/PP2PPPP/R1BQKBNR w KQkq -",
 		"moves": "d2d4 d7d5 c2c4 b8c6 b1c3 d5c4\r"
 	},
@@ -787,19 +787,19 @@ export const deco = [
 	},
 	{
 		"eco": "D10",
-		"name": "Slav Defense",
+		"name": "Slav Defense, 3. Nc3",
 		"fen": "rnbqkbnr/pp2pppp/2p5/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq -",
 		"moves": "d2d4 d7d5 c2c4 c7c6 b1c3\r"
 	},
 	{
 		"eco": "D10",
-		"name": "Slav Defense",
+		"name": "Slav Defense, 3. Nc3 dxc4",
 		"fen": "rnbqkbnr/pp2pppp/2p5/8/2pP4/2N5/PP2PPPP/R1BQKBNR w KQkq -",
 		"moves": "d2d4 d7d5 c2c4 c7c6 b1c3 d5c4\r"
 	},
 	{
 		"eco": "D10",
-		"name": "Slav Defense: Exchange Variation",
+		"name": "Slav Defense: Exchange Variation, 3. cxd5",
 		"fen": "rnbqkbnr/pp2pppp/2p5/3P4/3P4/8/PP2PPPP/RNBQKBNR b KQkq -",
 		"moves": "d2d4 d7d5 c2c4 c7c6 c4d5\r"
 	},
@@ -883,7 +883,7 @@ export const deco = [
 	},
 	{
 		"eco": "D13",
-		"name": "Slav Defense: Exchange Variation",
+		"name": "Slav Defense: Exchange Variation, 3. Nf3",
 		"fen": "rnbqkb1r/pp2pppp/5n2/3p4/3P4/5N2/PP2PPPP/RNBQKB1R w KQkq -",
 		"moves": "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 c4d5 c6d5\r"
 	},
@@ -925,7 +925,7 @@ export const deco = [
 	},
 	{
 		"eco": "D15",
-		"name": "Slav Defense: Geller Gambit",
+		"name": "Slav Defense: Geller Gambit, 5..b5",
 		"fen": "rnbqkb1r/p3pppp/2p2n2/1p2P3/2pP4/2N2N2/PP3PPP/R1BQKB1R b KQkq -",
 		"moves": "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 e2e4 b7b5 e4e5\r"
 	},
@@ -1207,7 +1207,7 @@ export const deco = [
 	},
 	{
 		"eco": "D23",
-		"name": "Queens Gambit Accepted",
+		"name": "Queens Gambit Accepted: 3. Nf3 Nf6",
 		"fen": "rnbqkb1r/ppp1pppp/5n2/8/2pP4/5N2/PP2PPPP/RNBQKB1R w KQkq -",
 		"moves": "d2d4 d7d5 c2c4 d5c4 g1f3 g8f6\r"
 	},
@@ -1243,7 +1243,7 @@ export const deco = [
 	},
 	{
 		"eco": "D25",
-		"name": "Queens Gambit Accepted: Normal Variation",
+		"name": "Queens Gambit Accepted: Normal Variation, 3..Nf6, 4. e3",
 		"fen": "rnbqkb1r/ppp1pppp/5n2/8/2pP4/4PN2/PP3PPP/RNBQKB1R b KQkq -",
 		"moves": "d2d4 d7d5 c2c4 d5c4 g1f3 g8f6 e2e3\r"
 	},
@@ -1363,13 +1363,13 @@ export const deco = [
 	},
 	{
 		"eco": "D30",
-		"name": "Queens Gambit Declined: Capablanca Variation",
+		"name": "Queens Gambit Declined: Capablanca Variation, 4..h6",
 		"fen": "rnbqkb1r/ppp2pp1/4pn1p/3p2B1/2PP4/5N2/PP2PPPP/RN1QKB1R w KQkq -",
 		"moves": "d2d4 g8f6 c2c4 e7e6 g1f3 d7d5 c1g5 h7h6\r"
 	},
 	{
 		"eco": "D30",
-		"name": "Queens Gambit Declined: Capablanca Variation",
+		"name": "Queens Gambit Declined: Capablanca Variation, 4..c6",
 		"fen": "r1bqkb1r/pp1n1ppp/2p1pn2/3p2B1/2PP4/4PN2/PP1N1PPP/R2QKB1R b KQkq -",
 		"moves": "d2d4 g8f6 g1f3 e7e6 c2c4 d7d5 c1g5 c7c6 b1d2 b8d7 e2e3\r"
 	},
@@ -1411,7 +1411,7 @@ export const deco = [
 	},
 	{
 		"eco": "D30",
-		"name": "Queens Gambit Declined: Vienna Variation",
+		"name": "Queens Gambit Declined: Vienna Variation, 4. Bg5 Bb4",
 		"fen": "rnbqk2r/ppp2ppp/4pn2/3p2B1/1bPP4/5N2/PP2PPPP/RN1QKB1R w KQkq -",
 		"moves": "d2d4 g8f6 c2c4 e7e6 g1f3 d7d5 c1g5 f8b4\r"
 	},
@@ -1423,7 +1423,7 @@ export const deco = [
 	},
 	{
 		"eco": "D30",
-		"name": "Semi-Slav Defense: Quiet Variation",
+		"name": "Semi-Slav Defense: Quiet Variation, 5..Nbd7",
 		"fen": "r1bqkb1r/pp1n1ppp/2p1pn2/3p4/2PP4/4PN2/PP1N1PPP/R1BQKB1R w KQkq -",
 		"moves": "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 e2e3 e7e6 b1d2 b8d7\r"
 	},
@@ -1723,7 +1723,7 @@ export const deco = [
 	},
 	{
 		"eco": "D35",
-		"name": "Queens Gambit Declined: Exchange Variation, Positional Variation",
+		"name": "Queens Gambit Declined: Exchange Variation, Positional Variation, 5..c6",
 		"fen": "rnbqkb1r/pp3ppp/2p2n2/3p2B1/3P4/2N5/PP2PPPP/R2QKBNR w KQkq -",
 		"moves": "d2d4 g8f6 c2c4 e7e6 b1c3 d7d5 c4d5 e6d5 c1g5 c7c6\r"
 	},
@@ -1765,19 +1765,19 @@ export const deco = [
 	},
 	{
 		"eco": "D37",
-		"name": "Queens Gambit Declined: Harrwitz Attack",
+		"name": "Queens Gambit Declined: Harrwitz Attack, 1..Nf6, 2. c4 e6, 3. Nf3 d5, 4. Nc3 Be7, 5. Bf4",
 		"fen": "rnbqk2r/ppp1bppp/4pn2/3p4/2PP1B2/2N2N2/PP2PPPP/R2QKB1R b KQkq -",
 		"moves": "d2d4 g8f6 c2c4 e7e6 g1f3 d7d5 b1c3 f8e7 c1f4\r"
 	},
 	{
 		"eco": "D37",
-		"name": "Queens Gambit Declined: Harrwitz Attack",
+		"name": "Queens Gambit Declined: Harrwitz Attack, 9. Rd1",
 		"fen": "r1b2rk1/pp3ppp/2n1pn2/q1bp4/2P2B2/P1N1PN2/1PQ2PPP/3RKB1R b K -",
 		"moves": "d2d4 g8f6 c2c4 e7e6 g1f3 d7d5 b1c3 f8e7 c1f4 e8g8 e2e3 c7c5 d4c5 e7c5 d1c2 b8c6 a1d1 d8a5 a2a3\r"
 	},
 	{
 		"eco": "D37",
-		"name": "Queens Gambit Declined: Harrwitz Attack",
+		"name": "Queens Gambit Declined: Harrwitz Attack, 9. a3",
 		"fen": "r1b2rk1/pp3ppp/2n1pn2/q1bp4/2P2B2/P1N1PN2/1PQ2PPP/2KR1B1R b - -",
 		"moves": "d2d4 g8f6 c2c4 e7e6 g1f3 d7d5 b1c3 f8e7 c1f4 e8g8 e2e3 c7c5 d4c5 e7c5 d1c2 b8c6 a2a3 d8a5 e1c1\r"
 	},
@@ -1831,7 +1831,7 @@ export const deco = [
 	},
 	{
 		"eco": "D37",
-		"name": "Queens Gambit Declined: Vienna Variation",
+		"name": "Queens Gambit Declined: Vienna Variation, 4. Nc3 dxc4",
 		"fen": "rnbqkb1r/ppp2ppp/4pn2/8/2pP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq -",
 		"moves": "d2d4 g8f6 c2c4 e7e6 g1f3 d7d5 b1c3 d5c4\r"
 	},
@@ -1891,7 +1891,7 @@ export const deco = [
 	},
 	{
 		"eco": "D41",
-		"name": "Queens Gambit Declined: Semi-Tarrasch Defense",
+		"name": "Queens Gambit Declined: Semi-Tarrasch Defense, 5. cxd5",
 		"fen": "rnbqkb1r/pp3ppp/4pn2/2pP4/3P4/2N2N2/PP2PPPP/R1BQKB1R b KQkq -",
 		"moves": "d2d4 g8f6 c2c4 e7e6 g1f3 d7d5 b1c3 c7c5 c4d5\r"
 	},
@@ -1909,7 +1909,7 @@ export const deco = [
 	},
 	{
 		"eco": "D41",
-		"name": "Queens Gambit Declined: Semi-Tarrasch Defense, Pillsbury Variation",
+		"name": "Queens Gambit Declined: Semi-Tarrasch Defense, Pillsbury Variation, 5. cxd5 Nxd5",
 		"fen": "rnbqkb1r/pp3ppp/4p3/2pn4/3P4/2N1PN2/PP3PPP/R1BQKB1R b KQkq -",
 		"moves": "d2d4 g8f6 c2c4 e7e6 g1f3 d7d5 b1c3 c7c5 c4d5 f6d5 e2e3\r"
 	},
@@ -1957,7 +1957,7 @@ export const deco = [
 	},
 	{
 		"eco": "D44",
-		"name": "Semi-Slav Defense: Botvinnik Variation",
+		"name": "Semi-Slav Defense: Botvinnik Variation, 6..b5",
 		"fen": "rnbqkb1r/p4p2/2p1pn1p/1p2P1N1/2pP3B/2N5/PP3PPP/R2QKB1R b KQkq -",
 		"moves": "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6 c1g5 d5c4 e2e4 b7b5 e4e5 h7h6 g5h4 g7g5 f3g5\r"
 	},
@@ -2053,7 +2053,7 @@ export const deco = [
 	},
 	{
 		"eco": "D46",
-		"name": "Semi-Slav Defense: Main Line",
+		"name": "Semi-Slav Defense: Main Line, 5..Nbd7 6. Bd3",
 		"fen": "r1bqkb1r/pp1n1ppp/2p1pn2/3p4/2PP4/2NBPN2/PP3PPP/R1BQK2R b KQkq -",
 		"moves": "d2d4 d7d5 c2c4 c7c6 b1c3 g8f6 e2e3 e7e6 g1f3 b8d7 f1d3\r"
 	},
@@ -2101,13 +2101,13 @@ export const deco = [
 	},
 	{
 		"eco": "D48",
-		"name": "Semi-Slav Defense: Meran Variation",
+		"name": "Semi-Slav Defense: Meran Variation, 8. Bd3",
 		"fen": "r1bqkb1r/3n1ppp/p1p1pn2/1p6/3P4/2NBPN2/PP3PPP/R1BQK2R w KQkq -",
 		"moves": "d2d4 d7d5 c2c4 c7c6 b1c3 g8f6 e2e3 e7e6 g1f3 b8d7 f1d3 d5c4 d3c4 b7b5 c4d3 a7a6\r"
 	},
 	{
 		"eco": "D48",
-		"name": "Semi-Slav Defense: Meran Variation",
+		"name": "Semi-Slav Defense: Meran Variation, 8. Bd3 a6, 9. e4",
 		"fen": "r1bqkb1r/3n1ppp/p3pn2/1pp5/3PP3/2NB1N2/PP3PPP/R1BQK2R w KQkq -",
 		"moves": "d2d4 d7d5 c2c4 c7c6 b1c3 g8f6 e2e3 e7e6 g1f3 b8d7 f1d3 d5c4 d3c4 b7b5 c4d3 a7a6 e3e4 c6c5\r"
 	},
@@ -2155,7 +2155,7 @@ export const deco = [
 	},
 	{
 		"eco": "D49",
-		"name": "Semi-Slav Defense: Meran Variation, Sozin Variation",
+		"name": "Semi-Slav Defense: Meran Variation, Sozin Variation, 12. Nxe5",
 		"fen": "r1bqkb1r/5ppp/4pn2/1p2N3/3p4/3B4/PP3PPP/R1BQ1RK1 b kq -",
 		"moves": "d2d4 d7d5 g1f3 g8f6 c2c4 c7c6 b1c3 e7e6 e2e3 b8d7 f1d3 d5c4 d3c4 b7b5 c4d3 a7a6 e3e4 c6c5 e4e5 c5d4 c3b5 d7e5 f3e5 a6b5 e1g1\r"
 	},
@@ -2227,13 +2227,13 @@ export const deco = [
 	},
 	{
 		"eco": "D51",
-		"name": "Queens Gambit Declined: Modern Variation, Knight Defense",
+		"name": "Queens Gambit Declined: Modern Variation, Knight Defense, 5. e3",
 		"fen": "r1bqkb1r/pppn1ppp/4pn2/3p2B1/2PP4/2N1P3/PP3PPP/R2QKBNR b KQkq -",
 		"moves": "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 b8d7 e2e3\r"
 	},
 	{
 		"eco": "D51",
-		"name": "Queens Gambit Declined: Modern Variation, Knight Defense",
+		"name": "Queens Gambit Declined: Modern Variation, Knight Defense, 5. e3 c6",
 		"fen": "r1bqkb1r/pp1n1ppp/2p1pn2/3p2B1/2PP4/2N1P3/PP3PPP/R2QKBNR w KQkq -",
 		"moves": "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 b8d7 e2e3 c7c6\r"
 	},
@@ -2245,7 +2245,7 @@ export const deco = [
 	},
 	{
 		"eco": "D52",
-		"name": "Queens Gambit Declined",
+		"name": "Queens Gambit Declined: 2..c6, 3. Nf3 Nf6, 4. Nc3 e6, 5. Bg5 Nbd7, 6. e3",
 		"fen": "r1bqkb1r/pp1n1ppp/2p1pn2/3p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R b KQkq -",
 		"moves": "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6 c1g5 b8d7 e2e3\r"
 	},
@@ -2257,7 +2257,7 @@ export const deco = [
 	},
 	{
 		"eco": "D52",
-		"name": "Queens Gambit Declined: Cambridge Springs Defense",
+		"name": "Queens Gambit Declined: Cambridge Springs Defense, 5. cxd5",
 		"fen": "r1b1kb1r/pp1n1ppp/2p1pn2/q2P2B1/3P4/2N1PN2/PP3PPP/R2QKB1R b KQkq -",
 		"moves": "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6 c1g5 b8d7 e2e3 d8a5 c4d5\r"
 	},
@@ -2293,7 +2293,7 @@ export const deco = [
 	},
 	{
 		"eco": "D53",
-		"name": "Queens Gambit Declined",
+		"name": "Queens Gambit Declined: 3. Nc3",
 		"fen": "rnbqk2r/ppp1bppp/4pn2/3p2B1/2PP4/2N5/PP2PPPP/R2QKBNR w KQkq -",
 		"moves": "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7\r"
 	},
@@ -2335,7 +2335,7 @@ export const deco = [
 	},
 	{
 		"eco": "D55",
-		"name": "Queens Gambit Declined: Neo-Orthodox Variation",
+		"name": "Queens Gambit Declined: Neo-Orthodox Variation, 3..Nf3",
 		"fen": "rnbq1rk1/ppp1bpp1/4pn1p/3p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R w KQ -",
 		"moves": "d2d4 g8f6 c2c4 e7e6 g1f3 d7d5 b1c3 f8e7 c1g5 e8g8 e2e3 h7h6\r"
 	},
@@ -2353,7 +2353,7 @@ export const deco = [
 	},
 	{
 		"eco": "D56",
-		"name": "Queens Gambit Declined: Lasker Defense",
+		"name": "Queens Gambit Declined: Lasker Defense, 3..Be7",
 		"fen": "rnbq1rk1/ppp1bpp1/4p2p/3p4/2PPn2B/2N1PN2/PP3PPP/R2QKB1R w KQ -",
 		"moves": "d2d4 d7d5 c2c4 e7e6 b1c3 f8e7 g1f3 g8f6 c1g5 h7h6 g5h4 e8g8 e2e3 f6e4\r"
 	},
@@ -2401,7 +2401,7 @@ export const deco = [
 	},
 	{
 		"eco": "D59",
-		"name": "Queens Gambit Declined: Tartakower Defense",
+		"name": "Queens Gambit Declined: Tartakower Defense, 8 cxd5",
 		"fen": "rn3rk1/p1p1qpp1/1p2b2p/3p4/3P4/4PN2/PP3PPP/2RQKB1R w K -",
 		"moves": "d2d4 d7d5 c2c4 e7e6 b1c3 f8e7 g1f3 g8f6 c1g5 h7h6 g5h4 e8g8 e2e3 b7b6 c4d5 f6d5 h4e7 d8e7 c3d5 e6d5 a1c1 c8e6\r"
 	},
@@ -2461,7 +2461,7 @@ export const deco = [
 	},
 	{
 		"eco": "D63",
-		"name": "Queens Gambit Declined: Orthodox Defense, Main Line",
+		"name": "Queens Gambit Declined: Orthodox Defense, Main Line, 7..c6",
 		"fen": "r1bq1rk1/pp1nbppp/2p1pn2/3p2B1/2PP4/2N1PN2/PP3PPP/2RQKB1R w K -",
 		"moves": "d2d4 g8f6 c2c4 e7e6 g1f3 d7d5 b1c3 f8e7 c1g5 e8g8 e2e3 b8d7 a1c1 c7c6\r"
 	},
@@ -2479,7 +2479,7 @@ export const deco = [
 	},
 	{
 		"eco": "D64",
-		"name": "Queens Gambit Declined: Orthodox Defense, Rubinstein Attack",
+		"name": "Queens Gambit Declined: Orthodox Defense, Rubinstein Attack, 8. a3",
 		"fen": "r1bq1rk1/1p1nbppp/p1p1pn2/3p2B1/2PP4/P1N1PN2/1PQ2PPP/2R1KB1R b K -",
 		"moves": "d2d4 g8f6 c2c4 e7e6 b1c3 d7d5 g1f3 f8e7 c1g5 e8g8 e2e3 b8d7 a1c1 c7c6 a2a3 a7a6 d1c2\r"
 	},
@@ -2491,19 +2491,19 @@ export const deco = [
 	},
 	{
 		"eco": "D64",
-		"name": "Queens Gambit Declined: Orthodox Defense, Rubinstein Attack",
+		"name": "Queens Gambit Declined: Orthodox Defense, Rubinstein Attack, 8..a6",
 		"fen": "r1bq1rk1/1p1nbppp/p1p1pn2/3p2B1/2PP4/2N1PN2/PPQ2PPP/2R1KB1R w K -",
 		"moves": "d2d4 g8f6 c2c4 e7e6 g1f3 d7d5 b1c3 f8e7 c1g5 e8g8 e2e3 b8d7 a1c1 c7c6 d1c2 a7a6\r"
 	},
 	{
 		"eco": "D64",
-		"name": "Queens Gambit Declined: Orthodox Defense, Rubinstein Attack",
+		"name": "Queens Gambit Declined: Orthodox Defense, Rubinstein Attack, 8..Ne4",
 		"fen": "r1bq1rk1/pp1nbppp/2p1p3/3p2B1/2PPn3/2N1PN2/PPQ2PPP/2R1KB1R w K -",
 		"moves": "g1f3 d7d5 d2d4 g8f6 c2c4 e7e6 b1c3 f8e7 c1g5 e8g8 e2e3 b8d7 a1c1 c7c6 d1c2 f6e4\r"
 	},
 	{
 		"eco": "D65",
-		"name": "Queens Gambit Declined: Orthodox Defense, Rubinstein Attack",
+		"name": "Queens Gambit Declined: Orthodox Defense, Rubinstein Attack, 8..a6, 9. cxd5",
 		"fen": "r1bq1rk1/1p1nbppp/p1p1pn2/3P2B1/3P4/2N1PN2/PPQ2PPP/2R1KB1R b K -",
 		"moves": "d2d4 d7d5 g1f3 g8f6 c2c4 e7e6 b1c3 f8e7 c1g5 e8g8 e2e3 b8d7 a1c1 c7c6 d1c2 a7a6 c4d5\r"
 	},
@@ -2527,7 +2527,7 @@ export const deco = [
 	},
 	{
 		"eco": "D67",
-		"name": "Queens Gambit Declined: Orthodox Defense, Bd3 Line",
+		"name": "Queens Gambit Declined: Orthodox Defense, Bd3 Line, 8..dxc4",
 		"fen": "r1b2rk1/pp1nqppp/2p1p3/3n4/2BP4/2N1PN2/PP3PPP/2RQK2R w K -",
 		"moves": "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7 e2e3 e8g8 g1f3 b8d7 a1c1 c7c6 f1d3 d5c4 d3c4 f6d5 g5e7 d8e7\r"
 	},
@@ -2545,7 +2545,7 @@ export const deco = [
 	},
 	{
 		"eco": "D67",
-		"name": "Queens Gambit Declined: Orthodox Defense, Main Line",
+		"name": "Queens Gambit Declined: Orthodox Defense, Main Line, 7..c6, 8. Bd3",
 		"fen": "r1b2rk1/pp1nqppp/2p1p3/3n4/2BP4/2N1PN2/PP3PPP/2RQ1RK1 b - -",
 		"moves": "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7 e2e3 e8g8 g1f3 b8d7 a1c1 c7c6 f1d3 d5c4 d3c4 f6d5 g5e7 d8e7 e1g1\r"
 	},
@@ -2557,19 +2557,19 @@ export const deco = [
 	},
 	{
 		"eco": "D68",
-		"name": "Queens Gambit Declined: Orthodox Defense, Classical Variation",
+		"name": "Queens Gambit Declined: Orthodox Defense, Classical Variation, 13. Qb1",
 		"fen": "r1b2rk1/pp1nqppp/2p5/4p3/2BP4/2R1PN2/PP3PPP/1Q3RK1 b - -",
 		"moves": "d2d4 d7d5 c2c4 e7e6 g1f3 g8f6 b1c3 f8e7 c1g5 e8g8 e2e3 b8d7 a1c1 c7c6 f1d3 d5c4 d3c4 f6d5 g5e7 d8e7 e1g1 d5c3 c1c3 e6e5 d1b1\r"
 	},
 	{
 		"eco": "D68",
-		"name": "Queens Gambit Declined: Orthodox Defense, Classical Variation",
+		"name": "Queens Gambit Declined: Orthodox Defense, Classical Variation, 13. Qc2",
 		"fen": "r1b2rk1/pp1nqppp/2p5/4p3/2BP4/2R1PN2/PPQ2PPP/5RK1 b - -",
 		"moves": "d2d4 g8f6 c2c4 e7e6 g1f3 d7d5 b1c3 f8e7 c1g5 e8g8 e2e3 b8d7 a1c1 c7c6 f1d3 d5c4 d3c4 f6d5 g5e7 d8e7 e1g1 d5c3 c1c3 e6e5 d1c2\r"
 	},
 	{
 		"eco": "D69",
-		"name": "Queens Gambit Declined: Orthodox Defense, Classical Variation",
+		"name": "Queens Gambit Declined: Orthodox Defense, Classical Variation, 13. dxe5",
 		"fen": "r1b2rk1/pp3ppp/2p5/4q3/2B5/2R1P3/PP3PPP/3Q1RK1 w - -",
 		"moves": "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7 e2e3 e8g8 g1f3 b8d7 a1c1 c7c6 f1d3 d5c4 d3c4 f6d5 g5e7 d8e7 e1g1 d5c3 c1c3 e6e5 d4e5 d7e5 f3e5 e7e5\r"
 	},
@@ -2599,19 +2599,19 @@ export const deco = [
 	},
 	{
 		"eco": "D75",
-		"name": "Neo-Grünfeld Defense: Delayed Exchange Variation",
+		"name": "Neo-Grünfeld Defense: Delayed Exchange Variation, 7. Bg2",
 		"fen": "rnbq1rk1/pp2ppbp/6p1/2pn4/3P4/2N2NP1/PP2PPBP/R1BQ1RK1 b - -",
 		"moves": "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 g1f3 e8g8 g2g3 d7d5 c4d5 f6d5 f1g2 c7c5 e1g1\r"
 	},
 	{
 		"eco": "D75",
-		"name": "Neo-Grünfeld Defense: Delayed Exchange Variation",
+		"name": "Neo-Grünfeld Defense: Delayed Exchange Variation, 7..c5",
 		"fen": "rnbq1rk1/pp2ppbp/6p1/2Pn4/8/5NP1/PP2PPBP/RNBQ1RK1 b - -",
 		"moves": "d2d4 g8f6 g1f3 g7g6 c2c4 f8g7 g2g3 e8g8 f1g2 d7d5 c4d5 f6d5 e1g1 c7c5 d4c5\r"
 	},
 	{
 		"eco": "D76",
-		"name": "Neo-Grünfeld Defense: Delayed Exchange Variation",
+		"name": "Neo-Grünfeld Defense: Delayed Exchange Variation, 7..Nb6",
 		"fen": "rnbq1rk1/ppp1ppbp/1n4p1/8/3P4/5NP1/PP2PPBP/RNBQ1RK1 w - -",
 		"moves": "d2d4 g8f6 c2c4 g7g6 g1f3 f8g7 g2g3 e8g8 f1g2 d7d5 c4d5 f6d5 e1g1 d5b6\r"
 	},
@@ -2773,7 +2773,7 @@ export const deco = [
 	},
 	{
 		"eco": "D86",
-		"name": "Grünfeld Defense: Exchange Variation, Larsen Variation",
+		"name": "Grünfeld Defense: Exchange Variation, Larsen Variation, 9. O-O",
 		"fen": "rnb2rk1/p1pqppbp/1p4p1/8/2BPP3/2P5/P3NPPP/R1BQ1RK1 w - -",
 		"moves": "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7 f1c4 e8g8 g1e2 d8d7 e1g1 b7b6\r"
 	},
@@ -2797,13 +2797,13 @@ export const deco = [
 	},
 	{
 		"eco": "D87",
-		"name": "Grünfeld Defense: Exchange Variation, Spassky Variation",
+		"name": "Grünfeld Defense: Exchange Variation, Spassky Variation, 8..O-O",
 		"fen": "rnbq1rk1/pp2ppbp/6p1/2p5/2BPP3/2P5/P3NPPP/R1BQK2R w KQ -",
 		"moves": "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7 f1c4 c7c5 g1e2 e8g8\r"
 	},
 	{
 		"eco": "D88",
-		"name": "Grünfeld Defense: Exchange Variation, Spassky Variation",
+		"name": "Grünfeld Defense: Exchange Variation, Spassky Variation, 8..Nc6",
 		"fen": "r1bq1rk1/pp2ppbp/2n3p1/8/2BPP3/4B3/P3NPPP/R2Q1RK1 b - -",
 		"moves": "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7 f1c4 c7c5 g1e2 b8c6 c1e3 e8g8 e1g1 c5d4 c3d4\r"
 	},
@@ -2815,7 +2815,7 @@ export const deco = [
 	},
 	{
 		"eco": "D89",
-		"name": "Grünfeld Defense: Exchange Variation, Spassky Variation",
+		"name": "Grünfeld Defense: Exchange Variation, Spassky Variation, 8..Nc6, 9. Be3",
 		"fen": "r2q1rk1/pp2ppbp/4b1p1/n7/3PP3/3BBP2/P3N1PP/R2Q1RK1 w - -",
 		"moves": "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7 f1c4 c7c5 g1e2 b8c6 c1e3 e8g8 e1g1 c8g4 f2f3 c6a5 c4d3 c5d4 c3d4 g4e6\r"
 	},
@@ -2833,7 +2833,7 @@ export const deco = [
 	},
 	{
 		"eco": "D90",
-		"name": "Grünfeld Defense: Three Knights Variation",
+		"name": "Grünfeld Defense: Three Knights Variation, 4..Bg7",
 		"fen": "rnbqk2r/ppp1ppbp/5np1/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq -",
 		"moves": "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 g1f3 f8g7\r"
 	},
@@ -2923,7 +2923,7 @@ export const deco = [
 	},
 	{
 		"eco": "D97",
-		"name": "Grünfeld Defense: Russian Variation",
+		"name": "Grünfeld Defense: Russian Variation, 5..dxc4",
 		"fen": "rnbq1rk1/ppp1ppbp/5np1/8/2QPP3/2N2N2/PP3PPP/R1B1KB1R b KQ -",
 		"moves": "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 g1f3 f8g7 d1b3 d5c4 b3c4 e8g8 e2e4\r"
 	},
@@ -2971,7 +2971,7 @@ export const deco = [
 	},
 	{
 		"eco": "D99",
-		"name": "Grünfeld Defense: Russian Variation, Smyslov Variation",
+		"name": "Grünfeld Defense: Russian Variation, Smyslov Variation, 8. Be3",
 		"fen": "rn1q1rk1/pppnppbp/6p1/8/3PP1b1/1QN1BN2/PP3PPP/R3KB1R b KQ -",
 		"moves": "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 g1f3 f8g7 d1b3 d5c4 b3c4 e8g8 e2e4 c8g4 c1e3 f6d7 c4b3\r"
 	},
