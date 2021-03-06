@@ -37,8 +37,7 @@ export class BoardComponent implements OnInit {
     const destinationCoordSubject = this.coordMap.get(destinationCoord);
     const currentPiece = initialCoordSubject.value.currentPiece;
     const destinationPiece = destinationCoordSubject.value.currentPiece;
-    initialCoordSubject.next({...initialCoordSubject.value, currentPiece: undefined});
-    destinationCoordSubject.next({...destinationCoordSubject.value, currentPiece});
+    this.movePiecesSubjects(currentPiece, initialCoordSubject, destinationCoordSubject);
     if (this.checkForCastle(currentPiece, initialCoord, destinationCoord)) {
       this.moveCastle(currentPiece, initialCoordSubject, destinationCoordSubject);
       return;
@@ -57,42 +56,34 @@ export class BoardComponent implements OnInit {
     return new BehaviorSubject<CellInfo>({coord, currentPiece: initialMap[coord]});
   }
 
+  private movePiecesSubjects(currentPiece: Pieces, initSubject: BehaviorSubject<CellInfo>, destSubject: BehaviorSubject<CellInfo>): void {
+    initSubject.next({...initSubject.value, currentPiece: undefined});
+    destSubject.next({...destSubject.value, currentPiece });
+  }
+
   private checkForCastle(currentPiece: Pieces, initalCoord: string, destinationCoord: string): boolean {
     return (currentPiece === Pieces.WK && initalCoord === "e1" && ((destinationCoord === "g1" && this.coordMap.get("h1").value.currentPiece === Pieces.WR) || (destinationCoord === "c1" && this.coordMap.get("a1").value.currentPiece === Pieces.WR)))
     || (currentPiece === Pieces.BK && initalCoord === "e8" && ((destinationCoord === "g8" && this.coordMap.get("h8").value.currentPiece === Pieces.BR) || (destinationCoord === "c8" && this.coordMap.get("a8").value.currentPiece === Pieces.BR))) 
   }
 
   private moveCastle(currentPiece: Pieces, initialCoord: BehaviorSubject<CellInfo>, destinationCoord: BehaviorSubject<CellInfo>): void {
-    initialCoord.next({...initialCoord.value, currentPiece: undefined});
-    destinationCoord.next({...destinationCoord.value, currentPiece});
+    this.movePiecesSubjects(currentPiece, initialCoord, destinationCoord);
     let rookPos, newPos;
     switch(destinationCoord.value.coord) {
       case "c1":
-        rookPos = this.coordMap.get("a1");
-        rookPos.next({...rookPos.value, currentPiece: undefined});
-        newPos = this.coordMap.get("d1");
-        newPos.next({...newPos.value, currentPiece: Pieces.WR});
+        this.movePiecesSubjects(Pieces.WR, this.coordMap.get("a1"), this.coordMap.get("d1"));
         this.moves.push("O-O-O");
         break;
       case "g1":
-        rookPos = this.coordMap.get("h1");
-        rookPos.next({...rookPos.value, currentPiece: undefined});
-        newPos = this.coordMap.get("f1");
-        newPos.next({...newPos.value, currentPiece: Pieces.WR});
+        this.movePiecesSubjects(Pieces.WR, this.coordMap.get("h1"), this.coordMap.get("f1"));
         this.moves.push("O-O");
         break;
       case "c8":
-        rookPos = this.coordMap.get("a8");
-        rookPos.next({...rookPos.value, currentPiece: undefined});
-        newPos = this.coordMap.get("d8");
-        newPos.next({...newPos.value, currentPiece: Pieces.BR});
+        this.movePiecesSubjects(Pieces.BR, this.coordMap.get("a8"), this.coordMap.get("d8"));
         this.moves.push("O-O-O");
         break;
       case "g8":
-        rookPos = this.coordMap.get("h8");
-        rookPos.next({...rookPos.value, currentPiece: undefined});
-        newPos = this.coordMap.get("f8");
-        newPos.next({...newPos.value, currentPiece: Pieces.BR});
+        this.movePiecesSubjects(Pieces.BR, this.coordMap.get("h8"), this.coordMap.get("f8"));
         this.moves.push("O-O");
         break;             
     }
