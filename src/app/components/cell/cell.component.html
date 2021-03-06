@@ -1,2 +1,2 @@
-<span class="coordinates">{{(cellInfo | async).coord}}</span>
+<span *ngIf="showCoord | async" class="coordinates">{{(cellInfo | async).coord}}</span>
 <div [class]="(cellInfo | async).currentPiece" class="pieces"></div>

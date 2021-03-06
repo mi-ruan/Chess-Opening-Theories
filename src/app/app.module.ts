@@ -8,6 +8,7 @@ import { SearchComponent } from "./components/search/search.component";
 import { MainComponent } from "./components/main/main.component";
 import { BoardComponent } from "./components/board/board.component";
 import { CellComponent } from "./components/cell/cell.component";
+import { OptionsComponent } from "./components/options/options.component";
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MaterialModule } from "./material/material.module";
@@ -16,7 +17,6 @@ import { AppRoutingModule } from "./app-routing.module";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MovesTableModule } from "./components/movesTable/moves-table.module";
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +24,8 @@ import { MovesTableModule } from "./components/movesTable/moves-table.module";
     EntryComponent,
     MainComponent,
     BoardComponent,
-    CellComponent
+    CellComponent,
+    OptionsComponent
   ],
   imports: [
     BrowserModule,
