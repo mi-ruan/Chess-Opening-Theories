@@ -2,6 +2,7 @@ import { Component, Input, OnInit, Output, EventEmitter } from "@angular/core";
 import { BehaviorSubject, Observable } from "rxjs";
 import { ECO } from "src/resources/master-list";
 import { initialMap, Pieces } from "../cell/initial-map";
+import { OptionsService } from "../options/options.service";
 
 export interface CellInfo {
   coord: string;
@@ -26,6 +27,8 @@ export class BoardComponent implements OnInit {
 
   private moves = [];
 
+  constructor(private optionsService: OptionsService) {}
+
   ngOnInit(): void {
     if (this.opening) {
       const listOfMoves = this.opening.moves.trim().split(" ");
@@ -35,10 +38,15 @@ export class BoardComponent implements OnInit {
   
   movePieces(move: string): void {
     const [initialCoord, destinationCoord] = [move.substring(0,2), move.substring(2)];
+    // update service with new positions
+    this.optionsService.initPos = initialCoord;
+    this.optionsService.destPos = destinationCoord;
+    
     const initialCoordSubject = this.coordMap.get(initialCoord);
     const destinationCoordSubject = this.coordMap.get(destinationCoord);
     const currentPiece = initialCoordSubject.value.currentPiece;
     const destinationPiece = destinationCoordSubject.value.currentPiece;
+
     this.movePiecesSubjects(currentPiece, initialCoordSubject, destinationCoordSubject);
     if (this.checkForCastle(currentPiece, initialCoord, destinationCoord)) {
       this.moveCastle(currentPiece, initialCoordSubject, destinationCoordSubject);

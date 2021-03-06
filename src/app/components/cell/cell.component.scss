@@ -1,5 +1,18 @@
 :host {
   position: relative;
+  z-index: 2
+}
+
+.highlight {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  bottom: 100%;
+
+  &.old-pos, &.new-pos {
+    background-color: #e9e929;
+    opacity: 50%;
+  }
 }
 
 .coordinates {
@@ -7,6 +20,8 @@
 }
 
 .pieces {
+  position: relative;
+  z-index: 2;
   background-repeat: no-repeat;
   background-size: contain;
   height: 100%;

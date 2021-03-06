@@ -5,6 +5,9 @@ import { BehaviorSubject } from "rxjs";
 export class OptionsService {
   showCoord = new BehaviorSubject<boolean>(false);
 
+  initPos!: string;
+  destPos!: string;
+
   updateShowCoord(value: boolean): void {
     this.showCoord.next(value);
   }
