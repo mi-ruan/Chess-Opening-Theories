@@ -39,6 +39,10 @@ export class BoardComponent implements OnInit {
     const destinationPiece = destinationCoordSubject.value.currentPiece;
     initialCoordSubject.next({...initialCoordSubject.value, currentPiece: undefined});
     destinationCoordSubject.next({...destinationCoordSubject.value, currentPiece});
+    if (this.checkForCastle(currentPiece, initialCoord, destinationCoord)) {
+      this.moveCastle(currentPiece, initialCoordSubject, destinationCoordSubject);
+      return;
+    }
     this.moves.push(this.convertCurrentPieceToNotation(currentPiece, initialCoordSubject.value.coord, destinationPiece)+destinationCoordSubject.value.coord);
     this.outputMoves.emit(this.moves);
   }
@@ -51,5 +55,47 @@ export class BoardComponent implements OnInit {
 
   private makeNewSubject(coord: string): BehaviorSubject<CellInfo> {
     return new BehaviorSubject<CellInfo>({coord, currentPiece: initialMap[coord]});
+  }
+
+  private checkForCastle(currentPiece: Pieces, initalCoord: string, destinationCoord: string): boolean {
+    return (currentPiece === Pieces.WK && initalCoord === "e1" && ((destinationCoord === "g1" && this.coordMap.get("h1").value.currentPiece === Pieces.WR) || (destinationCoord === "c1" && this.coordMap.get("a1").value.currentPiece === Pieces.WR)))
+    || (currentPiece === Pieces.BK && initalCoord === "e8" && ((destinationCoord === "g8" && this.coordMap.get("h8").value.currentPiece === Pieces.BR) || (destinationCoord === "c8" && this.coordMap.get("a8").value.currentPiece === Pieces.BR))) 
+  }
+
+  private moveCastle(currentPiece: Pieces, initialCoord: BehaviorSubject<CellInfo>, destinationCoord: BehaviorSubject<CellInfo>): void {
+    initialCoord.next({...initialCoord.value, currentPiece: undefined});
+    destinationCoord.next({...destinationCoord.value, currentPiece});
+    let rookPos, newPos;
+    switch(destinationCoord.value.coord) {
+      case "c1":
+        rookPos = this.coordMap.get("a1");
+        rookPos.next({...rookPos.value, currentPiece: undefined});
+        newPos = this.coordMap.get("d1");
+        newPos.next({...newPos.value, currentPiece: Pieces.WR});
+        this.moves.push("O-O-O");
+        break;
+      case "g1":
+        rookPos = this.coordMap.get("h1");
+        rookPos.next({...rookPos.value, currentPiece: undefined});
+        newPos = this.coordMap.get("f1");
+        newPos.next({...newPos.value, currentPiece: Pieces.WR});
+        this.moves.push("O-O");
+        break;
+      case "c8":
+        rookPos = this.coordMap.get("a8");
+        rookPos.next({...rookPos.value, currentPiece: undefined});
+        newPos = this.coordMap.get("d8");
+        newPos.next({...newPos.value, currentPiece: Pieces.BR});
+        this.moves.push("O-O-O");
+        break;
+      case "g8":
+        rookPos = this.coordMap.get("h8");
+        rookPos.next({...rookPos.value, currentPiece: undefined});
+        newPos = this.coordMap.get("f8");
+        newPos.next({...newPos.value, currentPiece: Pieces.BR});
+        this.moves.push("O-O");
+        break;             
+    }
+    this.outputMoves.emit(this.moves);
   }
 }
