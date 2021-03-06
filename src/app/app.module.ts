@@ -14,12 +14,8 @@ import { MaterialModule } from "./material/material.module";
 import { EntryComponent } from "./components/entry/entry.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { BreadcrumbModule } from "./components/breadcrumb/breadcrumb.module";
 import { MovesTableModule } from "./components/movesTable/moves-table.module";
 
-import { KingsPawnModule } from "./components/kingsPawn/kings-pawn.module";
-import { QueensPawnModule } from "./components/queensPawn/queens-pawn.module";
-import { FlankModule } from "./components/flankOpenings/flank.module";
 
 @NgModule({
   declarations: [
@@ -38,10 +34,6 @@ import { FlankModule } from "./components/flankOpenings/flank.module";
     RouterModule,
     ReactiveFormsModule,
     FormsModule,
-    BreadcrumbModule,
-    KingsPawnModule,
-    QueensPawnModule,
-    FlankModule,
     MovesTableModule
   ],
   providers: [    {

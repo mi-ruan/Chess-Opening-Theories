@@ -14,7 +14,7 @@ export interface CellInfo {
   styleUrls: ["./board.component.scss"]
 })
 export class BoardComponent implements OnInit {
-  @Input() opening!: ECO;
+  @Input() opening: ECO | undefined = undefined;
   @Output() outputMoves = new EventEmitter<Array<string>>();
   coordMap: Map<string, BehaviorSubject<CellInfo>> = new Map();
   grid = ["a", "b", "c", "d", "e", "f", "g", "h"].map(r =>
@@ -27,8 +27,10 @@ export class BoardComponent implements OnInit {
   private moves = [];
 
   ngOnInit(): void {
-    const listOfMoves = this.opening.moves.trim().split(" ");
-    listOfMoves.forEach(moves => this.movePieces(moves));
+    if (this.opening) {
+      const listOfMoves = this.opening.moves.trim().split(" ");
+      listOfMoves.forEach(moves => this.movePieces(moves));
+    }
   }
   
   movePieces(move: string): void {

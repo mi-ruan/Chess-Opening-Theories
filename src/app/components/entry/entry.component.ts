@@ -5,4 +5,10 @@ import { Component } from "@angular/core";
   styleUrls: ["./entry.component.scss"]
 })
 
-export class EntryComponent {}
+export class EntryComponent {
+  moves: Array<string> = [];
+
+  handleMoves(moves: Array<string>): void {
+    this.moves = moves;
+  }
+}

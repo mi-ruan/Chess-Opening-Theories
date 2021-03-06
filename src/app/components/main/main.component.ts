@@ -6,6 +6,7 @@ import { filter, distinctUntilChanged } from "rxjs/operators";
 import { ECO } from "../../../resources/master-list";
 
 @Component({
+  selector: "app-main",
   templateUrl: "./main.component.html",
   styleUrls: ["./main.component.scss"]
 })
@@ -16,8 +17,7 @@ export class MainComponent implements OnInit {
 
   constructor(private router: Router) {
     const data = this.router.getCurrentNavigation().extras.state?.data;
-    this.opening = data;
-    if (!data) this.router.navigate(["/home"]);
+    this.opening = data || undefined;
   }
   
   ngOnInit(): void {
