@@ -15,8 +15,16 @@
   }
 }
 
-.coordinates {
+.coordinates, .move-percent {
   position: absolute;
+  left: 4px;
+}
+
+.move-percent {
+  top: 20px;
+  color: black;
+  background-color: white;
+  opacity: 85%;
 }
 
 .pieces {

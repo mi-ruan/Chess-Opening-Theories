@@ -1,3 +1,8 @@
 <span *ngIf="showCoord | async" class="coordinates">{{(cellInfo | async).coord}}</span>
 <div [class]="(cellInfo | async).currentPiece" class="pieces"></div>
-<div class="highlight" [ngClass]="{'old-pos': isOldPos, 'new-pos': isNewPos}"></div>
+<div *ngIf="hasNextMoves" class="move-percent">{{movePercentage}}</div>
+<div class="highlight" 
+  [ngClass]="{'old-pos': isOldPos, 'new-pos': isNewPos}" 
+  [style.backgroundColor]="nextTurn ? nextTurn === 'white' ? 'green' : 'red' : ''"
+  [style.opacity]="opacity">
+</div>

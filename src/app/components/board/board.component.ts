@@ -1,12 +1,15 @@
 import { Component, Input, OnInit, Output, EventEmitter } from "@angular/core";
-import { BehaviorSubject, Observable } from "rxjs";
-import { ECO } from "src/resources/master-list";
+import { BehaviorSubject } from "rxjs";
+import { ECO, masterList } from "src/resources/master-list";
 import { initialMap, Pieces } from "../cell/initial-map";
 import { OptionsService } from "../options/options.service";
 
 export interface CellInfo {
   coord: string;
   currentPiece: Pieces | undefined;
+  nextMoves: Array<ECO>;
+  nextTurn?: "white" | "black";
+  totalNextMoves?: number;
 }
 
 @Component({
@@ -34,6 +37,7 @@ export class BoardComponent implements OnInit {
       const listOfMoves = this.opening.moves.trim().split(" ");
       listOfMoves.forEach(moves => this.movePieces(moves));
     }
+    this.getNextMoves();
   }
   
   movePieces(move: string): void {
@@ -63,7 +67,7 @@ export class BoardComponent implements OnInit {
   }
 
   private makeNewSubject(coord: string): BehaviorSubject<CellInfo> {
-    return new BehaviorSubject<CellInfo>({coord, currentPiece: initialMap[coord]});
+    return new BehaviorSubject<CellInfo>({coord, currentPiece: initialMap[coord], nextMoves: []});
   }
 
   private movePiecesSubjects(currentPiece: Pieces, initSubject: BehaviorSubject<CellInfo>, destSubject: BehaviorSubject<CellInfo>): void {
@@ -78,7 +82,6 @@ export class BoardComponent implements OnInit {
 
   private moveCastle(currentPiece: Pieces, initialCoord: BehaviorSubject<CellInfo>, destinationCoord: BehaviorSubject<CellInfo>): void {
     this.movePiecesSubjects(currentPiece, initialCoord, destinationCoord);
-    let rookPos, newPos;
     switch(destinationCoord.value.coord) {
       case "c1":
         this.movePiecesSubjects(Pieces.WR, this.coordMap.get("a1"), this.coordMap.get("d1"));
@@ -98,5 +101,27 @@ export class BoardComponent implements OnInit {
         break;             
     }
     this.outputMoves.emit(this.moves);
+  }
+
+  private getNextMoves(): void {
+    const updateCoordMap: Record<string, Array<ECO>> = {};
+    const openingMoves = this.opening?.moves.trim() || "";
+    const whoIsTurn = openingMoves === "" ? "white" : openingMoves.split(" ").length % 2 === 0 ? "white" : "black";
+    const nextMoves = masterList.filter(opening => opening.moves.startsWith(openingMoves));
+    nextMoves.map(opening => {
+      const nextMove = opening.moves.replace(openingMoves, "").trim();
+      if (nextMove.length > 0) {
+        const nextMoveCoord = nextMove.split(" ")[0].substring(2).trim();
+        updateCoordMap[nextMoveCoord] ? updateCoordMap[nextMoveCoord].push(opening) : updateCoordMap[nextMoveCoord] = [opening];
+      }
+    });
+    const totalNextMoves = Object.values(updateCoordMap).reduce((a,b) => a + b.length, 0);
+    Object.keys(updateCoordMap).forEach(coord => {
+      const destSubject = this.coordMap.get(coord);
+      destSubject.next({
+        ...destSubject.value, 
+        ...{ nextMoves: updateCoordMap[coord], nextTurn: whoIsTurn, totalNextMoves }
+      })
+    })
   }
 }

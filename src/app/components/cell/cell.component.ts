@@ -9,11 +9,15 @@ import { OptionsService } from "../options/options.service";
   styleUrls: ["./cell.component.scss"]
 })
 export class CellComponent implements OnInit {
-  @Input() cellInfo!: Observable<Partial<CellInfo>>;
+  @Input() cellInfo!: Observable<CellInfo>;
   piece!: string;
   showCoord!: Observable<boolean>;
   isOldPos = false;
   isNewPos = false;
+  hasNextMoves = false;
+  movePercentage!: string;
+  opacity!: number;
+  nextTurn!: "white" | "black" | undefined;
 
   constructor(private optionsService: OptionsService) {}
 
@@ -23,6 +27,17 @@ export class CellComponent implements OnInit {
     this.cellInfo.subscribe(info => {
       this.isOldPos = this.optionsService.initPos === info.coord;
       this.isNewPos = this.optionsService.destPos === info.coord;
+      this.hasNextMoves = info.nextMoves.length > 0;
+      this.nextTurn = info.nextTurn;
+      this.getPercentage(info);
     })
   }
+
+  private getPercentage(info: CellInfo): void {
+    if (info.totalNextMoves) {
+      this.opacity = info.nextMoves.length / info.totalNextMoves * 10;
+      this.movePercentage = ((info.nextMoves.length / info.totalNextMoves) * 100).toFixed(2)  + "%"; 
+    }
+  }
+
 }

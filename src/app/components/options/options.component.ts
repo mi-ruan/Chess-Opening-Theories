@@ -15,6 +15,7 @@ export class OptionsComponent implements OnInit {
   constructor(private optionsService: OptionsService) {}
 
   ngOnInit() {
+    this.showCoord.setValue(this.optionsService.showCoord.value);
     this.showCoord.valueChanges.subscribe(value => this.optionsService.updateShowCoord(value));
   }
 }
