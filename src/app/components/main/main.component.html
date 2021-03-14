@@ -1,5 +1,6 @@
-<div class="main"> 
+<div class="main">
   <app-options></app-options>
   <app-board [opening]="opening" (outputMoves)="handleMoves($event)"></app-board>
   <app-moves-table [moves]="moves"></app-moves-table>
+  <app-info></app-info> 
 </div>

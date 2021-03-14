@@ -2,7 +2,8 @@ import { Component, Input, OnInit, Output, EventEmitter } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
 import { ECO, masterList } from "src/resources/master-list";
 import { initialMap, Pieces } from "../cell/initial-map";
-import { OptionsService } from "../options/options.service";
+import { OptionsService } from "../../services/options.service";
+import { InfoService } from "src/app/services/info.service";
 
 export interface CellInfo {
   coord: string;
@@ -30,7 +31,7 @@ export class BoardComponent implements OnInit {
 
   private moves = [];
 
-  constructor(private optionsService: OptionsService) {}
+  constructor(private optionsService: OptionsService, private infoService: InfoService) {}
 
   ngOnInit(): void {
     if (this.opening) {
@@ -116,6 +117,7 @@ export class BoardComponent implements OnInit {
       }
     });
     const totalNextMoves = Object.values(updateCoordMap).reduce((a,b) => a + b.length, 0);
+    this.infoService.updateNextMoves(updateCoordMap);
     Object.keys(updateCoordMap).forEach(coord => {
       const destSubject = this.coordMap.get(coord);
       destSubject.next({

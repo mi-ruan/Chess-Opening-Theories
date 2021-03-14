@@ -1,0 +1,7 @@
+<mat-list class="info-list">
+  <mat-card class='info-card' *ngFor="let move of nextMovesInfo | async" (click)="navigateMove(move)">
+    <mat-card-title>{{move.name}}</mat-card-title>
+    <mat-card-subtitle>Continuations: {{move.continuations}}</mat-card-subtitle>
+    <mat-card-content>{{move.moves}}</mat-card-content>
+  </mat-card> 
+</mat-list>

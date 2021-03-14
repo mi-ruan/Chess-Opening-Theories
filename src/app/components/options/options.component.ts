@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
 import { FormControl } from "@angular/forms";
-import { OptionsService } from "./options.service";
+import { OptionsService } from "../../services/options.service";
 
 @Component({
   selector: "app-options",

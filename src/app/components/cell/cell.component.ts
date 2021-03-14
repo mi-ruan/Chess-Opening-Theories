@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
 import { CellInfo } from "../board/board.component";
-import { OptionsService } from "../options/options.service";
+import { OptionsService } from "../../services/options.service";
 
 @Component({
   selector: "app-cell",

@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  align-items: center;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  height: 65vh;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+}
+
+.info-card {
+  max-width: 250px;
+  margin: 16px;
+  cursor: pointer;
+}
+
+.mat-card-title {
+  font-size: 20px;
+}

@@ -16,6 +16,7 @@ import { EntryComponent } from "./components/entry/entry.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MovesTableModule } from "./components/movesTable/moves-table.module";
+import { InfoComponent } from "./components/info/info.component";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MovesTableModule } from "./components/movesTable/moves-table.module";
     MainComponent,
     BoardComponent,
     CellComponent,
-    OptionsComponent
+    OptionsComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
