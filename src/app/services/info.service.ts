@@ -2,18 +2,21 @@ import { Injectable } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
 import { ECO, masterList } from "src/resources/master-list";
 import { CellInfo } from "../components/board/board.component";
+import { MoveNotationService } from "../components/board/move-notation.service";
 
 export interface NextMoveInfo {
   name: string;
   moves: string;
   continuations: number;
   eco: ECO;
+  notation: string;
 }
 
 @Injectable({providedIn: "root"})
 export class InfoService {
   nextMoves = new BehaviorSubject<Array<NextMoveInfo>>([]);
-  currentBoardState!:  Map<string, BehaviorSubject<CellInfo>>;
+
+  constructor(private moveNotation: MoveNotationService) { }
 
   updateNextMoves(movesObject: Record<string, Array<ECO>>): void {
     let nextMovesInfo = [];
@@ -23,11 +26,6 @@ export class InfoService {
     });
     nextMovesInfo.sort((a,b) => b.continuations - a.continuations);
     this.nextMoves.next(nextMovesInfo);
-    this.currentBoardState.get("h3").next({
-      coord: "h10",
-      currentPiece: undefined,
-      nextMoves: []
-    })
   }
 
   private getLowestMove(moves: Array<ECO>): Array<NextMoveInfo> {
@@ -49,7 +47,8 @@ export class InfoService {
       name: moves.name,
       moves: moves.moves,
       continuations: masterList.filter(opening => opening.moves.startsWith(moves.moves.trim())).length,
-      eco: moves
+      eco: moves,
+      notation: this.moveNotation.getMoveNotation(moves.moves),
     }));
   }
 
