@@ -2,7 +2,13 @@
 <div [class]="(cellInfo | async).currentPiece" class="pieces"></div>
 <div *ngIf="hasNextMoves && (showPercent | async)" class="move-percent">{{movePercentage}}</div>
 <div class="highlight" 
-  [ngClass]="{'old-pos': isOldPos, 'new-pos': isNewPos}" 
+  [ngClass]="{
+    'old-pos': isOldPos, 
+    'new-pos': isNewPos, 
+    'attacked-white': (showSpace | async) && attackingColor === 'white',
+    'attacked-black': (showSpace | async) && attackingColor === 'black',
+    'attacked-both': (showSpace | async) && attackingColor === 'both'
+  }" 
   [style.backgroundColor]="hasNextMoves && (showPercent | async) ? nextTurn ? nextTurn === 'white' ? 'green' : 'red' : '' : ''"
-  [style.opacity]="opacity">
+  [style.opacity]="hasNextMoves && (showPercent | async) ? opacity : ''">
 </div>

@@ -13,18 +13,21 @@ export class CellComponent implements OnInit {
   piece!: string;
   showCoord!: Observable<boolean>;
   showPercent!: Observable<boolean>;
+  showSpace!: Observable<boolean>;
   isOldPos = false;
   isNewPos = false;
   hasNextMoves = false;
   movePercentage!: string;
   opacity!: number;
   nextTurn!: "white" | "black" | undefined;
+  attackingColor!: "white" | "black" | "both";
 
   constructor(private optionsService: OptionsService) {}
 
   ngOnInit(): void {
     this.showCoord = this.optionsService.showCoord;
     this.showPercent = this.optionsService.showPercent;
+    this.showSpace = this.optionsService.showSpace;
 
     this.cellInfo.subscribe(info => {
       this.isOldPos = this.optionsService.initPos === info.coord;
@@ -32,6 +35,7 @@ export class CellComponent implements OnInit {
       this.hasNextMoves = info.nextMoves.length > 0;
       this.nextTurn = info.nextTurn;
       this.getPercentage(info);
+      this.attackingColor = info.attackingColor;
     })
   }
 

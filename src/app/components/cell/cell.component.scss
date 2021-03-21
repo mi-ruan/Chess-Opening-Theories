@@ -8,10 +8,22 @@
   position: relative;
   z-index: 1;
   bottom: 100%;
+  opacity: 50%;
 
   &.old-pos, &.new-pos {
     background-color: #e9e929;
-    opacity: 50%;
+  }
+
+  &.attacked-white {
+    background-color: green;
+  }
+
+  &.attacked-black {
+    background-color: red;
+  }
+
+  &.attacked-both {
+    background-color: purple;
   }
 }
 
@@ -25,6 +37,7 @@
   color: black;
   background-color: white;
   opacity: 85%;
+  z-index: 2;
 }
 
 .pieces {

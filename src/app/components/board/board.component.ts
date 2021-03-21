@@ -11,6 +11,7 @@ export interface CellInfo {
   nextMoves: Array<ECO>;
   nextTurn?: "white" | "black";
   totalNextMoves?: number;
+  attackingColor?: "white" | "black" | "both";
 }
 
 @Component({
@@ -22,7 +23,8 @@ export class BoardComponent implements OnInit {
   @Input() opening: ECO | undefined = undefined;
   @Output() outputMoves = new EventEmitter<Array<string>>();
   coordMap: Map<string, BehaviorSubject<CellInfo>> = new Map();
-  grid = ["a", "b", "c", "d", "e", "f", "g", "h"].map(r =>
+  rowGrid = ["a", "b", "c", "d", "e", "f", "g", "h"];
+  grid = this.rowGrid.map(r =>
     [8, 7, 6, 5, 4, 3, 2, 1].map(c => {
       this.coordMap.set(r+c, this.makeNewSubject(r+c));
       return this.coordMap.get(r+c);
@@ -39,6 +41,7 @@ export class BoardComponent implements OnInit {
       listOfMoves.forEach(moves => this.movePieces(moves));
     }
     this.getNextMoves();
+    this.getAttackingMoves();
   }
   
   movePieces(move: string): void {
@@ -125,5 +128,56 @@ export class BoardComponent implements OnInit {
         ...{ nextMoves: updateCoordMap[coord], nextTurn: whoIsTurn, totalNextMoves }
       })
     })
+  }
+
+  private getAttackingMoves(): void {
+    this.coordMap.forEach(cellInfo => {
+      this.processAttackingMove(cellInfo.getValue());
+    })
+  }
+
+  private processAttackingMove(cellInfo: CellInfo): void {
+    const coord = cellInfo.coord;
+    if (cellInfo.currentPiece) {
+      const [color, piece] = cellInfo.currentPiece.split("-");
+  
+      if (piece === "pawn") {
+        this.processPawnAttack(coord, color as "white" | "black");
+      }
+    }
+  }
+
+  private processPawnAttack(coord: string, color: "white" | "black"): void {
+    const [row, col] = coord.split("");
+    let whiteCol: number | undefined, blackCol: number | undefined;
+    const rowNumber = this.rowGrid.findIndex(i => row === i) + 1;
+    const colNumber = parseInt(col);
+    const leftAttack: number | undefined = (rowNumber - 1 > 0) ? (rowNumber - 1): undefined;
+    const rightAttack: number | undefined = (rowNumber + 1 < 9) ? (rowNumber + 1): undefined;
+    if (color === "white") {
+      whiteCol = (colNumber + 1 < 9) ? (colNumber + 1) : undefined;
+    } else {
+      blackCol = (colNumber - 1 > 0) ? (colNumber - 1): undefined;
+    }
+    if (whiteCol) {
+      if (leftAttack) {
+        this.setAttackingSquare(whiteCol, leftAttack, color);
+      } if (rightAttack) {
+        this.setAttackingSquare(whiteCol, rightAttack, color);
+      }
+    } else if (blackCol) {
+      if (leftAttack) {
+        this.setAttackingSquare(blackCol, leftAttack, color);
+      } if (rightAttack) {
+        this.setAttackingSquare(blackCol, rightAttack, color);
+      }
+    }
+  }
+
+  private setAttackingSquare(colNumber: number, rowNumber: number, color: "white" | "black"): void {
+    const cell = this.coordMap.get(this.rowGrid[rowNumber - 1] + colNumber.toString());
+    let attackingColor: "white" | "black" | "both" = color;
+    if (cell.value.attackingColor !== undefined && cell.value.attackingColor !== attackingColor) attackingColor = "both";
+    cell.next({...cell.value, attackingColor});
   }
 }
