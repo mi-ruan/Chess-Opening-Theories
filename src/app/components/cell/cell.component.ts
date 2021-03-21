@@ -12,6 +12,7 @@ export class CellComponent implements OnInit {
   @Input() cellInfo!: Observable<CellInfo>;
   piece!: string;
   showCoord!: Observable<boolean>;
+  showPercent!: Observable<boolean>;
   isOldPos = false;
   isNewPos = false;
   hasNextMoves = false;
@@ -23,6 +24,7 @@ export class CellComponent implements OnInit {
 
   ngOnInit(): void {
     this.showCoord = this.optionsService.showCoord;
+    this.showPercent = this.optionsService.showPercent;
 
     this.cellInfo.subscribe(info => {
       this.isOldPos = this.optionsService.initPos === info.coord;

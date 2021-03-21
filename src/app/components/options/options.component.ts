@@ -11,11 +11,14 @@ import { OptionsService } from "../../services/options.service";
 
 export class OptionsComponent implements OnInit {
   showCoord = new FormControl(false);
+  showPercent = new FormControl(false);
 
   constructor(private optionsService: OptionsService) {}
 
   ngOnInit() {
     this.showCoord.setValue(this.optionsService.showCoord.value);
     this.showCoord.valueChanges.subscribe(value => this.optionsService.updateShowCoord(value));
+    this.showPercent.setValue(this.optionsService.showPercent.value);
+    this.showPercent.valueChanges.subscribe(value => this.optionsService.updateShowPercent(value));
   }
 }
