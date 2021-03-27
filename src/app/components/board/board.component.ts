@@ -42,6 +42,7 @@ export class BoardComponent implements OnInit {
     }
     this.getNextMoves();
     this.getAttackingMoves();
+    this.getAttackingData();
   }
   
   movePieces(move: string): void {
@@ -138,20 +139,35 @@ export class BoardComponent implements OnInit {
 
   private processAttackingMove(cellInfo: CellInfo): void {
     const coord = cellInfo.coord;
+    const [row, col] = coord.split("");
+    const rowNumber = this.rowGrid.findIndex(i => row === i) + 1;
+    const colNumber = parseInt(col);
     if (cellInfo.currentPiece) {
       const [color, piece] = cellInfo.currentPiece.split("-");
   
       if (piece === "pawn") {
-        this.processPawnAttack(coord, color as "white" | "black");
+        this.processPawnAttack(rowNumber, colNumber, color as "white" | "black");
+      }
+      else if (piece === "knight") {
+        this.processKnightAttack(rowNumber, colNumber, color as "white" | "black");
+      }
+      else if(piece === "bishop") {
+        this.processBishopAttack(rowNumber, colNumber, color as "white" | "black");
+      }
+      else if (piece === "rook") {
+        this.processRookAttack(rowNumber, colNumber, color as "white" | "black");
+      }
+      else if (piece === "queen") {
+        this.processQueenAttack(rowNumber, colNumber, color as "white" | "black");
+      }
+      else if (piece === "king") {
+        this.processKingAttack(rowNumber, colNumber, color as "white" | "black");
       }
     }
   }
 
-  private processPawnAttack(coord: string, color: "white" | "black"): void {
-    const [row, col] = coord.split("");
+  private processPawnAttack(rowNumber: number, colNumber: number, color: "white" | "black"): void {
     let whiteCol: number | undefined, blackCol: number | undefined;
-    const rowNumber = this.rowGrid.findIndex(i => row === i) + 1;
-    const colNumber = parseInt(col);
     const leftAttack: number | undefined = (rowNumber - 1 > 0) ? (rowNumber - 1): undefined;
     const rightAttack: number | undefined = (rowNumber + 1 < 9) ? (rowNumber + 1): undefined;
     if (color === "white") {
@@ -161,23 +177,111 @@ export class BoardComponent implements OnInit {
     }
     if (whiteCol) {
       if (leftAttack) {
-        this.setAttackingSquare(whiteCol, leftAttack, color);
+        this.setAttackingSquare(leftAttack, whiteCol, color);
       } if (rightAttack) {
-        this.setAttackingSquare(whiteCol, rightAttack, color);
+        this.setAttackingSquare(rightAttack, whiteCol, color);
       }
     } else if (blackCol) {
       if (leftAttack) {
-        this.setAttackingSquare(blackCol, leftAttack, color);
+        this.setAttackingSquare(leftAttack, blackCol, color);
       } if (rightAttack) {
-        this.setAttackingSquare(blackCol, rightAttack, color);
+        this.setAttackingSquare(rightAttack, blackCol, color);
       }
     }
   }
 
-  private setAttackingSquare(colNumber: number, rowNumber: number, color: "white" | "black"): void {
+  private processKnightAttack(rowNumber: number, colNumber: number, color: "white" | "black"): void {
+    // the eight direction knights can attack in 
+    const directions = [[1, 2], [2, 1], [-1, 2], [-2, 1], [1, -2], [2, -1], [-1, -2], [-2, -1]];
+    directions.forEach(([row, col]) => {
+      const newRow = rowNumber + row;
+      const newCol = colNumber + col;
+      if (newRow > 0 && newRow < 9 && newCol > 0 && newCol < 9) {
+        this.setAttackingSquare(newRow, newCol, color);
+      }
+    });
+  }
+
+  private processBishopAttack(rowNumber: number, colNumber: number, color: "white" | "black"): void {
+    // the diagonals
+    const diags: Array<[number, number]> = [[1, 1], [-1, 1], [1, -1], [-1, -1]];
+    this.processLineAttack(rowNumber, colNumber, color, diags);
+  }
+
+  private processRookAttack(rowNumber: number, colNumber: number, color: "white" | "black"): void {
+    // the ranks and files 
+    const rows: Array<[number, number]> = [[0, 1], [1, 0], [0, -1], [-1, 0]];
+    this.processLineAttack(rowNumber, colNumber, color, rows);
+  }
+
+  private processQueenAttack(rowNumber: number, colNumber: number, color: "white" | "black"): void {
+    // all eight directions
+    const directions: Array<[number, number]> = [[0, 1], [1, 0], [0, -1], [-1, 0], [1, 1], [-1, 1], [1, -1], [-1, -1]];
+    this.processLineAttack(rowNumber, colNumber, color, directions);
+  }
+
+  private processLineAttack(rowNumber, colNumber, color: "white" | "black", directions: Array<[number, number]>): void {
+    directions.forEach(([row, col]) => {
+      let hasFirstOccupiedSquare = false
+      let newRow = rowNumber + row;
+      let newCol = colNumber + col;
+      while (newRow > 0 && newRow < 9 && newCol > 0 && newCol < 9 && !hasFirstOccupiedSquare) {
+        this.setAttackingSquare(newRow, newCol, color);
+        hasFirstOccupiedSquare = this.checkFirstOccupiedSquare(newRow, newCol);
+        newRow += row;
+        newCol += col;
+      }
+    });
+  }
+
+  private checkFirstOccupiedSquare(rowNumber: number, colNumber: number): boolean {
+    const cell = this.coordMap.get(this.rowGrid[rowNumber - 1] + colNumber.toString());
+    return cell.getValue().currentPiece !== undefined;
+  }
+
+  private processKingAttack(rowNumber: number, colNumber: number, color: "white" | "black"): void {
+    // all eight directions
+    const directions: Array<[number, number]> = [[0, 1], [1, 0], [0, -1], [-1, 0], [1, 1], [-1, 1], [1, -1], [-1, -1]];
+    directions.forEach(([row, col]) => {
+      const newRow = rowNumber + row;
+      const newCol = colNumber + col;
+      if (newRow > 0 && newRow < 9 && newCol > 0 && newCol < 9) {
+        this.setAttackingSquare(newRow, newCol, color);
+      }
+    })
+  }
+
+  private setAttackingSquare(rowNumber: number, colNumber: number, color: "white" | "black"): void {
     const cell = this.coordMap.get(this.rowGrid[rowNumber - 1] + colNumber.toString());
     let attackingColor: "white" | "black" | "both" = color;
     if (cell.value.attackingColor !== undefined && cell.value.attackingColor !== attackingColor) attackingColor = "both";
     cell.next({...cell.value, attackingColor});
+  }
+
+  private getAttackingData(): void {
+    let whiteSpace = 0;
+    let blackSpace = 0; 
+    let bothSpace = 0;
+    this.coordMap.forEach(coord => {
+      const attackingColor = coord.getValue().attackingColor;
+      switch(attackingColor) {
+        case "white":
+          whiteSpace++;
+          return;
+        case "black":
+          blackSpace++;
+          return;
+        case "both":
+          bothSpace++;
+          whiteSpace++;
+          blackSpace++;
+          return;
+        default: 
+        return;
+      }
+    });
+    this.optionsService.whiteOccupiedSpace.next(whiteSpace);
+    this.optionsService.blackOccupiedSpace.next(blackSpace);
+    this.optionsService.bothOccupiedSpace.next(bothSpace);
   }
 }

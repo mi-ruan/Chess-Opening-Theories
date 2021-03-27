@@ -10,6 +10,10 @@ export class OptionsService {
   initPos!: string;
   destPos!: string;
 
+  whiteOccupiedSpace = new BehaviorSubject(0);
+  blackOccupiedSpace = new BehaviorSubject(0);
+  bothOccupiedSpace = new BehaviorSubject(0);
+
   updateShowCoord(value: boolean): void {
     this.showCoord.next(value);
   }

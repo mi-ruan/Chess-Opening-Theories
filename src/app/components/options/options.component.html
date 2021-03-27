@@ -2,3 +2,9 @@
 <mat-checkbox [formControl]="showPercent" labelPosition="before">Show Percent</mat-checkbox>
 <mat-checkbox [formControl]="showSpace" labelPosition="before">Show Space</mat-checkbox>
 
+<div *ngIf="showSpace.value">
+  <br />
+  <div>White Squares: {{whiteSpace | async}}</div>
+  <div>Black Squares: {{blackSpace | async}}</div>
+  <div>Contested Squares: {{bothSpace | async}}</div>
+</div>

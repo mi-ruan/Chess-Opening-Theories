@@ -15,6 +15,10 @@ export class OptionsComponent implements OnInit {
   showPercent = new FormControl(false);
   showSpace = new FormControl(false);
 
+  whiteSpace = this.optionsService.whiteOccupiedSpace;
+  blackSpace = this.optionsService.blackOccupiedSpace;
+  bothSpace = this.optionsService.bothOccupiedSpace;
+
   constructor(private optionsService: OptionsService) {}
 
   ngOnInit() {
@@ -24,5 +28,6 @@ export class OptionsComponent implements OnInit {
     this.showPercent.valueChanges.pipe(distinctUntilChanged()).subscribe(value => this.optionsService.updateShowPercent(value));
     this.optionsService.showSpace.subscribe(value => this.showSpace.setValue(value));
     this.showSpace.valueChanges.pipe(distinctUntilChanged()).subscribe(value => this.optionsService.updateShowSpace(value));
+
   }
 }
