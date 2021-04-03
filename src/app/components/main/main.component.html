@@ -1,6 +1,6 @@
 <div class="main">
   <app-options></app-options>
-  <app-board [opening]="opening" (outputMoves)="handleMoves($event)"></app-board>
-  <app-moves-table *ngIf="moves.length > 0" [moves]="moves"></app-moves-table>
+  <app-board [opening]="opening"></app-board>
+  <app-moves-table *ngIf="(moves | async).length > 0"></app-moves-table>
   <app-info></app-info> 
 </div>

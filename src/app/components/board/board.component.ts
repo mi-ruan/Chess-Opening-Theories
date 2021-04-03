@@ -4,7 +4,8 @@ import { ECO, masterList } from "src/resources/master-list";
 import { initialMap, Pieces } from "../cell/initial-map";
 import { OptionsService } from "../../services/options.service";
 import { InfoService } from "src/app/services/info.service";
-import { CdkDrag, CdkDragDrop, CdkDropList } from "@angular/cdk/drag-drop";
+import { CdkDrag, CdkDropList } from "@angular/cdk/drag-drop";
+import { MoveTableService } from "../movesTable/moves-table.service";
 
 export interface CellInfo {
   coord: string;
@@ -22,7 +23,6 @@ export interface CellInfo {
 })
 export class BoardComponent implements OnInit {
   @Input() opening: ECO | undefined = undefined;
-  @Output() outputMoves = new EventEmitter<Array<string>>();
   coordMap: Map<string, BehaviorSubject<CellInfo>> = new Map();
   rowGrid = ["a", "b", "c", "d", "e", "f", "g", "h"];
   grid = this.rowGrid.map(r =>
@@ -33,16 +33,23 @@ export class BoardComponent implements OnInit {
     );
   listOfCoords = this.rowGrid.map(r => [8, 7, 6, 5, 4, 3, 2, 1].map(c => r+c)).reduce((a,b) => a.concat(b), []);
 
-  private moves = [];
+  /** notation moves array */
+  private noteMoves: Array<string> = [];
+  /** raw moves array with init and dest position */
+  private openingMoves: Array<string> = [];
   private dragCoord: string = undefined;
   private dropCoord: string = undefined;
 
-  constructor(private optionsService: OptionsService, private infoService: InfoService) {}
+  constructor(
+    private optionsService: OptionsService, 
+    private infoService: InfoService,
+    private moveTable: MoveTableService
+  ) {}
 
   ngOnInit(): void {
     if (this.opening) {
-      const listOfMoves = this.opening.moves.trim().split(" ");
-      listOfMoves.forEach(moves => this.movePieces(moves));
+      this.openingMoves = this.opening.moves.trim().split(" ");
+      this.openingMoves.forEach(moves => this.movePieces(moves));
     }
     this.getNextMoves();
     this.getAttackingMoves();
@@ -52,8 +59,8 @@ export class BoardComponent implements OnInit {
   movePieces(move: string): void {
     const [initialCoord, destinationCoord] = [move.substring(0,2), move.substring(2)];
     // update service with new positions
-    this.optionsService.initPos = initialCoord;
-    this.optionsService.destPos = destinationCoord;
+    this.optionsService.initPos.next(initialCoord);
+    this.optionsService.destPos.next(destinationCoord);
     
     const initialCoordSubject = this.coordMap.get(initialCoord);
     const destinationCoordSubject = this.coordMap.get(destinationCoord);
@@ -65,8 +72,8 @@ export class BoardComponent implements OnInit {
       this.moveCastle(currentPiece, initialCoordSubject, destinationCoordSubject);
       return;
     }
-    this.moves.push(this.convertCurrentPieceToNotation(currentPiece, initialCoordSubject.value.coord, destinationPiece)+destinationCoordSubject.value.coord);
-    this.outputMoves.emit(this.moves);
+    this.noteMoves.push(this.convertCurrentPieceToNotation(currentPiece, initialCoordSubject.value.coord, destinationPiece)+destinationCoordSubject.value.coord);
+    this.moveTable.updateMoveTable(this.noteMoves);
   }
 
   enterPredicate(drag: CdkDrag, drop: CdkDropList): boolean {
@@ -77,7 +84,11 @@ export class BoardComponent implements OnInit {
 
   drop(): void {
     if (this.dragCoord && this.dropCoord) {
+      this.openingMoves.push(this.dragCoord + this.dropCoord);
       this.movePieces(this.dragCoord + this.dropCoord);
+      this.getNextMoves();
+      this.getAttackingMoves();
+      this.getAttackingData();
     }
     this.dragCoord = undefined;
     this.dropCoord = undefined;
@@ -108,31 +119,31 @@ export class BoardComponent implements OnInit {
     switch(destinationCoord.value.coord) {
       case "c1":
         this.movePiecesSubjects(Pieces.WR, this.coordMap.get("a1"), this.coordMap.get("d1"));
-        this.moves.push("O-O-O");
+        this.noteMoves.push("O-O-O");
         break;
       case "g1":
         this.movePiecesSubjects(Pieces.WR, this.coordMap.get("h1"), this.coordMap.get("f1"));
-        this.moves.push("O-O");
+        this.noteMoves.push("O-O");
         break;
       case "c8":
         this.movePiecesSubjects(Pieces.BR, this.coordMap.get("a8"), this.coordMap.get("d8"));
-        this.moves.push("O-O-O");
+        this.noteMoves.push("O-O-O");
         break;
       case "g8":
         this.movePiecesSubjects(Pieces.BR, this.coordMap.get("h8"), this.coordMap.get("f8"));
-        this.moves.push("O-O");
+        this.noteMoves.push("O-O");
         break;             
     }
-    this.outputMoves.emit(this.moves);
+    this.moveTable.updateMoveTable(this.noteMoves);
   }
 
   private getNextMoves(): void {
     const updateCoordMap: Record<string, Array<ECO>> = {};
-    const openingMoves = this.opening?.moves.trim() || "";
-    const whoIsTurn = openingMoves === "" ? "white" : openingMoves.split(" ").length % 2 === 0 ? "white" : "black";
-    const nextMoves = masterList.filter(opening => opening.moves.startsWith(openingMoves));
+    const openingMoves = this.openingMoves;
+    const whoIsTurn = openingMoves.length === 0 ? "white" : openingMoves.length % 2 === 0 ? "white" : "black";
+    const nextMoves = masterList.filter(opening => opening.moves.startsWith(openingMoves.join(" ")));
     nextMoves.map(opening => {
-      const nextMove = opening.moves.replace(openingMoves, "").trim();
+      const nextMove = opening.moves.replace(openingMoves.join(" "), "").trim();
       if (nextMove.length > 0) {
         const nextMoveCoord = nextMove.split(" ")[0].substring(2).trim();
         updateCoordMap[nextMoveCoord] ? updateCoordMap[nextMoveCoord].push(opening) : updateCoordMap[nextMoveCoord] = [opening];

@@ -7,8 +7,8 @@ export class OptionsService {
   showPercent = new BehaviorSubject<boolean>(true);
   showSpace = new BehaviorSubject<boolean>(false);
 
-  initPos!: string;
-  destPos!: string;
+  initPos = new BehaviorSubject<string | undefined>(undefined);
+  destPos = new BehaviorSubject<string | undefined>(undefined);
 
   whiteOccupiedSpace = new BehaviorSubject(0);
   blackOccupiedSpace = new BehaviorSubject(0);

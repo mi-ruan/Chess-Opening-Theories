@@ -14,6 +14,7 @@ export class CellComponent implements OnInit {
   showCoord!: Observable<boolean>;
   showPercent!: Observable<boolean>;
   showSpace!: Observable<boolean>;
+  coord!: string;
   isOldPos = false;
   isNewPos = false;
   hasNextMoves = false;
@@ -30,13 +31,15 @@ export class CellComponent implements OnInit {
     this.showSpace = this.optionsService.showSpace;
 
     this.cellInfo.subscribe(info => {
-      this.isOldPos = this.optionsService.initPos === info.coord;
-      this.isNewPos = this.optionsService.destPos === info.coord;
+      this.coord = info.coord;
       this.hasNextMoves = info.nextMoves.length > 0;
       this.nextTurn = info.nextTurn;
       this.getPercentage(info);
       this.attackingColor = info.attackingColor;
-    })
+    });
+
+    this.optionsService.initPos.subscribe(init => this.isOldPos = init === this.coord);
+    this.optionsService.destPos.subscribe(dest => this.isNewPos = dest === this.coord);
   }
 
   private getPercentage(info: CellInfo): void {

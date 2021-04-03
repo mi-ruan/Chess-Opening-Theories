@@ -1,8 +1,8 @@
-<span *ngIf="showCoord | async" class="coordinates">{{(cellInfo | async).coord}}</span>
+<span *ngIf="showCoord | async" class="coordinates">{{coord}}</span>
 <div [class]="(cellInfo | async).currentPiece" 
   class="pieces"
   cdkDrag
-  [cdkDragData]="(cellInfo | async).coord">
+  [cdkDragData]="coord">
   <div class="drag-placeholder" *cdkDragPlaceholder></div>
 </div>
 <div *ngIf="hasNextMoves && (showPercent | async)" class="move-percent">{{movePercentage}}</div>
