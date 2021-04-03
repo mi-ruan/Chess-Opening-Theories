@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { DragDropModule} from "@angular/cdk/drag-drop";
 import { RouteReuseStrategy, RouterModule } from "@angular/router";
 import { DefaultRouteReuseStrategy } from "./default-route-reuse-strategy";
 
@@ -37,6 +38,7 @@ import { InfoComponent } from "./components/info/info.component";
     RouterModule,
     ReactiveFormsModule,
     FormsModule,
+    DragDropModule,
     MovesTableModule
   ],
   providers: [    {

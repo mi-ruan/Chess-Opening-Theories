@@ -4,6 +4,7 @@ import { ECO, masterList } from "src/resources/master-list";
 import { initialMap, Pieces } from "../cell/initial-map";
 import { OptionsService } from "../../services/options.service";
 import { InfoService } from "src/app/services/info.service";
+import { CdkDrag, CdkDragDrop, CdkDropList } from "@angular/cdk/drag-drop";
 
 export interface CellInfo {
   coord: string;
@@ -29,9 +30,12 @@ export class BoardComponent implements OnInit {
       this.coordMap.set(r+c, this.makeNewSubject(r+c));
       return this.coordMap.get(r+c);
     })
-  );
+    );
+  listOfCoords = this.rowGrid.map(r => [8, 7, 6, 5, 4, 3, 2, 1].map(c => r+c)).reduce((a,b) => a.concat(b), []);
 
   private moves = [];
+  private dragCoord: string = undefined;
+  private dropCoord: string = undefined;
 
   constructor(private optionsService: OptionsService, private infoService: InfoService) {}
 
@@ -63,6 +67,20 @@ export class BoardComponent implements OnInit {
     }
     this.moves.push(this.convertCurrentPieceToNotation(currentPiece, initialCoordSubject.value.coord, destinationPiece)+destinationCoordSubject.value.coord);
     this.outputMoves.emit(this.moves);
+  }
+
+  enterPredicate(drag: CdkDrag, drop: CdkDropList): boolean {
+    this.dragCoord = drag.data;
+    this.dropCoord = drop.id;
+    return false;
+  }
+
+  drop(): void {
+    if (this.dragCoord && this.dropCoord) {
+      this.movePieces(this.dragCoord + this.dropCoord);
+    }
+    this.dragCoord = undefined;
+    this.dropCoord = undefined;
   }
 
   private convertCurrentPieceToNotation(piece: Pieces, initialCoord: string, destPiece: Pieces): string {

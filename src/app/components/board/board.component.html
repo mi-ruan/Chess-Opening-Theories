@@ -1,7 +1,12 @@
 <div class="grid">
   <div *ngFor="let row of grid">
     <div *ngFor="let cell of row" class="cell">
-      <app-cell [cellInfo]="cell"></app-cell>
+      <app-cell [cellInfo]="cell" 
+        cdkDropList 
+        [id]="(cell | async).coord" 
+        [cdkDropListConnectedTo]="listOfCoords"
+        (cdkDropListDropped)="drop($event)"
+        [cdkDropListEnterPredicate]="enterPredicate.bind(this)"></app-cell>
     </div>
   </div>
 </div>
