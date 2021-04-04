@@ -1,7 +1,6 @@
 import { Injectable } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
 import { ECO, masterList } from "src/resources/master-list";
-import { CellInfo } from "../components/board/board.component";
 import { MoveNotationService } from "../components/board/move-notation.service";
 
 export interface NextMoveInfo {

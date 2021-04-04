@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
-import { CellInfo } from "../board/board.component";
+import { CellInfo, CurrentMoveService } from "../board/current-move.service";
 import { OptionsService } from "../../services/options.service";
 
 @Component({
@@ -22,8 +22,12 @@ export class CellComponent implements OnInit {
   opacity!: number;
   nextTurn!: "white" | "black" | undefined;
   attackingColor!: "white" | "black" | "both";
+  isValidMove = false;
 
-  constructor(private optionsService: OptionsService) {}
+  constructor(
+    private optionsService: OptionsService,
+    private moveService: CurrentMoveService
+  ) {}
 
   ngOnInit(): void {
     this.showCoord = this.optionsService.showCoord;
@@ -36,10 +40,15 @@ export class CellComponent implements OnInit {
       this.nextTurn = info.nextTurn;
       this.getPercentage(info);
       this.attackingColor = info.attackingColor;
+      this.isValidMove = info.validMove;
     });
 
     this.optionsService.initPos.subscribe(init => this.isOldPos = init === this.coord);
     this.optionsService.destPos.subscribe(dest => this.isNewPos = dest === this.coord);
+  }
+
+  getValidMoves(): void {
+    this.moveService.getValidMoves(this.coord);
   }
 
   private getPercentage(info: CellInfo): void {
@@ -48,5 +57,4 @@ export class CellComponent implements OnInit {
       this.movePercentage = ((info.nextMoves.length / info.totalNextMoves) * 100).toFixed(2)  + "%"; 
     }
   }
-
 }

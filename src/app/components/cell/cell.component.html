@@ -2,9 +2,11 @@
 <div [class]="(cellInfo | async).currentPiece" 
   class="pieces"
   cdkDrag
-  [cdkDragData]="coord">
+  [cdkDragData]="coord"
+  (cdkDragStarted)="getValidMoves()">
   <div class="drag-placeholder" *cdkDragPlaceholder></div>
 </div>
+<div *ngIf="!isValidMove" class="valid-move"></div>
 <div *ngIf="hasNextMoves && (showPercent | async)" class="move-percent">{{movePercentage}}</div>
 <div class="highlight" 
   [ngClass]="{

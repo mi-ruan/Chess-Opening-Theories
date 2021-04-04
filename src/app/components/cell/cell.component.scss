@@ -44,6 +44,16 @@
   z-index: 2;
 }
 
+.valid-move {
+  position: absolute;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: solid;
+  top: 20px;
+}
+
 .pieces {
   position: relative;
   z-index: 2;
