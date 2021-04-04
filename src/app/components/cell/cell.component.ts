@@ -10,7 +10,7 @@ import { OptionsService } from "../../services/options.service";
 })
 export class CellComponent implements OnInit {
   @Input() cellInfo!: Observable<CellInfo>;
-  piece!: string;
+  piece: string | undefined;
   showCoord!: Observable<boolean>;
   showPercent!: Observable<boolean>;
   showSpace!: Observable<boolean>;
@@ -41,6 +41,7 @@ export class CellComponent implements OnInit {
       this.getPercentage(info);
       this.attackingColor = info.attackingColor;
       this.isValidMove = info.validMove;
+      this.piece = info.currentPiece;
     });
 
     this.optionsService.initPos.subscribe(init => this.isOldPos = init === this.coord);
@@ -49,6 +50,10 @@ export class CellComponent implements OnInit {
 
   getValidMoves(): void {
     this.moveService.getValidMoves(this.coord);
+  }
+
+  isDisabled(): boolean {
+    return !this.piece || this.moveService.getCurrentTurn() !== this.piece?.split("-")[0];
   }
 
   private getPercentage(info: CellInfo): void {

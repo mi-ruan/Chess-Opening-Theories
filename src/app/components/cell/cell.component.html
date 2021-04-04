@@ -1,13 +1,18 @@
-<span *ngIf="showCoord | async" class="coordinates">{{coord}}</span>
-<div [class]="(cellInfo | async).currentPiece" 
-  class="pieces"
-  cdkDrag
-  [cdkDragData]="coord"
-  (cdkDragStarted)="getValidMoves()">
-  <div class="drag-placeholder" *cdkDragPlaceholder></div>
+<div class="container">
+  <div [class]="piece" 
+    class="pieces"
+    cdkDrag
+    [cdkDragData]="coord"
+    [cdkDragDisabled]="isDisabled()"
+    (cdkDragStarted)="getValidMoves()">
+    <div class="drag-placeholder" *cdkDragPlaceholder></div>
+  </div>
+  <span *ngIf="showCoord | async" class="coordinates">{{coord}}</span>
+  <div class="coord-container">
+    <div *ngIf="isValidMove" class="valid-move"></div>
+    <div *ngIf="hasNextMoves && (showPercent | async)" class="move-percent">{{movePercentage}}</div>
+  </div>
 </div>
-<div *ngIf="!isValidMove" class="valid-move"></div>
-<div *ngIf="hasNextMoves && (showPercent | async)" class="move-percent">{{movePercentage}}</div>
 <div class="highlight" 
   [ngClass]="{
     'old-pos': isOldPos, 

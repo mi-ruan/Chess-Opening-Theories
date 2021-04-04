@@ -120,7 +120,7 @@ export class CurrentMoveService {
   getNextMoves(): void {
     const updateCoordMap: Record<string, Array<ECO>> = {};
     const openingMoves = this.openingMoves;
-    const whoIsTurn = this.getCurrentTurn(this.openingMoves);
+    const whoIsTurn = this.getCurrentTurn();
     const nextMoves = masterList.filter(opening => opening.moves.startsWith(openingMoves.join(" ")));
     nextMoves.map(opening => {
       const nextMove = opening.moves.replace(openingMoves.join(" "), "").trim();
@@ -142,8 +142,8 @@ export class CurrentMoveService {
     });
   }
 
-  private getCurrentTurn(moves: Array<string>): "white" | "black" {
-    return moves.length === 0 ? "white" : moves.length % 2 === 0 ? "white" : "black";
+  getCurrentTurn(): "white" | "black" {
+    return this.openingMoves.length === 0 ? "white" : this.openingMoves.length % 2 === 0 ? "white" : "black";
   }
 
   getAttackingMoves(): void {
@@ -311,7 +311,7 @@ export class CurrentMoveService {
 
   // get valid moves while dragging
   getValidMoves(coord: string): void {
-    const whoIsTurn = this.getCurrentTurn(this.openingMoves);
+    const whoIsTurn = this.getCurrentTurn();
     let attackingSquares: Tuple;
     const cellInfo = this.coordMap.get(coord).getValue();
     const [color, piece] = cellInfo.currentPiece.split("-");
