@@ -16,6 +16,8 @@ export interface CellInfo {
   attackingColor?: "white" | "black" | "both";
 }
 
+export type Tuple = Array<[number, number]>;
+
 @Component({
   selector: "app-board",
   templateUrl: "./board.component.html",
@@ -84,11 +86,14 @@ export class BoardComponent implements OnInit {
 
   drop(): void {
     if (this.dragCoord && this.dropCoord) {
-      this.openingMoves.push(this.dragCoord + this.dropCoord);
-      this.movePieces(this.dragCoord + this.dropCoord);
-      this.getNextMoves();
-      this.getAttackingMoves();
-      this.getAttackingData();
+      const nextMove = this.dragCoord + this.dropCoord;
+      if (this.isValidMove(nextMove)) {
+        this.openingMoves.push(nextMove);
+        this.movePieces(nextMove);
+        this.getNextMoves();
+        this.getAttackingMoves();
+        this.getAttackingData();
+      }
     }
     this.dragCoord = undefined;
     this.dropCoord = undefined;
@@ -137,10 +142,14 @@ export class BoardComponent implements OnInit {
     this.moveTable.updateMoveTable(this.noteMoves);
   }
 
+  private getCurrentTurn(moves: Array<string>): "white" | "black" {
+    return moves.length === 0 ? "white" : moves.length % 2 === 0 ? "white" : "black";
+  }
+
   private getNextMoves(): void {
     const updateCoordMap: Record<string, Array<ECO>> = {};
     const openingMoves = this.openingMoves;
-    const whoIsTurn = openingMoves.length === 0 ? "white" : openingMoves.length % 2 === 0 ? "white" : "black";
+    const whoIsTurn = this.getCurrentTurn(this.openingMoves);
     const nextMoves = masterList.filter(opening => opening.moves.startsWith(openingMoves.join(" ")));
     nextMoves.map(opening => {
       const nextMove = opening.moves.replace(openingMoves.join(" "), "").trim();
@@ -149,6 +158,8 @@ export class BoardComponent implements OnInit {
         updateCoordMap[nextMoveCoord] ? updateCoordMap[nextMoveCoord].push(opening) : updateCoordMap[nextMoveCoord] = [opening];
       }
     });
+    // clear old next moves before updating next moves
+    this.coordMap.forEach(coord => coord.next({...coord.value, ...{ nextMoves: [], totalNextMoves: 0 }}));
     const totalNextMoves = Object.values(updateCoordMap).reduce((a,b) => a + b.length, 0);
     this.infoService.updateNextMoves(updateCoordMap);
     Object.keys(updateCoordMap).forEach(coord => {
@@ -157,7 +168,7 @@ export class BoardComponent implements OnInit {
         ...destSubject.value, 
         ...{ nextMoves: updateCoordMap[coord], nextTurn: whoIsTurn, totalNextMoves }
       })
-    })
+    });
   }
 
   private getAttackingMoves(): void {
@@ -178,7 +189,8 @@ export class BoardComponent implements OnInit {
         this.processPawnAttack(rowNumber, colNumber, color as "white" | "black");
       }
       else if (piece === "knight") {
-        this.processKnightAttack(rowNumber, colNumber, color as "white" | "black");
+        const attackingSquares = this.processKnightAttack(rowNumber, colNumber);
+        attackingSquares.forEach(([row, col]) => this.setAttackingSquare(row, col, color as "white" | "black"));
       }
       else if(piece === "bishop") {
         this.processBishopAttack(rowNumber, colNumber, color as "white" | "black");
@@ -219,16 +231,18 @@ export class BoardComponent implements OnInit {
     }
   }
 
-  private processKnightAttack(rowNumber: number, colNumber: number, color: "white" | "black"): void {
+  private processKnightAttack(rowNumber: number, colNumber: number): Tuple {
     // the eight direction knights can attack in 
     const directions = [[1, 2], [2, 1], [-1, 2], [-2, 1], [1, -2], [2, -1], [-1, -2], [-2, -1]];
+    const attackingSquares: Tuple = [];
     directions.forEach(([row, col]) => {
       const newRow = rowNumber + row;
       const newCol = colNumber + col;
       if (newRow > 0 && newRow < 9 && newCol > 0 && newCol < 9) {
-        this.setAttackingSquare(newRow, newCol, color);
+        attackingSquares.push([newRow, newCol]);
       }
     });
+    return attackingSquares;
   }
 
   private processBishopAttack(rowNumber: number, colNumber: number, color: "white" | "black"): void {
@@ -312,5 +326,25 @@ export class BoardComponent implements OnInit {
     this.optionsService.whiteOccupiedSpace.next(whiteSpace);
     this.optionsService.blackOccupiedSpace.next(blackSpace);
     this.optionsService.bothOccupiedSpace.next(bothSpace);
+  }
+
+  private isValidMove(move: string): boolean {
+    const whoIsTurn = this.getCurrentTurn(this.openingMoves);
+    const [initialCoord, destinationCoord] = [move.substring(0,2), move.substring(2)];
+    const initCoordPiece = this.coordMap.get(initialCoord).getValue().currentPiece;
+    const destCoordPiece = this.coordMap.get(destinationCoord).getValue().currentPiece;
+    // only move pieces that are the same as current color
+    if (initCoordPiece?.split("-")[0] !== whoIsTurn) return false;
+    // do not move pieces where square is already occupied by the same color
+    if (destCoordPiece?.split("-")[0] === whoIsTurn) return false;
+    const piece = initCoordPiece?.split("-")[1];
+    const [initRow, initCol] = initialCoord.split("");
+    const rowNumber = this.rowGrid.findIndex(i => initRow === i) + 1;
+    const colNumber = parseInt(initCol);
+    if (piece === "knight") {
+      const attackingSquares = this.processKnightAttack(rowNumber, colNumber);
+      return !!attackingSquares.map(([row, col]) => this.rowGrid[row - 1] + col.toString()).find(coord => coord === destinationCoord);
+    }
+    return true;
   }
 }
