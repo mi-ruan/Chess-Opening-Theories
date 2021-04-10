@@ -159,26 +159,26 @@ export class CurrentMoveService {
     const colNumber = parseInt(col);
     if (cellInfo.currentPiece) {
       const [color, piece] = cellInfo.currentPiece.split("-");
-  
+      let attackingSquares: Tuple;
       if (piece === "pawn") {
-        this.processPawnAttack(rowNumber, colNumber, color as "white" | "black");
+        attackingSquares = this.processPawnAttack(rowNumber, colNumber, color as "white" | "black");
       }
       else if (piece === "knight") {
-        const attackingSquares = this.processKnightAttack(rowNumber, colNumber);
-        attackingSquares.forEach(([row, col]) => this.setAttackingSquare(row, col, color as "white" | "black"));
+        attackingSquares = this.processKnightAttack(rowNumber, colNumber);
       }
       else if(piece === "bishop") {
-        this.processBishopAttack(rowNumber, colNumber, color as "white" | "black");
+        attackingSquares = this.processBishopAttack(rowNumber, colNumber);
       }
       else if (piece === "rook") {
-        this.processRookAttack(rowNumber, colNumber, color as "white" | "black");
+        attackingSquares = this.processRookAttack(rowNumber, colNumber);
       }
       else if (piece === "queen") {
-        this.processQueenAttack(rowNumber, colNumber, color as "white" | "black");
+        attackingSquares = this.processQueenAttack(rowNumber, colNumber);
       }
       else if (piece === "king") {
-        this.processKingAttack(rowNumber, colNumber, color as "white" | "black");
+        attackingSquares = this.processKingAttack(rowNumber, colNumber);
       }
+      attackingSquares.forEach(([row, col]) => this.setAttackingSquare(row, col, color as "white" | "black"));
     }
   }
 
@@ -189,7 +189,7 @@ export class CurrentMoveService {
     cell.next({...cell.value, attackingColor});
   }
 
-  private processPawnAttack(rowNumber: number, colNumber: number, color: "white" | "black"): void {
+  private processPawnAttack(rowNumber: number, colNumber: number, color: "white" | "black"): Tuple {
     let whiteCol: number | undefined, blackCol: number | undefined;
     const leftAttack: number | undefined = (rowNumber - 1 > 0) ? (rowNumber - 1): undefined;
     const rightAttack: number | undefined = (rowNumber + 1 < 9) ? (rowNumber + 1): undefined;
@@ -200,17 +200,19 @@ export class CurrentMoveService {
     }
     if (whiteCol) {
       if (leftAttack) {
-        this.setAttackingSquare(leftAttack, whiteCol, color);
+        return [[leftAttack, whiteCol]];
       } if (rightAttack) {
-        this.setAttackingSquare(rightAttack, whiteCol, color);
+        return [[rightAttack, whiteCol]];
       }
     } else if (blackCol) {
       if (leftAttack) {
-        this.setAttackingSquare(leftAttack, blackCol, color);
+        return [[leftAttack, blackCol]];
       } if (rightAttack) {
-        this.setAttackingSquare(rightAttack, blackCol, color);
+        return [[rightAttack, blackCol]];
       }
     }
+    // not  
+    return [];
   }
 
   private processKnightAttack(rowNumber: number, colNumber: number): Tuple {
@@ -227,36 +229,38 @@ export class CurrentMoveService {
     return attackingSquares;
   }
 
-  private processBishopAttack(rowNumber: number, colNumber: number, color: "white" | "black"): void {
+  private processBishopAttack(rowNumber: number, colNumber: number): Tuple {
     // the diagonals
-    const diags: Array<[number, number]> = [[1, 1], [-1, 1], [1, -1], [-1, -1]];
-    this.processLineAttack(rowNumber, colNumber, color, diags);
+    const diags: Tuple = [[1, 1], [-1, 1], [1, -1], [-1, -1]];
+    return this.processLineAttack(rowNumber, colNumber, diags);
   }
 
-  private processRookAttack(rowNumber: number, colNumber: number, color: "white" | "black"): void {
+  private processRookAttack(rowNumber: number, colNumber: number): Tuple {
     // the ranks and files 
-    const rows: Array<[number, number]> = [[0, 1], [1, 0], [0, -1], [-1, 0]];
-    this.processLineAttack(rowNumber, colNumber, color, rows);
+    const rows: Tuple = [[0, 1], [1, 0], [0, -1], [-1, 0]];
+    return this.processLineAttack(rowNumber, colNumber, rows);
   }
 
-  private processQueenAttack(rowNumber: number, colNumber: number, color: "white" | "black"): void {
+  private processQueenAttack(rowNumber: number, colNumber: number): Tuple {
     // all eight directions
-    const directions: Array<[number, number]> = [[0, 1], [1, 0], [0, -1], [-1, 0], [1, 1], [-1, 1], [1, -1], [-1, -1]];
-    this.processLineAttack(rowNumber, colNumber, color, directions);
+    const directions: Tuple = [[0, 1], [1, 0], [0, -1], [-1, 0], [1, 1], [-1, 1], [1, -1], [-1, -1]];
+    return this.processLineAttack(rowNumber, colNumber, directions);
   }
 
-  private processLineAttack(rowNumber, colNumber, color: "white" | "black", directions: Array<[number, number]>): void {
+  private processLineAttack(rowNumber, colNumber, directions: Tuple): Tuple {
+    const attackingSquares: Tuple = [];
     directions.forEach(([row, col]) => {
       let hasFirstOccupiedSquare = false
       let newRow = rowNumber + row;
       let newCol = colNumber + col;
       while (newRow > 0 && newRow < 9 && newCol > 0 && newCol < 9 && !hasFirstOccupiedSquare) {
-        this.setAttackingSquare(newRow, newCol, color);
+        attackingSquares.push([newRow, newCol]);
         hasFirstOccupiedSquare = this.checkFirstOccupiedSquare(newRow, newCol);
         newRow += row;
         newCol += col;
       }
     });
+    return attackingSquares;
   }
 
   private checkFirstOccupiedSquare(rowNumber: number, colNumber: number): boolean {
@@ -264,16 +268,18 @@ export class CurrentMoveService {
     return cell.getValue().currentPiece !== undefined;
   }
 
-  private processKingAttack(rowNumber: number, colNumber: number, color: "white" | "black"): void {
+  private processKingAttack(rowNumber: number, colNumber: number): Tuple {
     // all eight directions
-    const directions: Array<[number, number]> = [[0, 1], [1, 0], [0, -1], [-1, 0], [1, 1], [-1, 1], [1, -1], [-1, -1]];
+    const directions: Tuple = [[0, 1], [1, 0], [0, -1], [-1, 0], [1, 1], [-1, 1], [1, -1], [-1, -1]];
+    const attackingSquares: Tuple = [];
     directions.forEach(([row, col]) => {
       const newRow = rowNumber + row;
       const newCol = colNumber + col;
       if (newRow > 0 && newRow < 9 && newCol > 0 && newCol < 9) {
-        this.setAttackingSquare(newRow, newCol, color);
+        attackingSquares.push([newRow, newCol]);
       }
-    })
+    });
+    return attackingSquares;
   }
 
   getAttackingData(): void {
@@ -322,9 +328,16 @@ export class CurrentMoveService {
     const colNumber = parseInt(initCol);
     if (piece === "knight") {
       attackingSquares = this.processKnightAttack(rowNumber, colNumber);
-    } else {
-      // TODO: fill in the rest
-      return;
+    } else if (piece === "bishop") {
+      attackingSquares = this.processBishopAttack(rowNumber, colNumber);
+    } else if (piece === "rook") {
+      attackingSquares = this.processRookAttack(rowNumber, colNumber);
+    } else if (piece === "queen") {
+      attackingSquares = this.processQueenAttack(rowNumber, colNumber);
+    } else if (piece === "king") {
+      attackingSquares = this.processKingAttack(rowNumber, colNumber);
+    } else if (piece === "pawn") {
+      attackingSquares = this.processPawnMove(rowNumber, colNumber, color);
     }
     const attackingCoord = attackingSquares
       .map(([row, col]) => this.rowGrid[row - 1] + col.toString())
@@ -346,5 +359,24 @@ export class CurrentMoveService {
   clearValidMoves(): void {
     this.coordMap.forEach(coord => coord.next({...coord.value, validMove: false}));
     this.listofValidMoves = [];
+  }
+
+  private processPawnMove(rowNumber: number, colNumber: number, color: "white" | "black"): Tuple {
+    const moveSquares: Tuple = []
+    if (color === "white") {
+      if (colNumber + 1 < 9) moveSquares.push([rowNumber, colNumber + 1]);
+      if (colNumber === 2) moveSquares.push([rowNumber, colNumber + 2]);
+    } else if (color === "black") {
+      if (colNumber - 1 > 0) moveSquares.push([rowNumber, colNumber - 1]);
+      if (colNumber === 7) moveSquares.push([rowNumber, colNumber - 2]);
+    }
+    let attackingSquares = this.processPawnAttack(rowNumber, colNumber, color);
+    attackingSquares = attackingSquares.filter(([row, col]) => {
+      const cell = this.coordMap.get(this.rowGrid[row - 1] + col.toString());
+      const cellPiece = cell.getValue().currentPiece
+      if (!cellPiece) return false;
+      return cellPiece.split("-")[0] !== color;
+    });
+    return moveSquares.concat(attackingSquares);
   }
 }
