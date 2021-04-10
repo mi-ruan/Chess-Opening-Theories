@@ -24,6 +24,7 @@ export class CurrentMoveService {
   listOfCoords = this.rowGrid.map(r => [8, 7, 6, 5, 4, 3, 2, 1].map(c => r+c)).reduce((a,b) => a.concat(b), []);
   /** raw moves array with init and dest position */
   openingMoves: Array<string> = [];
+  clickedCoord: string | undefined;
   private coordMap: Map<string, BehaviorSubject<CellInfo>> = new Map();
   /** notation moves array */
   private noteMoves: Array<string> = [];
@@ -317,6 +318,7 @@ export class CurrentMoveService {
 
   // get valid moves while dragging
   getValidMoves(coord: string): void {
+    this.clickedCoord = coord;
     const whoIsTurn = this.getCurrentTurn();
     let attackingSquares: Tuple;
     const cellInfo = this.coordMap.get(coord).getValue();
@@ -359,16 +361,17 @@ export class CurrentMoveService {
   clearValidMoves(): void {
     this.coordMap.forEach(coord => coord.next({...coord.value, validMove: false}));
     this.listofValidMoves = [];
+    this.clickedCoord = undefined;
   }
 
   private processPawnMove(rowNumber: number, colNumber: number, color: "white" | "black"): Tuple {
     const moveSquares: Tuple = []
     if (color === "white") {
-      if (colNumber + 1 < 9) moveSquares.push([rowNumber, colNumber + 1]);
-      if (colNumber === 2) moveSquares.push([rowNumber, colNumber + 2]);
+      if (colNumber + 1 < 9 && !this.checkFirstOccupiedSquare(rowNumber, colNumber + 1)) moveSquares.push([rowNumber, colNumber + 1]);
+      if (colNumber === 2 && !this.checkFirstOccupiedSquare(rowNumber, colNumber + 2)) moveSquares.push([rowNumber, colNumber + 2]);
     } else if (color === "black") {
-      if (colNumber - 1 > 0) moveSquares.push([rowNumber, colNumber - 1]);
-      if (colNumber === 7) moveSquares.push([rowNumber, colNumber - 2]);
+      if (colNumber - 1 > 0 && !this.checkFirstOccupiedSquare(rowNumber, colNumber - 1)) moveSquares.push([rowNumber, colNumber - 1]);
+      if (colNumber === 7 && !this.checkFirstOccupiedSquare(rowNumber, colNumber - 2)) moveSquares.push([rowNumber, colNumber - 2]);
     }
     let attackingSquares = this.processPawnAttack(rowNumber, colNumber, color);
     attackingSquares = attackingSquares.filter(([row, col]) => {

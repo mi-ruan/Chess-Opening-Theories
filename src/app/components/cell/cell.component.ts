@@ -24,6 +24,8 @@ export class CellComponent implements OnInit {
   attackingColor!: "white" | "black" | "both";
   isValidMove = false;
 
+  private clicked = false;
+
   constructor(
     private optionsService: OptionsService,
     private moveService: CurrentMoveService
@@ -49,11 +51,29 @@ export class CellComponent implements OnInit {
   }
 
   getValidMoves(): void {
-    this.moveService.getValidMoves(this.coord);
+    if (this.piece) this.moveService.getValidMoves(this.coord);
   }
 
   isDisabled(): boolean {
     return !this.piece || this.moveService.getCurrentTurn() !== this.piece?.split("-")[0];
+  }
+
+  handleClick(): void {
+    if (this.isValidMove && this.moveService.clickedCoord) {
+      const nextMove = this.moveService.clickedCoord + this.coord;
+      if (this.moveService.isValidMove(nextMove)) {
+        this.moveService.openingMoves.push(nextMove);
+        this.moveService.movePieces(nextMove);
+        this.moveService.getNextMoves();
+        this.moveService.getAttackingMoves();
+        this.moveService.getAttackingData();
+      }
+      this.moveService.clearValidMoves();
+      this.clicked = false;
+    } else {
+      this.clicked ? this.moveService.clearValidMoves() : this.getValidMoves();
+      this.clicked = !this.clicked;
+    }
   }
 
   private getPercentage(info: CellInfo): void {
