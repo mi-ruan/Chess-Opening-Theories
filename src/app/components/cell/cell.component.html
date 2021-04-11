@@ -1,4 +1,10 @@
-<div class="container" (click)="handleClick()">
+<div class="container" 
+  (click)="handleClick()"
+  cdkDropList 
+  [id]="coord" 
+  [cdkDropListConnectedTo]="listOfCoords"
+  (cdkDropListDropped)="dragDropService.drop()"
+  [cdkDropListEnterPredicate]="dragDropService.enterPredicate.bind(dragDropService)">
   <div [class]="piece" 
     class="pieces"
     cdkDrag

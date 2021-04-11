@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
 import { CellInfo, CurrentMoveService } from "../board/current-move.service";
 import { OptionsService } from "../../services/options.service";
+import { DragDropService } from "./drag-drop.service";
 
 @Component({
   selector: "app-cell",
@@ -23,10 +24,12 @@ export class CellComponent implements OnInit {
   nextTurn!: "white" | "black" | undefined;
   attackingColor!: "white" | "black" | "both";
   isValidMove = false;
+  listOfCoords!: Array<string>;
 
   private clicked = false;
 
   constructor(
+    public dragDropService: DragDropService,
     private optionsService: OptionsService,
     private moveService: CurrentMoveService
   ) {}
@@ -35,6 +38,8 @@ export class CellComponent implements OnInit {
     this.showCoord = this.optionsService.showCoord;
     this.showPercent = this.optionsService.showPercent;
     this.showSpace = this.optionsService.showSpace;
+
+    this.listOfCoords = this.moveService.listOfCoords;
 
     this.cellInfo.subscribe(info => {
       this.coord = info.coord;
