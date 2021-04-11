@@ -18,14 +18,7 @@ export class DragDropService {
   drop(): void {
     if (this.dragCoord && this.dropCoord) {
       const nextMove = this.dragCoord + this.dropCoord;
-      if (this.moveService.isValidMove(nextMove)) {
-        this.moveService.openingMoves.push(nextMove);
-        this.moveService.movePieces(nextMove);
-        this.moveService.getNextMoves();
-        this.moveService.getAttackingMoves();
-        this.moveService.getAttackingData();
-      }
-      this.moveService.clearValidMoves();
+      this.moveService.checkAndMoveValidMove(nextMove);
     }
     this.dragCoord = undefined;
     this.dropCoord = undefined;

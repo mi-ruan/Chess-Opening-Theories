@@ -23,8 +23,6 @@ export class BoardComponent implements OnInit {
       this.moveService.openingMoves = this.opening.moves.trim().split(" ");
       this.moveService.openingMoves.forEach(moves => this.moveService.movePieces(moves));
     }
-    this.moveService.getNextMoves();
-    this.moveService.getAttackingMoves();
-    this.moveService.getAttackingData();
+    this.moveService.movePiecesAnalysis();
   }
 }

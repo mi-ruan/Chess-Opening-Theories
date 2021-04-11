@@ -23,6 +23,7 @@
   [ngClass]="{
     'old-pos': isOldPos, 
     'new-pos': isNewPos, 
+    'attacked-none': (showSpace | async) && attackingColor === undefined,
     'attacked-white': (showSpace | async) && attackingColor === 'white',
     'attacked-black': (showSpace | async) && attackingColor === 'black',
     'attacked-both': (showSpace | async) && attackingColor === 'both'

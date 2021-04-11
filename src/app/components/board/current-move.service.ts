@@ -59,6 +59,22 @@ export class CurrentMoveService {
     });
   }
 
+  checkAndMoveValidMove(coord: string): void {
+    if (this.isValidMove(coord)) {
+      this.openingMoves.push(coord);
+      this.movePieces(coord);
+      this.movePiecesAnalysis();
+    }
+    this.clearValidMoves();
+  }
+
+  movePiecesAnalysis(): void {
+    this.clearAttackingMoves();
+    this.getNextMoves();
+    this.getAttackingMoves();
+    this.getAttackingData();
+  }
+
   movePieces(move: string): void {
     const [initialCoord, destinationCoord] = [move.substring(0,2), move.substring(2)];
     // update service with new positions
@@ -153,6 +169,12 @@ export class CurrentMoveService {
     })
   }
 
+  clearAttackingMoves(): void {
+    this.coordMap.forEach(cellInfo => {
+      cellInfo.next({...cellInfo.value, attackingColor: undefined})
+    })
+  }
+
   private processAttackingMove(cellInfo: CellInfo): void {
     const coord = cellInfo.coord;
     const [row, col] = coord.split("");
@@ -191,6 +213,7 @@ export class CurrentMoveService {
   }
 
   private processPawnAttack(rowNumber: number, colNumber: number, color: "white" | "black"): Tuple {
+    const attackingSquares: Tuple = [];
     let whiteCol: number | undefined, blackCol: number | undefined;
     const leftAttack: number | undefined = (rowNumber - 1 > 0) ? (rowNumber - 1): undefined;
     const rightAttack: number | undefined = (rowNumber + 1 < 9) ? (rowNumber + 1): undefined;
@@ -201,19 +224,18 @@ export class CurrentMoveService {
     }
     if (whiteCol) {
       if (leftAttack) {
-        return [[leftAttack, whiteCol]];
+        attackingSquares.push([leftAttack, whiteCol]);
       } if (rightAttack) {
-        return [[rightAttack, whiteCol]];
+        attackingSquares.push([rightAttack, whiteCol]);
       }
     } else if (blackCol) {
       if (leftAttack) {
-        return [[leftAttack, blackCol]];
+        attackingSquares.push([leftAttack, blackCol]);
       } if (rightAttack) {
-        return [[rightAttack, blackCol]];
+        attackingSquares.push([rightAttack, blackCol]);
       }
     }
-    // not  
-    return [];
+    return attackingSquares;
   }
 
   private processKnightAttack(rowNumber: number, colNumber: number): Tuple {

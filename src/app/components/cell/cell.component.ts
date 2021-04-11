@@ -22,7 +22,7 @@ export class CellComponent implements OnInit {
   movePercentage!: string;
   opacity!: number;
   nextTurn!: "white" | "black" | undefined;
-  attackingColor!: "white" | "black" | "both";
+  attackingColor: "white" | "black" | "both" | undefined;
   isValidMove = false;
   listOfCoords!: Array<string>;
 
@@ -66,14 +66,7 @@ export class CellComponent implements OnInit {
   handleClick(): void {
     if (this.isValidMove && this.moveService.clickedCoord) {
       const nextMove = this.moveService.clickedCoord + this.coord;
-      if (this.moveService.isValidMove(nextMove)) {
-        this.moveService.openingMoves.push(nextMove);
-        this.moveService.movePieces(nextMove);
-        this.moveService.getNextMoves();
-        this.moveService.getAttackingMoves();
-        this.moveService.getAttackingData();
-      }
-      this.moveService.clearValidMoves();
+      this.moveService.checkAndMoveValidMove(nextMove);
       this.clicked = false;
     } else {
       this.clicked ? this.moveService.clearValidMoves() : this.getValidMoves();

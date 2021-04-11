@@ -33,6 +33,10 @@
   &.attacked-both {
     background-color: purple;
   }
+
+  &.attacked-none {
+    background-color: unset;
+  }
 }
 
 .coordinates {
