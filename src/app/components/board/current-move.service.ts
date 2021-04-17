@@ -61,8 +61,8 @@ export class CurrentMoveService {
 
   checkAndMoveValidMove(coord: string): void {
     if (this.isValidMove(coord)) {
-      this.openingMoves.push(coord);
       this.movePieces(coord);
+      this.openingMoves.push(coord);
       this.movePiecesAnalysis();
     }
     this.clearValidMoves();
@@ -87,6 +87,9 @@ export class CurrentMoveService {
     const destinationPiece = destinationCoordSubject.value.currentPiece;
 
     this.movePiecesSubjects(currentPiece, initialCoordSubject, destinationCoordSubject);
+    if (this.checkForEnPassantMove(currentPiece, initialCoord, destinationCoord)) {
+      this.moveEnPassant(currentPiece, destinationCoord);
+    }
     if (this.checkForCastle(currentPiece, initialCoord, destinationCoord)) {
       this.moveCastle(currentPiece, initialCoordSubject, destinationCoordSubject);
       return;
@@ -127,6 +130,31 @@ export class CurrentMoveService {
     }
     this.moveTable.updateMoveTable(this.noteMoves);
   }
+
+  private checkForEnPassantMove(currentPiece: Pieces, initialCoord: string, destCoord: string): boolean {
+    if (currentPiece.split("-")[1] === "pawn") {
+      const row = this.rowGrid.indexOf(initialCoord[0]) + 1;
+      const enPassantMove = this.processEnpassant(row, parseInt(initialCoord[1]), currentPiece.split("-")[0] as "white" | "black");
+      if (enPassantMove) {
+        const move = this.rowGrid[enPassantMove[0][0] - 1] + enPassantMove[0][1];
+        return destCoord === move;
+      }
+      return false;
+    }
+    return false;
+  }
+
+  private moveEnPassant(currentPiece: Pieces, destCoord: string): void {
+    const color = currentPiece.split("-")[0] as "white" | "black";
+    let capturedCoord: string;
+    if (color === "white") {
+      capturedCoord = destCoord[0] + (parseInt(destCoord[1]) - 1);
+    } else {
+      capturedCoord = destCoord[0] + (parseInt(destCoord[1]) + 1);
+    }
+    const capturedSubject = this.coordMap.get(capturedCoord);
+    capturedSubject.next({...capturedSubject.value, currentPiece: undefined});
+  } 
 
   private convertCurrentPieceToNotation(piece: Pieces, initialCoord: string, destPiece: Pieces): string {
     const name = piece.split("-")[1];
@@ -213,7 +241,7 @@ export class CurrentMoveService {
   }
 
   private processPawnAttack(rowNumber: number, colNumber: number, color: "white" | "black"): Tuple {
-    const attackingSquares: Tuple = [];
+    let attackingSquares: Tuple = [];
     let whiteCol: number | undefined, blackCol: number | undefined;
     const leftAttack: number | undefined = (rowNumber - 1 > 0) ? (rowNumber - 1): undefined;
     const rightAttack: number | undefined = (rowNumber + 1 < 9) ? (rowNumber + 1): undefined;
@@ -236,6 +264,44 @@ export class CurrentMoveService {
       }
     }
     return attackingSquares;
+  }
+
+  private processEnpassant(rowNumber: number, colNumber: number, color: "white" | "black"): Tuple {
+    let attackingMove: Tuple;
+    const lastMove = this.openingMoves[this.openingMoves.length - 1];
+    // for white pawns, only when white pawn is at the 5th rank and an adjacent black pawns has moved two square
+    if (color === "white" && colNumber === 5) {
+      const [leftSide, rightSide] = [rowNumber - 1, rowNumber + 1];
+      let attackRow;
+      if (leftSide > 0) {
+        attackRow = this.rowGrid[leftSide - 1];
+        // move has to be from the 7 rank to 5 rank
+        const checkSquare = attackRow + 7 + attackRow + 5;
+        if (lastMove === checkSquare) attackingMove = [[leftSide, 6]];
+      } 
+      if (rightSide < 9) {
+        attackRow = this.rowGrid[rightSide - 1];
+        // move has to be from the 7 rank to 5 rank
+        const checkSquare = attackRow + 7 + attackRow + 5;
+        if (lastMove === checkSquare) attackingMove = [[rightSide, 6]];
+      }
+    } else if (color === "black" && colNumber === 4) {
+      const [leftSide, rightSide] = [rowNumber - 1, rowNumber + 1];
+      let attackRow;
+      if (leftSide > 0) {
+        attackRow = this.rowGrid[leftSide - 1];
+        // move has to be from the 2 rank to 4 rank
+        const checkSquare = attackRow + 2 + attackRow + 4;
+        if (lastMove === checkSquare) attackingMove = [[leftSide, 3]];
+      } 
+      if (rightSide < 9) {
+        attackRow = this.rowGrid[rightSide - 1];
+        // move has to be from the 2 rank to 4 rank
+        const checkSquare = attackRow + 2 + attackRow + 4;
+        if (lastMove === checkSquare) attackingMove = [[rightSide, 3]];
+      }
+    }
+    return attackingMove;
   }
 
   private processKnightAttack(rowNumber: number, colNumber: number): Tuple {
@@ -402,6 +468,8 @@ export class CurrentMoveService {
       if (!cellPiece) return false;
       return cellPiece.split("-")[0] !== color;
     });
+    const enpassant = this.processEnpassant(rowNumber, colNumber, color);
+    if (enpassant) attackingSquares = attackingSquares.concat(enpassant);
     return moveSquares.concat(attackingSquares);
   }
 }
