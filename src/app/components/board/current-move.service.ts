@@ -31,6 +31,9 @@ export class CurrentMoveService {
   /** list of valid moves based of current piece */
   private listofValidMoves: Array<string> = [];
 
+  // keep track of all pieces that have been moved
+  private pieceHistory = [];
+
   constructor(
     private optionsService: OptionsService,
     private moveTable: MoveTableService,
@@ -42,6 +45,7 @@ export class CurrentMoveService {
   makeNewGrid(): Array<Array<BehaviorSubject<CellInfo>>> {
     this.openingMoves = [];
     this.noteMoves = [];
+    this.pieceHistory = [];
     return this.rowGrid.map(r =>
       [8, 7, 6, 5, 4, 3, 2, 1].map(c => {
         this.coordMap.set(r+c, this.makeNewSubject(r+c));
@@ -86,16 +90,17 @@ export class CurrentMoveService {
     const currentPiece = initialCoordSubject.value.currentPiece;
     const destinationPiece = destinationCoordSubject.value.currentPiece;
 
-    this.movePiecesSubjects(currentPiece, initialCoordSubject, destinationCoordSubject);
     if (this.checkForEnPassantMove(currentPiece, initialCoord, destinationCoord)) {
       this.moveEnPassant(currentPiece, destinationCoord);
     }
     if (this.checkForCastle(currentPiece, initialCoord, destinationCoord)) {
       this.moveCastle(currentPiece, initialCoordSubject, destinationCoordSubject);
-      return;
+    } else {
+      this.movePiecesSubjects(currentPiece, initialCoordSubject, destinationCoordSubject);
+      this.noteMoves.push(this.convertCurrentPieceToNotation(currentPiece, initialCoordSubject.value.coord, destinationPiece)+destinationCoordSubject.value.coord);
     }
-    this.noteMoves.push(this.convertCurrentPieceToNotation(currentPiece, initialCoordSubject.value.coord, destinationPiece)+destinationCoordSubject.value.coord);
     this.moveTable.updateMoveTable(this.noteMoves);
+    this.pieceHistory.push(currentPiece);
   }
 
   private movePiecesSubjects(currentPiece: Pieces, initSubject: BehaviorSubject<CellInfo>, destSubject: BehaviorSubject<CellInfo>): void {
@@ -103,9 +108,49 @@ export class CurrentMoveService {
     destSubject.next({...destSubject.value, currentPiece });
   }
 
-  private checkForCastle(currentPiece: Pieces, initalCoord: string, destinationCoord: string): boolean {
-    return (currentPiece === Pieces.WK && initalCoord === "e1" && ((destinationCoord === "g1" && this.coordMap.get("h1").value.currentPiece === Pieces.WR) || (destinationCoord === "c1" && this.coordMap.get("a1").value.currentPiece === Pieces.WR)))
-    || (currentPiece === Pieces.BK && initalCoord === "e8" && ((destinationCoord === "g8" && this.coordMap.get("h8").value.currentPiece === Pieces.BR) || (destinationCoord === "c8" && this.coordMap.get("a8").value.currentPiece === Pieces.BR))) 
+  private checkForCastle(currentPiece: Pieces, initialCoord: string, destinationCoord: string): boolean {
+    // cannot castle if king or rook has already moved
+    if (currentPiece === Pieces.WK && this.pieceHistory.includes(currentPiece || Pieces.WR)) return false;
+    if (currentPiece === Pieces.BK && this.pieceHistory.includes(currentPiece || Pieces.BR)) return false;
+    // cannot castle if the king or the squares the king pass through to castle is under attack and are not occupied
+    // can only castle if king and rook are on the right squares
+    
+    if (currentPiece === Pieces.WK && initialCoord === "e1") {
+      // white king side castle
+      if (destinationCoord === "g1" && this.coordMap.get("h1").value.currentPiece === Pieces.WR) {
+        return this.coordMap.get("e1").value.attackingColor === "white" && 
+          this.coordMap.get("f1").value.attackingColor === "white" && 
+          this.coordMap.get("f1").value.currentPiece === undefined &&
+          this.coordMap.get("g1").value.attackingColor === "white" &&
+          this.coordMap.get("g1").value.currentPiece === undefined;
+        // white queen side castle
+      } else if (destinationCoord === "c1" && this.coordMap.get("a1").value.currentPiece === Pieces.WR) {
+        return this.coordMap.get("e1").value.attackingColor === "white" && 
+          this.coordMap.get("d1").value.attackingColor === "white" && 
+          this.coordMap.get("d1").value.currentPiece === undefined &&
+          this.coordMap.get("c1").value.attackingColor === "white" &&
+          this.coordMap.get("c1").value.currentPiece === undefined && 
+          this.coordMap.get("b1").value.currentPiece === undefined
+      }
+    } else if (currentPiece === Pieces.BK && initialCoord === "e8") {
+      // black king side castle
+      if (destinationCoord === "g8" && this.coordMap.get("h8").value.currentPiece === Pieces.BR) {
+        return this.coordMap.get("e8").value.attackingColor === "black" && 
+          this.coordMap.get("f8").value.attackingColor === "black" && 
+          this.coordMap.get("f8").value.currentPiece === undefined &&
+          this.coordMap.get("g8").value.attackingColor === "black" &&
+          this.coordMap.get("g8").value.currentPiece === undefined;
+        // black queen side castle
+      } else if (destinationCoord === "c8" && this.coordMap.get("a8").value.currentPiece === Pieces.BR) {
+        return this.coordMap.get("e8").value.attackingColor === "black" && 
+          this.coordMap.get("d8").value.attackingColor === "black" && 
+          this.coordMap.get("d8").value.currentPiece === undefined &&
+          this.coordMap.get("c8").value.attackingColor === "black" &&
+          this.coordMap.get("c8").value.currentPiece === undefined && 
+          this.coordMap.get("b8").value.currentPiece === undefined
+      }
+    }
+    return false;
   }
 
   private moveCastle(currentPiece: Pieces, initialCoord: BehaviorSubject<CellInfo>, destinationCoord: BehaviorSubject<CellInfo>): void {
@@ -128,7 +173,6 @@ export class CurrentMoveService {
         this.noteMoves.push("O-O");
         break;             
     }
-    this.moveTable.updateMoveTable(this.noteMoves);
   }
 
   private checkForEnPassantMove(currentPiece: Pieces, initialCoord: string, destCoord: string): boolean {
@@ -425,7 +469,7 @@ export class CurrentMoveService {
     } else if (piece === "queen") {
       attackingSquares = this.processQueenAttack(rowNumber, colNumber);
     } else if (piece === "king") {
-      attackingSquares = this.processKingAttack(rowNumber, colNumber);
+      attackingSquares = this.processKingAttack(rowNumber, colNumber).concat(this.checkValidCastle(cellInfo.currentPiece, coord));
     } else if (piece === "pawn") {
       attackingSquares = this.processPawnMove(rowNumber, colNumber, color);
     }
@@ -471,5 +515,29 @@ export class CurrentMoveService {
     const enpassant = this.processEnpassant(rowNumber, colNumber, color);
     if (enpassant) attackingSquares = attackingSquares.concat(enpassant);
     return moveSquares.concat(attackingSquares);
+  }
+
+  private checkValidCastle(currentPiece: Pieces, coord: string): Tuple {
+    // white king's initial square
+    if (coord === "e1") {
+      // castle king side
+      if (this.checkForCastle(currentPiece, coord, "g1")) {
+        return [[7, 1]];
+      // castle queen side
+      } else if (this.checkForCastle(currentPiece, coord, "c1")) {
+        return [[3, 1]];
+      }
+    // black king's initial square
+    } else if (coord === "e8") {
+      // castle king side
+      if (this.checkForCastle(currentPiece, coord, "g8")) {
+        return [[7, 8]];
+      }
+      // castle queen side
+      if (this.checkForCastle(currentPiece, coord, "c8")) {
+        return [[3, 8]];
+      }
+    }
+    return [];
   }
 }
