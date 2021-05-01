@@ -18,6 +18,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MovesTableModule } from "./components/movesTable/moves-table.module";
 import { InfoComponent } from "./components/info/info.component";
+import { PromotionModalComponent } from "./components/board/promotionModal/promotion-modal.component";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { InfoComponent } from "./components/info/info.component";
     BoardComponent,
     CellComponent,
     OptionsComponent,
-    InfoComponent
+    InfoComponent,
+    PromotionModalComponent
   ],
   imports: [
     BrowserModule,
@@ -39,12 +41,12 @@ import { InfoComponent } from "./components/info/info.component";
     ReactiveFormsModule,
     FormsModule,
     DragDropModule,
-    MovesTableModule
+    MovesTableModule,
   ],
-  providers: [    {
+  providers: [{
     provide: RouteReuseStrategy,
     useClass: DefaultRouteReuseStrategy,
-  },],
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

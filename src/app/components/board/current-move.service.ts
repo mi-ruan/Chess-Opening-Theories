@@ -1,10 +1,12 @@
 import { Injectable } from "@angular/core";
+import { MatDialog } from "@angular/material/dialog";
 import { BehaviorSubject } from "rxjs";
 import { InfoService } from "src/app/services/info.service";
 import { OptionsService } from "src/app/services/options.service";
 import { ECO, masterList } from "src/resources/master-list";
 import { Pieces, initialMap } from "../cell/initial-map";
 import { MoveTableService } from "../movesTable/moves-table.service";
+import { PromotionModalComponent } from "./promotionModal/promotion-modal.component";
 
 export interface CellInfo {
   coord: string;
@@ -38,6 +40,7 @@ export class CurrentMoveService {
     private optionsService: OptionsService,
     private moveTable: MoveTableService,
     private infoService: InfoService,
+    private dialog: MatDialog
   ) {
     this.makeNewGrid();
   }
@@ -93,7 +96,11 @@ export class CurrentMoveService {
     if (this.checkForEnPassantMove(currentPiece, initialCoord, destinationCoord)) {
       this.moveEnPassant(currentPiece, destinationCoord);
     }
-    if (this.checkForCastle(currentPiece, initialCoord, destinationCoord)) {
+    if (this.checkForPromotion(currentPiece, destinationCoord)) {
+      this.movePiecesSubjects(currentPiece, initialCoordSubject, destinationCoordSubject);
+      this.showPromotion(currentPiece, destinationCoord);
+      this.noteMoves.push(this.convertCurrentPieceToNotation(currentPiece, initialCoordSubject.value.coord, destinationPiece)+destinationCoordSubject.value.coord);
+    } else if (this.checkForCastle(currentPiece, initialCoord, destinationCoord)) {
       this.moveCastle(currentPiece, initialCoordSubject, destinationCoordSubject);
     } else {
       this.movePiecesSubjects(currentPiece, initialCoordSubject, destinationCoordSubject);
@@ -199,6 +206,22 @@ export class CurrentMoveService {
     const capturedSubject = this.coordMap.get(capturedCoord);
     capturedSubject.next({...capturedSubject.value, currentPiece: undefined});
   } 
+
+  private checkForPromotion(currentPiece: Pieces, destCoord: string): boolean {
+    return currentPiece === Pieces.WP && destCoord[1] === "8" || currentPiece === Pieces.BP && destCoord[1] === "1"; 
+  }
+
+  private showPromotion(currentPiece: Pieces, initialCoord: string): void {
+    const color = currentPiece.split("-")[0];
+    this.dialog.open(PromotionModalComponent, {
+      data: {color},
+      disableClose: true
+    }).afterClosed().subscribe(result => {
+      const promotion = (color + "-" + result) as Pieces;
+      const cellInfo = this.coordMap.get(initialCoord);
+      cellInfo.next({...cellInfo.value, currentPiece: promotion});
+    });
+  }
 
   private convertCurrentPieceToNotation(piece: Pieces, initialCoord: string, destPiece: Pieces): string {
     const name = piece.split("-")[1];

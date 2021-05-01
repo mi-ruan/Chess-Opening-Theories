@@ -1,0 +1,30 @@
+
+<div *ngIf="data.color === 'white' else black">
+  <button mat-stroked-button mat-dialog-close="queen">
+    <img [src]="'assets/images/white_queen.svg'" />
+  </button>
+  <button mat-stroked-button mat-dialog-close="knight">
+    <img [src]="'assets/images/white_knight.svg'" />
+  </button>
+  <button mat-stroked-button mat-dialog-close="bishop">
+    <img [src]="'assets/images/white_bishop.svg'" />
+  </button>
+  <button mat-stroked-button mat-dialog-close="rook">
+    <img [src]="'assets/images/white_rook.svg'" />
+  </button>
+</div>
+
+<ng-template #black>
+  <button mat-stroked-button mat-dialog-close="queen">
+    <img [src]="'assets/images/black_queen.svg'" />
+  </button>
+  <button mat-stroked-button mat-dialog-close="knight">
+    <img [src]="'assets/images/black_knight.svg'" />
+  </button>
+  <button mat-stroked-button mat-dialog-close="bishop">
+    <img [src]="'assets/images/black_bishop.svg'" />
+  </button>
+  <button mat-stroked-button mat-dialog-close="rook">
+    <img [src]="'assets/images/black_rook.svg'" />
+  </button>
+</ng-template>
