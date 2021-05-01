@@ -404,7 +404,7 @@ export class CurrentMoveService {
   private processKingAttack(rowNumber: number, colNumber: number): Tuple {
     // all eight directions
     const directions: Tuple = [[0, 1], [1, 0], [0, -1], [-1, 0], [1, 1], [-1, 1], [1, -1], [-1, -1]];
-    const attackingSquares: Tuple = [];
+    let attackingSquares: Tuple = [];
     directions.forEach(([row, col]) => {
       const newRow = rowNumber + row;
       const newCol = colNumber + col;
@@ -412,6 +412,11 @@ export class CurrentMoveService {
         attackingSquares.push([newRow, newCol]);
       }
     });
+    // filter out squares that are in check
+    attackingSquares = attackingSquares.filter(tuple => {
+      const cell = this.coordMap.get(this.rowGrid[tuple[0] - 1] + tuple[1].toString());
+      return cell.value.attackingColor === undefined || cell.value.attackingColor === "white"
+    })
     return attackingSquares;
   }
 
