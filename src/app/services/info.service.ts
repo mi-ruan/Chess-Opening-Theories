@@ -13,9 +13,14 @@ export interface NextMoveInfo {
 
 @Injectable({providedIn: "root"})
 export class InfoService {
+  currentOpening = new BehaviorSubject<string>("");
   nextMoves = new BehaviorSubject<Array<NextMoveInfo>>([]);
 
   constructor(private moveNotation: MoveNotationService) { }
+
+  setCurrentOpening(opening: ECO) {
+    this.currentOpening.next(opening?.name || "");
+  }
 
   updateNextMoves(movesObject: Record<string, Array<ECO>>): void {
     let nextMovesInfo = [];

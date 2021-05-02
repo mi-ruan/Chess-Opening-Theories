@@ -242,6 +242,8 @@ export class CurrentMoveService {
     const updateCoordMap: Record<string, Array<ECO>> = {};
     const openingMoves = this.openingMoves;
     const whoIsTurn = this.getCurrentTurn();
+    const currentOpening = masterList.filter(opening => opening.moves.trim() === openingMoves.join(" "));
+    this.infoService.setCurrentOpening(currentOpening[0]);
     const nextMoves = masterList.filter(opening => opening.moves.startsWith(openingMoves.join(" ")));
     nextMoves.map(opening => {
       const nextMove = opening.moves.replace(openingMoves.join(" "), "").trim();

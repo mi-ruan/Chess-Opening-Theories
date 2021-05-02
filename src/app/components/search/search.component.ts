@@ -42,7 +42,7 @@ export class SearchComponent implements OnInit {
   navigate(): void {
     const result = this.masterList.find(list => list.name === this.searchResult.value)
     if (result) {
-      this.router.navigate(["/main"], {state: {data: result}});
+      this.router.navigate(["/home"], {state: {data: result}});
     }
   }
 }
