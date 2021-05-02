@@ -73,6 +73,7 @@ export class CurrentMoveService {
       this.movePieces(coord);
       this.openingMoves.push(coord);
       this.movePiecesAnalysis();
+      this.checkForCheck();
     }
     this.clearValidMoves();
   }
@@ -231,6 +232,44 @@ export class CurrentMoveService {
       // update the move table with new move - also async 
       this.moveTable.updateMoveTable(this.noteMoves);
     });
+  }
+
+  private checkForCheck(): void {
+    const currentPiece: string = this.pieceHistory[this.pieceHistory.length - 1];
+    const color = currentPiece.split("-")[0] as "white" | "black";
+    if (color === "white") {
+      let blackKingCoord: CellInfo;
+      this.coordMap.forEach(coord => {
+        if (coord.value.currentPiece === Pieces.BK) blackKingCoord = coord.value;
+      });
+      if (blackKingCoord.attackingColor === "both" || blackKingCoord.attackingColor === "white") {
+        let lastNoteMove = this.noteMoves.pop();
+        lastNoteMove += "+";
+        if (this.checkForCheckmate(blackKingCoord)) lastNoteMove += "+";
+        this.noteMoves.push(lastNoteMove+"+");
+        this.moveTable.updateMoveTable(this.noteMoves);
+      }
+    } else {
+      let whiteKingCoord: CellInfo;
+      this.coordMap.forEach(coord => {
+        if (coord.value.currentPiece === Pieces.WK) whiteKingCoord = coord.value;
+      });
+      if (whiteKingCoord.attackingColor === "both" || whiteKingCoord.attackingColor === "black") {
+        let lastNoteMove = this.noteMoves.pop();
+        lastNoteMove += "+";
+        if (this.checkForCheckmate(whiteKingCoord)) lastNoteMove += "+";
+        this.noteMoves.push(lastNoteMove+"+");
+        this.moveTable.updateMoveTable(this.noteMoves);
+      }
+    }
+  }
+
+  private checkForCheckmate(cellInfo: CellInfo): boolean {
+    const [initRow, initCol] = cellInfo.coord.split("");
+    const rowNumber = this.rowGrid.findIndex(i => initRow === i) + 1;
+    const colNumber = parseInt(initCol);
+    const moves = this.processKingAttack(rowNumber, colNumber);
+    return moves.length === 0;
   }
 
   private convertCurrentPieceToNotation(piece: Pieces, initialCoord: string, destPiece: Pieces): string {
