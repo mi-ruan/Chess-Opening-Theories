@@ -32,6 +32,8 @@ export class CurrentMoveService {
   private noteMoves: Array<string> = [];
   /** list of valid moves based of current piece */
   private listofValidMoves: Array<string> = [];
+  /** map of pieces to notation */
+  private notationMap = {pawn: "", knight: "N", bishop: "B", rook: "R", queen: "Q", king: "K"};
 
   // keep track of all pieces that have been moved
   private pieceHistory = [];
@@ -94,17 +96,16 @@ export class CurrentMoveService {
     const destinationPiece = destinationCoordSubject.value.currentPiece;
 
     if (this.checkForEnPassantMove(currentPiece, initialCoord, destinationCoord)) {
-      this.moveEnPassant(currentPiece, destinationCoord);
-    }
-    if (this.checkForPromotion(currentPiece, destinationCoord)) {
       this.movePiecesSubjects(currentPiece, initialCoordSubject, destinationCoordSubject);
-      this.showPromotion(currentPiece, destinationCoord);
-      this.noteMoves.push(this.convertCurrentPieceToNotation(currentPiece, initialCoordSubject.value.coord, destinationPiece)+destinationCoordSubject.value.coord);
+      this.moveEnPassant(currentPiece, destinationCoord);
+      this.noteMoves.push(initialCoord[0]+"x"+ destinationCoord);
+    } else if (this.checkForPromotion(currentPiece, destinationCoord)) {
+      this.showAndMovePromotion(currentPiece, initialCoord, destinationCoord);
     } else if (this.checkForCastle(currentPiece, initialCoord, destinationCoord)) {
       this.moveCastle(currentPiece, initialCoordSubject, destinationCoordSubject);
     } else {
       this.movePiecesSubjects(currentPiece, initialCoordSubject, destinationCoordSubject);
-      this.noteMoves.push(this.convertCurrentPieceToNotation(currentPiece, initialCoordSubject.value.coord, destinationPiece)+destinationCoordSubject.value.coord);
+      this.noteMoves.push(this.convertCurrentPieceToNotation(currentPiece, initialCoord, destinationPiece)+destinationCoord);
     }
     this.moveTable.updateMoveTable(this.noteMoves);
     this.pieceHistory.push(currentPiece);
@@ -211,22 +212,30 @@ export class CurrentMoveService {
     return currentPiece === Pieces.WP && destCoord[1] === "8" || currentPiece === Pieces.BP && destCoord[1] === "1"; 
   }
 
-  private showPromotion(currentPiece: Pieces, initialCoord: string): void {
+  private showAndMovePromotion(currentPiece: Pieces, initialCoord: string, destCoord: string): void {
     const color = currentPiece.split("-")[0];
     this.dialog.open(PromotionModalComponent, {
       data: {color},
       disableClose: true
     }).afterClosed().subscribe(result => {
       const promotion = (color + "-" + result) as Pieces;
-      const cellInfo = this.coordMap.get(initialCoord);
+      const cellInfo = this.coordMap.get(destCoord);
+      // this part is async so need to be careful here and make sure the parent function is handled correctly
+      // we also need to do this before replacing the cell's piece
+      this.noteMoves.push(this.convertCurrentPieceToNotation(currentPiece, initialCoord, cellInfo.value.currentPiece)+destCoord+"="+this.notationMap[result]);
+      // move piece to dest coord
       cellInfo.next({...cellInfo.value, currentPiece: promotion});
+      // need to replace initial coord now
+      const initialCellInfo = this.coordMap.get(initialCoord);
+      initialCellInfo.next({...initialCellInfo.value, currentPiece: undefined});
+      // update the move table with new move - also async 
+      this.moveTable.updateMoveTable(this.noteMoves);
     });
   }
 
   private convertCurrentPieceToNotation(piece: Pieces, initialCoord: string, destPiece: Pieces): string {
     const name = piece.split("-")[1];
-    const map = {pawn: "", knight: "N", bishop: "B", rook: "R", queen: "Q", king: "K"};
-    return destPiece ? name === "pawn" ? initialCoord[0]+"x"+map[name] : map[name]+"x" : map[name];
+    return destPiece ? name === "pawn" ? initialCoord[0]+"x"+this.notationMap[name] : this.notationMap[name]+"x" : this.notationMap[name];
   }
 
   getNextMoves(): void {
