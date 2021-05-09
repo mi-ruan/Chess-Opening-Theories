@@ -256,9 +256,8 @@ export class CurrentMoveService {
       });
       if (whiteKingCoord.attackingColor === "both" || whiteKingCoord.attackingColor === "black") {
         let lastNoteMove = this.noteMoves.pop();
-        lastNoteMove += "+";
-        if (this.checkForCheckmate(whiteKingCoord)) lastNoteMove += "+";
-        this.noteMoves.push(lastNoteMove+"+");
+        this.checkForCheckmate(whiteKingCoord) ? lastNoteMove += "#" : lastNoteMove += "+";
+        this.noteMoves.push(lastNoteMove);
         this.moveTable.updateMoveTable(this.noteMoves);
       }
     }
